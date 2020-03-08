@@ -31,5 +31,5 @@ C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\mum5.pdb
 C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\mum5.csproj.CopyComplete
 C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\Razor\Views\Home\Account\Login.g.cshtml.cs
 C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\Razor\Views\Home\Account\Registration.g.cshtml.cs
-C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\Razor\Views\Registrations\Index.g.cshtml.cs
 C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\Razor\Views\Registrations\AddOrEdit.g.cshtml.cs
+C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\Razor\Views\Registrations\SuccReg.g.cshtml.cs

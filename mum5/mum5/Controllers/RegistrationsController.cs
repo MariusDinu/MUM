@@ -19,7 +19,7 @@ namespace mum5.Controllers
         }
 
         // GET: Registrations
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> SuccReg()
         {
             return View(await _context.Registration.ToListAsync());
         }
@@ -43,7 +43,7 @@ namespace mum5.Controllers
             {
                 _context.Add(registration);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(SuccReg));
             }
             return View(registration);
         }
