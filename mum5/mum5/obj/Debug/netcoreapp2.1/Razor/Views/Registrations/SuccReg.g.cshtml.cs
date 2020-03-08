@@ -65,12 +65,12 @@ using mum5.Models;
             WriteLiteral("\r\n<header></header>\r\n");
             EndContext();
             BeginContext(117, 347, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ea6f2d4e7254d63ae0e3f5a6e823cf0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf0b81508ac2474cb4cc78de89cdd9e0", async() => {
                 BeginContext(123, 220, true);
                 WriteLiteral("\r\n    \r\n\r\n\r\n    <div style=\"margin-top:50px;color:white;font-size:60px;position:center;text-align:center;\">\r\n\r\n    <ul>\r\n             Registration Successful! \r\n            Thank you for registering.\r\n    </ul>\r\n\r\n\r\n    ");
                 EndContext();
                 BeginContext(343, 52, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3cdcc6ca904b49fdb8c61d9650b97764", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "190f57e1e68f41c98ba8d7c9f5791590", async() => {
                     BeginContext(369, 22, true);
                     WriteLiteral("Back to the start page");
                     EndContext();
@@ -92,7 +92,7 @@ using mum5.Models;
                 WriteLiteral("\r\n\r\n    <p> ");
                 EndContext();
                 BeginContext(407, 26, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b81817982ca14df5881bc23680ec7ac2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "78b27eeb74684285a75c2a16d2c8dea9", async() => {
                     BeginContext(424, 5, true);
                     WriteLiteral("Login");
                     EndContext();

@@ -33,3 +33,4 @@ C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\Razor\Vie
 C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\Razor\Views\Home\Account\Registration.g.cshtml.cs
 C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\Razor\Views\Registrations\AddOrEdit.g.cshtml.cs
 C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\Razor\Views\Registrations\SuccReg.g.cshtml.cs
+C:\Users\mariu\Desktop\MuM.UAIC.INFO\mum5\mum5\obj\Debug\netcoreapp2.1\mum5.csprojAssemblyReference.cache
