@@ -10,15 +10,14 @@ namespace mum5.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult HomePage()
         {
             return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
+            
             return View();
         }
 
@@ -29,10 +28,12 @@ namespace mum5.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Random()
         {
-            return View();
-        }
+            var movie = new HomeController();
+            return View(); }
+        public ActionResult Edit(int id)
+        { return Content("id" + id); }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -40,4 +41,6 @@ namespace mum5.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
+
+  
 }

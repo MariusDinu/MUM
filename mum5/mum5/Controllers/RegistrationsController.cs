@@ -68,9 +68,9 @@ namespace mum5.Controllers
 
         
 
-        private bool RegistrationExists(int id)
+        private bool RegistrationExists(string email)
         {
-            return _context.Registration.Any(e => e.UserID == id);
+            return _context.Registration.Any(e => e.Email == email);
         }
     }
 }
