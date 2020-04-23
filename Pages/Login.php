@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html>
-
+<?php require '../vendor/autoload.php';?>
 <head>
     <link href="/Mum/Css/Layout.css" rel="stylesheet">
     <link href="/Mum/Css/Plus.css" rel="stylesheet">
@@ -92,7 +92,11 @@
                         <div id="password-error"></div>
                         <div class="center">
                         <button type="submit" id="login" value="login" class="button-Start">Login</button>
-</div>
+                         </div>
+
+                         <div>
+                            <a href="/MUM/Pages/welcome.php"> <p>Login with Spotify?</p> </a>
+                         </div>
                         </form>
             </div>
         </div>
