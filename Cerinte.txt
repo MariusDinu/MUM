@@ -1,0 +1,45 @@
+MuM (Music Review Manager) 
+Se doreste crearea unei aplicatii Web care permite specificarea adnotarilor textuale si a meta-datelor 
+(a se studia The Ultimate Guide to Music Metadata), plus exprimarea opiniilor vizand auditiile muzicale 
+realizate de o persoana sau grup de persoane. Sistemul va realiza managementul productiilor muzicale,
+ inclusiv organizarea lor pe diverse criterii: categorie, artist, album, an, legaturi cu alte melodii inrudite etc. 
+Se vor oferi statistici diverse ce pot fi exportate in formate deschise – minimal, CSV si PDF. 
+Diversele anunturi (o persoana a comentat un album muzical, a aparut o alta compilatie de interes,
+modificarea clasamentului celor mai apreciate cantece ale lunii etc.) vor fi expuse ca flux de stiri RSS.
+ Listele de melodii preferate vor fi importate/exportate in format JSPF/XSPF. 
+Resurse de interes: MusicBrainz - The Open Music Encyclopedia. 
+Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.   
+
+1.Instalare Xamp *
+
+//Baze de date
+2.Crearea unei baze de date pentru inregistrare (creare cont in myphpadmin) *
+3.Creare script pentru inregistrare,logare,verificare date,modificare date,adaugare/eliminare date(admin). *
+4.Crearea unei baze de date pentru melodii. 
+5.Creare script pentru adaugare,eliminare,cautare in bara search,afisare detalii,adaugare,eliminare (admin). 
+6.Crearea unei baze de date pentru comentarii.
+7.Crearea unui script pentru adaugarea,eliminarea,afisarea lor.
+//Pagini
+8.Layout pagina-guest *
+9.Pagina Home *
+10.Pagina Register *
+11.Pagina Login *
+12.Pagina About *
+13.Pagina Succes *
+14.Pagina UserHome (pagina principala a aplicatiei)
+15.Pagina UserSettings
+//Aplicatie bazata pe baza de date a melodiilor
+16.Aplicatie Web 
+ 
+  * Organizarea pe criterii 
+  * Statistici in formate deschise 
+  * Diversele anunturi ca flux RSS
+  {
+       * Top 10    
+       * Comentarii recente
+       * Melodii adaugate recent
+} 
+  * Liste de melodii preferate import/export
+  * Cautare 
+  * Recomandari
+  
