@@ -320,3 +320,8 @@ html {
     display: grid;
     grid-gap: 5px 0px;
 }
+
+.reg {
+    text-align: center;
+    border-color: red;
+}

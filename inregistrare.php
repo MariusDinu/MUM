@@ -21,4 +21,10 @@ function inregistrare(){
  
  inregistrare();
 ?>
+<a onclick="fillRegister()">
+<?php 
+echo 'Inregistrarea a reusit!'; 
 
+  ?>
+ </a>
+ 

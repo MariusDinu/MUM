@@ -36,15 +36,21 @@ html::-webkit-scrollbar-track {
     -webkit-box-align: center;
     align-items: center;
     background-color: black;
+    height: max-content;
+}
+
+img.mylogo {
+    max-height: -webkit-fill-available;
 }
 
 .site-header .logo2 {
     -webkit-transition: 0s;
     transition: 0s;
     -webkit-box-flex: 0;
-    padding-left: 200px;
     align-self: stretch;
+    width: 500px;
     border-right: 1px solid #201c29;
+    background-image: url(/MUM/Images/Pulsefinal.png);
     background-repeat: no-repeat;
     background-position: center;
 }

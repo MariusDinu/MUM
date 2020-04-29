@@ -12,13 +12,12 @@
 
 <body>
     <header class="site-header">
-        <div class="logo2">
-            <a href="/">
-                <svg class="icon-logo-text">
-                <a href="HomePage.html"> </a>
-            </svg>
-            </a>
-        </div>
+       
+      
+            <div class="logo2" ></div>
+  
+        
+      
 
 
         <div class="header-middle-area">
@@ -80,7 +79,15 @@
         <div class="login-register-form-section">
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="login">
-                    <form class="form-horizontal" method="post" action="/MUM/Pages/Login.php">
+
+                <form class="form-horizontal">
+              
+                    <div class="reg" style="text-align: center;">
+                       Registration
+                    </div>
+            
+                </form>
+                    <form class="form-horizontal" method="post" action="/MUM/Pages/Succes.php">
                         <label for="email"><b>Email</b></label>
                         <input type="text" placeholder="Enter Email" id="email"  name="email" required=""> 
                         <div id="display"></div>
@@ -125,5 +132,14 @@
 <script src="/MUM/Js/cautaUsername.js"></script>
 <script src="/MUM/Js/inregistrare.js"></script>
 <script src="/MUM/Js/verificareParole.js"></script>
+<script>
+    $(document).ready(function() {
+    //On pressing a key on "Search box" in "search.php" file. This function will be called.
+    $("#logo32323232").click(function() {
+        window.location.href='/MUM/Pages/HomePage.php';
+        cursor:pointer;
 
+    });
+});
+    </script>
 </html>

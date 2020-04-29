@@ -1,7 +1,11 @@
 $(document).ready(function() {
-    //On pressing a key on "Search box" in "search.php" file. This function will be called.
+    function fillRegister(Value) {
+
+        //Hiding "display" div in "search.php" file.
+        $('#show-registration').hide();
+    }
     $("#register").click(function() {
-        //Assigning search box value to javascript variable named as "name".
+
         var registerButton = $('#register').val();
         var emailButton = $('email').val();
         var userButton = $('username').val();
@@ -25,10 +29,13 @@ $(document).ready(function() {
                     confirmPassword: passConfirmButton,
                     country: countryButton
 
-                }
+                },
                 //If result found, this funtion will be called.
+                success: function(html) {
 
+                    $("show-registration").html(html).show();
 
+                }
             });
         }
     });
