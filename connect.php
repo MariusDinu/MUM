@@ -7,7 +7,10 @@
                 self::$conexiune_bd = new PDO('mysql:host=localhost;dbname=projectdatabase', 'marius', 'marius');
             }
             return self::$conexiune_bd;
-        }    
+        } 
+        public static function close(){
+            self::$conexiune_bd->close();
+        }   
     }
     
   ?>  

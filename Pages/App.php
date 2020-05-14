@@ -2,6 +2,8 @@
 <html>
     <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js "></script>
+    
+    <link href="/Mum/Css/App.css" rel="stylesheet">
     </head>
 <body>
 
@@ -41,25 +43,38 @@
             </div>
         </div>
     </header>
+<?php    if(isset($_GET['user']))
+echo "<div class='"."Admin"."' id='"."user"."' value='".$_GET['user']."'>".$_GET['user']."</div>"
+?>
+<div class="video-player-inner-wrap">
+                  <div class="redare" id="redare"></div>
+                <button class="
+                    video-player-close
+                    js-close-player
+                ">Close</button>
+            
+        
 
-<form action="/MUM/Pages/Music.php"method="POST" >
+        
+
+
+</div>
+
+
+
+
 <div class="container" >
 <div class="tabel" id="tabel" value="1"> 
 <ol class="c" id="tabel1" value="1">
     
 
 </ol>
-<ol class="c" id="tabel2" value="1">
- <a onclick=showMusic() href="/MUM/Pages/Music.php"> <li>Coffee</li> </a>
-  <li>Tea</li>
-  <li>Coca Cola</li>
 
-</ol>
 </div>
                 </div>
                 <button onclick="goBack()">Go Back</button>
                 <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-</form>
+
 </body>
 
 <script>
@@ -67,15 +82,51 @@ function goBack() {
   window.history.back();
 }
 </script>
-<script src="/MUM/Js/AfisareMelodii.js"></script>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js "></script>
 
 </script>
 
 <script>
+function deleteMelodie(current){
+var music=current.value;
+var musicA=document.getElementById("user").value;
+    $.ajax({
+            //AJAX type is "Post".
+            type: "POST",
+            //Data will be sent to "ajax.php".
+            url: "/MUM/DeleteMelodii.php",
+            //Data, that will be sent to "ajax.php".
+            data: {
+                musicAdmin: musicA,
+                musicIdDelete: music
+            },
+            //If result found, this funtion will be called.
+            success: function(html) {
+                //Assigning result to "display" div in "search.php" file.
+                $("#tabel1").html(html).show();
+                
+
+            }
+        });
+
+
+}
+
+
+function playMusic(current){
+var play=current.id;
+var redarea=document.getElementById("redare");
+
+
+redarea.innerHTML="<iframe class='"+"video-player-embed js-player"+"' width='"+"560"+"' height='"+"443"+"' class='"+"yvideo"+"' id='"+"p1QgNF6J1h0"+"' src='"+play+"' frameborder='"+"0"+"' allow='"+"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"+"' allowfullscreen></iframe>;";
+
+}
 
 
 
 </script>
-
+<script src="/MUM/Js/AfisareMelodii.js"></script>
+<script src="/MUM/Js/DeleteMelodii.js"></script>
 </html>
