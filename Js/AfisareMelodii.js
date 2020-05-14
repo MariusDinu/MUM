@@ -32,10 +32,7 @@ $(document).ready(function() {
             success: function(html) {
                 //Assigning result to "display" div in "search.php" file.
                 $("#tabel1").html(html).show();
-                $("#Delete").click(function() {
-                    alert("asdasd");
-                    //Assigning search box value to javascript variable named as "name".
-                });
+
 
             }
         });

@@ -10,7 +10,7 @@ function deleteMelodie(){
   $cerereAdmin=$cerDelete->prepare($sqlDelete);
   $cerereAdmin->execute();
 
-  echo"fraiere";
+  
   
 }
 ?>
