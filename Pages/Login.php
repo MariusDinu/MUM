@@ -8,6 +8,7 @@
     <link href="/Mum/Css/site.css" rel="stylesheet">
     <link href="/Mum/Css/purecookie.css" rel="stylesheet">
     <link href="/Mum/Css/register.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js "></script>
 </head>
 
 <body>
@@ -85,23 +86,26 @@
                 </div>
                 <div id="show-registration"> </div>
                     </form>
-                    <form class="form-horizontal" method="get" action="/MUM//Pages/App.php">
+                   
                     
                         <label for="Username"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" id="user" name="user" value="" required="" >
                        
                         <div id="displayUser"></div>
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" id="password_login"  name="password_login" required="" >
+                        <input type="password" placeholder="Enter Password" id="password"  name="password" required="" >
                         <div id="password-error"></div>
-                        <div class="center">
-                        <button type="submit" id="login"  value="login" class="button-Start">Login</button>
-                         </div>
 
+                        <div id="errorLoginUser"></div>
+                        <div id="errorLoginPass"></div>
+                        <div class="center">
+                        <button class="button-Start" onclick="validate()" id="Login" type="submit">Login</button>
+                         </div>
+                
                          <div>
                             <a href="/MUM/Pages/welcome.php"> <p>Login with Spotify?</p> </a>
                          </div>
-                        </form>
+                        
             </div>
         </div>
                 </div>
@@ -117,22 +121,47 @@
     </footer>
 
     <script src="/MUM/Js/purecookie.js"></script>
-               <script>
+              
+<script>
 function validate(){
+var login=document.getElementById("Login");
+var userM=document.getElementById("user").value;
+var passM=document.getElementById("password").value;
+
+$.ajax({
+        //AJAX type is "Post".
+        type: "POST",
+        //Data will be sent to "ajax.php".
+        url: "/MUM/Login.php",
+        //Data, that will be sent to "ajax.php".
+        data: {
+            user: userM,
+            password: passM
+        },
+        //If result found, this funtion will be called.
+        success: function(html) {
+            //Assigning result to "display" div in "search.php" file.
+            console.log(html);
+            if(html==0){
+            $("#errorLoginPass").html('Parola sau user incorect!').show();
+
+            } else if(html==1)
+            window.location.href = "/MUM/Pages/App.php?user="+userM;
 
 
+           
+           
 
 
-
-
-
+        }
+    });
+  console.log(userM,passM);  
 }
 
 
 
 
-               </script>
-
+</script>
 </body>
 
 

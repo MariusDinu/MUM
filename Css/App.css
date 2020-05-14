@@ -24,7 +24,15 @@ button {
 }
 
 .Melodie {
+    height: 100px;
     background-color: black;
+    width: 80%;
+}
+
+.Melodie .first {
+    height: 100px;
+    background-color: black;
+    width: 80%;
 }
 
 .modal {
