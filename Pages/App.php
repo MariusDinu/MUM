@@ -45,14 +45,14 @@
         </div>
     </header>
 <?php    if(isset($_GET['user']))
-echo "<div class='"."Admin"."' id='"."user"."' value='".$_GET['user']."'>".$_GET['user']."</div>"
+echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>".$_GET['user']."</div>"
 ?>
 <div class="video-player-inner-wrap" id="video-player-inner-wrap">
                   <div class="redare" id="redare"></div>
                   
 </div>
 
-
+<button onclick="history.go(0)">Refresh</button>
 
 <div id="myModal" class="modal">
 
@@ -80,6 +80,7 @@ echo "<div class='"."Admin"."' id='"."user"."' value='".$_GET['user']."'>".$_GET
                         <p>
                             <label for="idle">Data lansarii</label>
 <select id="zi" name="zi">
+  <option value=""></option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -110,10 +111,11 @@ echo "<div class='"."Admin"."' id='"."user"."' value='".$_GET['user']."'>".$_GET
   <option value="28">28</option>
   <option value="29">29</option>
   <option value="30">30</option>
-  <option value="31" selected="selected">31</option>
+  <option value="31">31</option>
 </select>
 
  <select id="luna" name="luna">
+  <option value=""></option>
   <option value="1">Ianuarie</option>
   <option value="2">Februarie</option>
   <option value="3">Martie</option>
@@ -125,10 +127,11 @@ echo "<div class='"."Admin"."' id='"."user"."' value='".$_GET['user']."'>".$_GET
   <option value="9">Septembrie</option>
   <option value="10">Octombrie</option>
   <option value="11">Noiembrie</option>
-  <option value="12" selected="selected" >Decembrie</option>
+  <option value="12" >Decembrie</option>
 </select>
 
-<select id="zi" name="zi">
+<select id="an" name="an">
+  <option value=""></option>
   <option value="1990">1990</option>
   <option value="1991">1991</option>
   <option value="1992">1992</option>
@@ -159,7 +162,7 @@ echo "<div class='"."Admin"."' id='"."user"."' value='".$_GET['user']."'>".$_GET
   <option value="2017">2017</option>
   <option value="2018">2018</option>
   <option value="2019">2019</option>
-  <option value="2020" selected="selected">2020</option>
+  <option value="2020">2020</option>
 </select>
 
                         </p>
@@ -197,7 +200,7 @@ function goBack() {
 
 
 
-</script>
+
 
 <script>
 function deleteMelodie(current) {
@@ -232,14 +235,11 @@ var musicA=document.getElementById("user").value;
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var salvare=document.getElementById("Salvare");
-// When the user clicks the button, open the modal 
+
   modal.style.display = "block";
 
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
@@ -253,8 +253,9 @@ salvare.onclick=function(){
      var zi=document.getElementById("zi").value;
      var luna=document.getElementById("luna").value;
      var an=document.getElementById("an").value;
-     var data=zi+"-"+luna+"-"+an;
-    
+     if(zi==""&&luna==""&&an=="") var data="";
+     else {var data=zi+"-"+luna+"-"+an;}
+     console.log(data);
     $.ajax({
             //AJAX type is "Post".
             type: "POST",
@@ -263,22 +264,23 @@ salvare.onclick=function(){
             //Data, that will be sent to "ajax.php".
             data: {
                 nameM: name,
-               // artistM: artist,
-                //genM: gen,
-               // linkM: link,
-                //albumM: album,
-                //dataM: data,
+                artistM: artist,
+                genM: gen,
+                linkM: link,
+                albumM: album,
+                dataM: data,
                 musicAdmin: musicA,
                 musicIdDelete: music
             },
             //If result found, this funtion will be called.
             success: function(html) {
                 //Assigning result to "display" div in "search.php" file.
-                $("#tabel1").html(html).show();
+               
                 
 
             }
         });
+        
 
 }
 
@@ -291,8 +293,8 @@ window.onclick = function(event) {
 
 
 }
-
-
+</script>
+<script>
 function playMusic(current){
 var play=current.id;
 var redarea=document.getElementById("redare");
@@ -307,14 +309,6 @@ document.getElementById("closeVideo").remove();
 
 
 }
-
-
-</script>
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 
 </script>
 <script src="/MUM/Js/AfisareMelodii.js"></script>

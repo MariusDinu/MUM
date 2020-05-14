@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     //Assigning search box value to javascript variable named as "name".
 
-    var admin = $("#user").attr('value');
+    var admin = document.getElementById('user').value;
     //Validating, if "name" is empty.
     if (admin == "") {
         //Assigning empty value to "display" div in "search.php" file.

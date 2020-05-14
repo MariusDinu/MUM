@@ -16,7 +16,7 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 2.Crearea unei baze de date pentru inregistrare (creare cont in myphpadmin) *
 3.Creare script pentru inregistrare,logare,verificare date,modificare date,adaugare/eliminare date(admin). *
 4.Crearea unei baze de date pentru melodii. *
-5.Creare script pentru adaugare,eliminare,cautare in bara search,afisare detalii,adaugare,eliminare (admin). 
+5.Creare script pentru adaugare,eliminare,cautare in bara search,afisare detalii,adaugare,eliminare (admin). *
 6.Crearea unei baze de date pentru comentarii. * 
 7.Crearea unui script pentru adaugarea,eliminarea,afisarea lor.
 //Pagini

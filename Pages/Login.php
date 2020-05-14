@@ -85,16 +85,17 @@
                 </div>
                 <div id="show-registration"> </div>
                     </form>
-                    <form class="form-horizontal" method="post" action="/MUM/UserPageHome.php">
+                    <form class="form-horizontal" method="get" action="/MUM//Pages/App.php">
                     
                         <label for="Username"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" id="username" name="username" value="" required="" >
+                        <input type="text" placeholder="Enter Username" id="user" name="user" value="" required="" >
+                       
                         <div id="displayUser"></div>
                         <label for="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" id="password_login"  name="password_login" required="" >
                         <div id="password-error"></div>
                         <div class="center">
-                        <button type="submit" id="login" value="login" class="button-Start">Login</button>
+                        <button type="submit" id="login"  value="login" class="button-Start">Login</button>
                          </div>
 
                          <div>
@@ -116,13 +117,21 @@
     </footer>
 
     <script src="/MUM/Js/purecookie.js"></script>
-                <script> 
-        $(document).ready(function(){
-            
-                $("#show-registration").html("Registration succes!").show();
-            
-        })
-            </script>
+               <script>
+function validate(){
+
+
+
+
+
+
+
+}
+
+
+
+
+               </script>
 
 </body>
 

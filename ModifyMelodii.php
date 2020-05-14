@@ -1,32 +1,56 @@
 <?php 
 include "AfisareMelodii.php";
+
 function modifyMelodie(){
 
 
   $name=$_POST['nameM'];
- // $artist=$_POST['artistM'];
-  //$gen=$_POST['genM'];
-  //$album=$_POST['albumM'];
- // $link=$_POST['linkM'];
- // $data=$_POST['dataM'];
+  $artist=$_POST['artistM'];
+  $gen=$_POST['genM'];
+  $album=$_POST['albumM'];
+  $link=$_POST['linkM'];
+  $data=$_POST['dataM'];
   $musicAdmin=$_POST['musicAdmin'];
   $musicId=$_POST['musicIdDelete'];
   $bazaDelete= new BD();
   
-  //$sqlname = "  UPDATE `music` SET `Name`='$name' WHERE id='$musicId'";
- // $sqlartist = "  UPDATE `music` SET `Artist`='$artist' WHERE id='$musicId'";
-  //$sqlalbum = "  UPDATE `music` SET `Album`='$album' WHERE id='$musicId'";
- // $sqlgen = "  UPDATE `music` SET `Gen`='$gen' WHERE id='$musicId'";
-  //$sqlartist = "  UPDATE `music` SET `Artist`='$artist' WHERE id='$musicId'";
-  //$sqllink = "  UPDATE `music` SET `Link`='$link' WHERE id='$musicId'";
-  $sql = "UPDATE `music` SET `Date` = "+"1111"+" where Name='11'";
+  $sqlname = "  UPDATE `music` SET `Name`='$name' WHERE id='$musicId'";
+  $sqlartist = "  UPDATE `music` SET `Artist`='$artist' WHERE id='$musicId'";
+  $sqlalbum = "  UPDATE `music` SET `Album`='$album' WHERE id='$musicId'";
+  $sqlgen = "  UPDATE `music` SET `Gen`='$gen' WHERE id='$musicId'";
+  $sqlartist = "  UPDATE `music` SET `Artist`='$artist' WHERE id='$musicId'";
+  $sqllink = "  UPDATE `music` SET `Local`='$link' WHERE id='$musicId'";
+  $sqldata = "UPDATE `music` SET `Date` ='$data' where id='$musicId'";
 
   $cerDelete = $bazaDelete::obtine_conexiune();
-   $cerereAdmin=$cerDelete->prepare($sql);
-    $cerereAdmin->execute();
+   
+if($name==""){}
+    else {$cerereAdmin=$cerDelete->prepare($sqlname);
+     $cerereAdmin->execute();}
 
-//if($data==""){}
- // else
+if($artist==""){}
+   else
+     {$cerereAdmin=$cerDelete->prepare($sqlartist);
+     $cerereAdmin->execute();}
+
+if($gen==""){}
+   else
+     {$cerereAdmin=$cerDelete->prepare($sqlgen);
+     $cerereAdmin->execute();}
+
+if($album==""){}
+   else
+     {$cerereAdmin=$cerDelete->prepare($sqlalbum);
+     $cerereAdmin->execute();}
+
+if($link==""){}
+   else
+     {$cerereAdmin=$cerDelete->prepare($sqllink);
+     $cerereAdmin->execute();}
+
+if($data==""){}
+  else{$cerereAdmin=$cerDelete->prepare($sqldata);
+    $cerereAdmin->execute();}
    
   
   

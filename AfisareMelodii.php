@@ -81,8 +81,7 @@ function afisareMelodii(){
 
 <?php
 afisareMelodii();
-$output = `./DeleteMelodii.php`;
-echo $output; ?>  
+ ?>  
    
    
     
