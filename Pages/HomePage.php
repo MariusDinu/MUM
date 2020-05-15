@@ -94,7 +94,7 @@
 
     </footer>
 
-    <script src="/Js/purecookie.js"></script>
+    <script src="/MUM/Js/purecookie.js"></script>
 
 </body>
 

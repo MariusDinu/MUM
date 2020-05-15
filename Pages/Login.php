@@ -87,7 +87,7 @@
                 <div id="show-registration"> </div>
                     </form>
                    
-                    
+                    <form>
                         <label for="Username"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" id="user" name="user" value="" required="" >
                        
@@ -99,14 +99,14 @@
                         <div id="errorLoginUser"></div>
                         <div id="errorLoginPass"></div>
                         <div class="center">
-                        <button class="button-Start" onclick="validate()" id="Login" type="submit">Login</button>
+                        <button class="button-Start" onclick="validate()"  id="Login" type="submit">Login</button>
                          </div>
                 
                          <div>
                             <a href="/MUM/Pages/welcome.php"> <p>Login with Spotify?</p> </a>
                          </div>
-                        
-            </div>
+                </div>
+                </form>
         </div>
                 </div>
 
@@ -124,9 +124,12 @@
               
 <script>
 function validate(){
-var login=document.getElementById("Login");
-var userM=document.getElementById("user").value;
-var passM=document.getElementById("password").value;
+
+ 
+
+ var userM = document.getElementById("user").value;
+ var passM = document.getElementById("password").value;
+ var login = document.getElementById("Login");
 
 $.ajax({
         //AJAX type is "Post".
@@ -146,8 +149,9 @@ $.ajax({
             $("#errorLoginPass").html('Parola sau user incorect!').show();
 
             } else if(html==1)
+            {
             window.location.href = "/MUM/Pages/App.php?user="+userM;
-
+        }
 
            
            
@@ -156,6 +160,11 @@ $.ajax({
         }
     });
   console.log(userM,passM);  
+
+
+
+
+
 }
 
 
