@@ -135,7 +135,7 @@ $.ajax({
         //AJAX type is "Post".
         type: "POST",
         //Data will be sent to "ajax.php".
-        url: "/MUM/Login.php",
+        url: "/MUM/PhpRegister/Login.php",
         //Data, that will be sent to "ajax.php".
         data: {
             user: userM,

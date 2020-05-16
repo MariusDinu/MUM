@@ -23,7 +23,7 @@ $(document).ready(function() {
             //AJAX type is "Post".
             type: "POST",
             //Data will be sent to "ajax.php".
-            url: "/MUM/AfisareMelodii.php",
+            url: "/MUM/PhpMusic/AfisareMelodii.php",
             //Data, that will be sent to "ajax.php".
             data: {
                 verify: admin

@@ -210,7 +210,7 @@ function deleteMelodie(current) {
         //AJAX type is "Post".
         type: "POST",
         //Data will be sent to "ajax.php".
-        url: "/MUM/DeleteMelodii.php",
+        url: "/MUM/PhpMusic/DeleteMelodii.php",
         //Data, that will be sent to "ajax.php".
         data: {
             musicAdmin: musicA,
@@ -260,7 +260,7 @@ salvare.onclick=function(){
             //AJAX type is "Post".
             type: "POST",
             //Data will be sent to "ajax.php".
-            url: "/MUM/ModifyMelodii.php",
+            url: "/MUM/PhpMusic/ModifyMelodii.php",
             //Data, that will be sent to "ajax.php".
             data: {
                 nameM: name,

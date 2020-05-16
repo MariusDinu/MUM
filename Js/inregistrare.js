@@ -19,7 +19,7 @@ $(document).ready(function() {
                 //AJAX type is "Post".
                 type: "POST",
                 //Data will be sent to "ajax.php".
-                url: "/MUM/inregistrare.php",
+                url: "/MUM/PhpRegister/inregistrare.php",
                 //Data, that will be sent to "ajax.php".
                 data: {
                     register: registerButton,

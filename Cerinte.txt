@@ -35,11 +35,11 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
   * Statistici in formate deschise 
   * Diversele anunturi ca flux RSS
   {
-       * Top 10    
+       * Top 10     
        * Comentarii recente
-       * Melodii adaugate recent
+       * Melodii adaugate recent - 
 } 
-  * Liste de melodii preferate import/export
+  * Liste de melodii preferate import/export 
   * Cautare 
   * Recomandari
   

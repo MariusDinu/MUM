@@ -95,7 +95,7 @@
     </footer>
 
     <script src="/MUM/Js/purecookie.js"></script>
-
+]
 </body>
 
 
