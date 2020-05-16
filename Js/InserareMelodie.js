@@ -15,9 +15,13 @@ function insertMelodie() {
     }
 
 
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    $('#Inserare').click(function() {
 
-
-    inserare.onclick = function() {
         var name = document.getElementById("numeleMelodieiInserare").value;
         var artist = document.getElementById("artistInserare").value;
         var gen = document.getElementById("genInserare").value;
@@ -27,11 +31,12 @@ function insertMelodie() {
         var luna = document.getElementById("lunaInserare").value;
         var an = document.getElementById("anInserare").value;
 
-        if ((gen == "") || (link == "") || (zi == "") || (luna == "") || (an = "")) {} else {
+        if ((name == "") || (gen == "") || (link == "") || (zi == "") || (luna == "") || (an = "")) {} else {
             modal.style.display = "none";
             var data = zi + "-" + luna + "-" + an;
-            console.log(data);
+
             $.ajax({
+                dataType: "text",
                 //AJAX type is "Post".
                 type: "POST",
                 //Data will be sent to "ajax.php".
@@ -49,15 +54,17 @@ function insertMelodie() {
                 },
                 //If result found, this funtion will be called.
                 success: function(html) {
-                    if (html == 1)
-                    //Assigning result to "display" div in "search.php" file.
-                        alert("Am inserat!");
-                    else
-                        alert("Inserarea a esuat!");
+                    $("#casa").html(html).show();
+
+                    /* var a = document.createElement("script");
+                    a.src = "/Mum/Js/AfisareMelodii.js";
+                    document.body.appendChild(a);*/
+
+
 
 
                 }
             });
         }
-    }
+    });
 }

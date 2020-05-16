@@ -1,3 +1,56 @@
+button.buttonAdmin {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    width: 20%;
+}
+
+button.buttonInsert {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    width: 20%;
+    float: right;
+}
+
 button {
     -webkit-appearance: button;
     -webkit-writing-mode: horizontal-tb !important;
@@ -21,18 +74,61 @@ button {
     border-style: outset;
     border-color: buttonface;
     border-image: initial;
+    width: 60px;
+}
+
+button.Play {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    cursor: pointer;
+    background-color: black;
+}
+
+.containerMusic {
+    height: 100px;
+    background-color: white;
+    width: 80%;
+    display: inline;
 }
 
 .Melodie {
-    height: 100px;
     background-color: black;
-    width: 80%;
+    width: 100%;
+    display: flex;
+}
+
+a.form-inline {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+a.form-inline div.second {
+    display: flex;
+    width: 100%;
+    align-content: space-between;
+    border-color: red;
+}
+
+.Melodie .second .ver {
+    background-color: red;
+    display: inline;
+    width: 100px;
+    height: 100px;
+}
+
+.Melodie .first button svg {
+    width: 100%;
+    height: 100%;
+    color: #bf2e2e;
+    background-color: blue;
+    border-radius: 20px;
 }
 
 .Melodie .first {
-    height: 100px;
     background-color: black;
-    width: 80%;
 }
 
 .modal {
@@ -84,4 +180,9 @@ button {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+text-decoration: none;
+cursor: pointer;
+
 }

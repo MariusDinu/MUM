@@ -72,7 +72,7 @@ var admin = $("#user").attr('value');
             //AJAX type is "Post".
             type: "POST",
             //Data will be sent to "ajax.php".
-            url: "/MUM/AfisareMelodii.php",
+            url: "/MUM/PhpMusic/AfisareMelodii.php",
             //Data, that will be sent to "ajax.php".
             data: {
                 verify: admin
@@ -80,7 +80,7 @@ var admin = $("#user").attr('value');
             //If result found, this funtion will be called.
             success: function(html) {
                 //Assigning result to "display" div in "search.php" file.
-                $("#tabel1").html(html).show();
+                $("#tabelAfisare").html(html).show();
                 
 
             }

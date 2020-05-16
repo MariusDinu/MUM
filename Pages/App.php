@@ -5,6 +5,7 @@
     
     
     <link href="/Mum/Css/App.css" rel="stylesheet">
+    <link href="/MUM/Css/Layout.css" rel="stylesheet">
     </head>
 <body>
 
@@ -21,40 +22,65 @@
         <div class="header-middle-area">
             <div class="main-nav">
                 <ul class="main-sections">
-                    
+                <li class="Home">
+                        <a href="/MUM/Pages/HomePage.php">
+                            <svg id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#clip0)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"></path><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"></path><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"></path></g></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="Home">
+                        <a href="/MUM/Pages/HomePage.php">
+                            <svg id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#clip0)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"></path><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"></path><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"></path></g></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="Home">
+                        <a href="/MUM/Pages/HomePage.php">
+                            <svg id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#clip0)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"></path><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"></path><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"></path></g></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="Home">
+                        <a href="/MUM/Pages/HomePage.php">
+                            <svg id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#clip0)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"></path><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"></path><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"></path></g></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+
+
+
+
                 </ul>
 
             </div>
         </div>
 
         <div class="search" role="search" id="search-area">
-            <div class="chw-widget">
-                <form role="search" method="get" id="searchform" class="search-form" action="https://css-tricks.com/">
-                    <label class="screen-reader-text" id="search-label" for="search-input">Search for:</label>
-                    <input type="search" required="" name="s" id="search-input" class="search-field" value="">
-                    <input type="hidden" name="orderby" value="relevance">
-                    <input type="hidden" name="post_type" value="post,page,guide">
+                
+                    <input type="search" required="required" name="" id="Search" class="search-field" value="">
+                   
                     <button type="submit" class="button-search">
                         <span class="screen-reader-text">Search</span>
-                        <svg class="icon-search" width="26px" height="26px">
-                            <use xlink:href="#icon-search"></use>
-                        </svg>
+                        
                     </button>
-                </form>
+               
             </div>
         </div>
     </header>
 <?php    if(isset($_GET['user']))
-echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>".$_GET['user']."</div>"
+echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminului:".$_GET['user']."</div>"
 ?>
+
+<div class="casa" id="casa"> asdasdasdasd</div>
 <div class="video-player-inner-wrap" id="video-player-inner-wrap">
                   <div class="redare" id="redare"></div>
                   
 </div>
 
 <button onclick="history.go(0)">Refresh</button>
-<button class="Insert" id="Insert" data-toggle="modal" data-target="#music-Settings" onclick="insertMelodie()" >Adaugare</button> 
-
+<button class="buttonInsert" id="Insert" data-toggle="modal" data-target="#music-Settings" onclick="insertMelodie()" >Adaugare</button> 
+<br></br>
 <div id="myModalModify" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
@@ -203,7 +229,7 @@ echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>".$_GET['user
                         </p>
                         <p>
                             <label for="idle">Data lansarii</label>
-<select id="ziInserare" name="zi">
+<select id="ziInserare" name="zi" required="required">
   <option value=""></option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -238,7 +264,7 @@ echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>".$_GET['user
   <option value="31">31</option>
 </select>
 
- <select id="lunaInserare" name="luna">
+ <select id="lunaInserare" name="luna" required="required">
   <option value=""></option>
   <option value="1">Ianuarie</option>
   <option value="2">Februarie</option>
@@ -254,7 +280,7 @@ echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>".$_GET['user
   <option value="12" >Decembrie</option>
 </select>
 
-<select id="anInserare" name="an">
+<select id="anInserare" name="an" required="required">
   <option value=""></option>
   <option value="1990">1990</option>
   <option value="1991">1991</option>
@@ -307,14 +333,11 @@ echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>".$_GET['user
 
 
 
-<div class="container" >
-<div class="tabel" id="tabel" value="1"> 
-<ol class="c" id="tabel1" value="1">
-    
+<div class="containerC" >
+<div class="containerMusic" id="tabelAfisare" value="1"> 
 
-</ol>
 
-</div>
+</div><div class="containerMusic" id="tabelSearch" value="1"> 
                 </div>
                 <button onclick="goBack()">Go Back</button>
                
@@ -348,8 +371,14 @@ function deleteMelodie(current) {
         //If result found, this funtion will be called.
         success: function(html) {
             //Assigning result to "display" div in "search.php" file.
-            $("#tabel1").html(html).show();
-
+            /*$("#tabelAfisare").html(html).show();*/
+             /*location.reload();*/
+            var a=document.createElement("script");
+            a.src="/Mum/Js/AfisareMelodii.js";
+            document.body.appendChild(a);
+            
+           
+             
 
         }
     });
@@ -410,6 +439,8 @@ salvare.onclick=function(){
             },
             //If result found, this funtion will be called.
             success: function(html) {
+
+                document.getElementById("casa").innerHTML=html;
                 //Assigning result to "display" div in "search.php" file.
                
                 
@@ -464,4 +495,5 @@ document.getElementById("closeVideo").remove();
 
 <script src="/MUM/Js/AfisareMelodii.js"></script>
 <script src="/MUM/Js/InserareMelodie.js"></script>
+<script src="/MUM/Js/Search.js"></script>
 </html>

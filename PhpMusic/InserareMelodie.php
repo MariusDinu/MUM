@@ -8,15 +8,18 @@ function adaugaMelodie(){
     $link=$_POST['linkM'];
     $album=$_POST['albumM'];
     $data=$_POST['dataM'];
-    $musicA=$_POST['musicAdmin'];
+    
 
       $baza= new BD();
       $sql = "INSERT INTO `music`( `Name`, `Artist`, `Album`, `Gen`, `Date`, `Local`) VALUES ('$name','$artist','$album','$gen','$data','$link')";
       $cerere = $baza::obtine_conexiune()->prepare($sql);
       $cerere->execute();
-      return 1;
+      $b=1;
+      echo $b;
 }
  ?>
  <?php
  adaugaMelodie();
+ 
+ 
 ?>

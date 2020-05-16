@@ -1,13 +1,13 @@
-<?php
+<?php 
 include "/xampp/htdocs/MUM/PhpRegister/connect.php";
-
-function afisareUser(){
+function afisareUserSearch($search_value){
     $bazaUser= new BD();
     $sqlUser = "SELECT * FROM music order by id";
     $cerUser = $bazaUser::obtine_conexiune();
     $cerereUser=$cerUser->prepare($sqlUser);
     $cerereUser->execute();
     $abc=$cerereUser->fetchAll();
+    if($cerereUser->rowCount()>0){
     foreach( $cerUser->query($sqlUser) as $row){
      
     
@@ -22,15 +22,16 @@ function afisareUser(){
       "<p id='Album:".$row['Album']."'>".$row['Album']."</p>"
      ."</div></a></div> ";
      
-      
+    }
     }}
-function afisareAdmin(){
+function afisareAdminSearch($search_value){
       $bazaAdmin= new BD();
-      $sqlAdmin = "SELECT * FROM music order by id";
+      $sqlAdmin = "SELECT * FROM music  where Name like '%".$search_value."%' order by id ";
       $cerAdmin = $bazaAdmin::obtine_conexiune();
       $cerereAdmin=$cerAdmin->prepare($sqlAdmin);
       $cerereAdmin->execute();
       $abc=$cerereAdmin->fetchAll();
+      if($cerereAdmin->rowCount()>0){
       foreach( $cerAdmin->query($sqlAdmin) as $row){
        
       
@@ -54,38 +55,42 @@ function afisareAdmin(){
        "</div> <br></br>";
        
         
-      }}
+      }}else
+      {
+         echo "Nu am gasit nimic!";
 
-function afisareMelodii(){
-    $user_value=$_POST['verify'];
-    $baza= new BD();
-    $sql_user="SELECT * FROM register where UserName='$user_value'";
-    $cer = $baza::obtine_conexiune();
-    $cerere=$cer->prepare($sql_user);
-    $cerere->execute();
-    $ver_user=$cerere->fetchAll();
-    foreach($cer->query($sql_user) as $row)
-    {
-            if($row['Admin']==1)
-            {
-              afisareAdmin();
-            }
-            else {
-              afisareUser();
-            }
-
+      }
+    
+    
+    
+    
+    }
+      function afisareMelodiiSearch(){
+        $user_value=$_POST['admin'];
+        $search_value=$_POST['search'];
+        $baza= new BD();
+        $sql_user="SELECT * FROM register where UserName='$user_value'";
+        $cer = $baza::obtine_conexiune();
+        $cerere=$cer->prepare($sql_user);
+        $cerere->execute();
+        $ver_user=$cerere->fetchAll();
+        foreach($cer->query($sql_user) as $row)
+        {
+                if($row['Admin']==1)
+                {
+                  afisareAdminSearch($search_value);
+                }
+                else {
+                  afisareUserSearch($search_value);
+                }
+    
+        }
+    
+        
     }
 
-    
-}
-?>
+      ?>
 
-<?php
-afisareMelodii();
- ?>  
-   
-   
-    
-  
-
-<?php  ?>
+      <?php
+      afisareMelodiiSearch();
+      ?>

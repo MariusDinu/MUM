@@ -31,7 +31,7 @@ $(document).ready(function() {
             //If result found, this funtion will be called.
             success: function(html) {
                 //Assigning result to "display" div in "search.php" file.
-                $("#tabel1").html(html).show();
+                $("#tabelAfisare").html(html).show();
 
 
             }
