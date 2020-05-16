@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "/xampp/htdocs/MUM/PhpRegister/connect.php";
 function cautaEmail(){
      $email_value=$_POST['email'];
       $baza= new BD();

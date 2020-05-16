@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "/xampp/htdocs/MUM/PhpRegister/connect.php";
 function cautaUsername(){
                             $user_name=$_POST['username'];
                              $baza= new BD();

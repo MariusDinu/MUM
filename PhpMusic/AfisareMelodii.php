@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "/xampp/htdocs/MUM/PhpRegister/connect.php";
 
 function afisareUser(){
     $bazaUser= new BD();
