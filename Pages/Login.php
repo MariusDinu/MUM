@@ -99,7 +99,7 @@
                         <div id="errorLoginUser"></div>
                         <div id="errorLoginPass"></div>
                         <div class="center">
-                        <button class="button-Start" onclick="validate()"  id="Login" type="submit">Login</button>
+                        <button class="button-Start"   id="Login" >Login</button>
                          </div>
                 
                          <div>
@@ -121,21 +121,23 @@
     </footer>
 
     <script src="/MUM/Js/purecookie.js"></script>
-              
+    <script src="/MUM/Js/Login.js"></script>
+             
 <script>
-function validate(){
+/*function validate(){
 
  
 
  var userM = document.getElementById("user").value;
  var passM = document.getElementById("password").value;
  var login = document.getElementById("Login");
-
-$.ajax({
+ 
+$.ajax({processData: true,
         //AJAX type is "Post".
         type: "POST",
         //Data will be sent to "ajax.php".
         url: "/MUM/PhpRegister/Login.php",
+        
         //Data, that will be sent to "ajax.php".
         data: {
             user: userM,
@@ -146,8 +148,10 @@ $.ajax({
             //Assigning result to "display" div in "search.php" file.
             console.log(html);
             if(html==0){
-            $("#errorLoginPass").html('Parola sau user incorect!').show();
-
+                  location.reload(false);
+                  $("#errorLoginPass").html('Parola sau user incorect!');
+                  document.getElementById("errorLoginPass").innerHTML="asdasdasdas";
+                  
             } else if(html==1)
             {
             window.location.href = "/MUM/Pages/App.php?user="+userM;
@@ -158,7 +162,8 @@ $.ajax({
 
 
         }
-    });
+       
+    }); 
   console.log(userM,passM);  
 
 
@@ -167,7 +172,7 @@ $.ajax({
 
 }
 
-
+*/
 
 
 </script>

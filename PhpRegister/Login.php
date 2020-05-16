@@ -11,16 +11,19 @@ if($cerere->rowCount()==1)
  {return 1;}
 else {return 2;}
                            }
-  if (isset($_POST['user'])) 
- { $a=cautaEmailAndPass();
+  
 ?>
                         
  
- 
-<?php  if($a==1) 
-{ echo '1'  ;} 
- else echo '0'
-  ?>
+<a onclick="fillerrorPass()">
+<?php  
 
+if (isset($_POST['user'])) 
+ { $a=cautaEmailAndPass();
+if($a==1) 
+{ echo '1'  ;} 
+ else echo '0';
+  ?>
+</a>
  <?php } ?>
                  
