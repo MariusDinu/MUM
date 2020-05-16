@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //On pressing a key on "Search box" in "search.php" file. This function will be called.
-    $("#Login").click(function() {
+    $("#Login").click(function(event) {
         //Assigning search box value to javascript variable named as "name".
         var userM = document.getElementById("user").value;
         var passM = document.getElementById("password").value;
@@ -39,6 +39,6 @@ $(document).ready(function() {
             }
 
         });
-
+        event.preventDefault();
     });
 });

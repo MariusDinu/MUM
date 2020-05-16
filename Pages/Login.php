@@ -9,6 +9,7 @@
     <link href="/Mum/Css/purecookie.css" rel="stylesheet">
     <link href="/Mum/Css/register.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js "></script>
+    
 </head>
 
 <body>
@@ -99,7 +100,7 @@
                         <div id="errorLoginUser"></div>
                         <div id="errorLoginPass"></div>
                         <div class="center">
-                        <button class="button-Start"   id="Login" >Login</button>
+                        <button class="button-Start"   id="Login" type="submit">Login</button>
                          </div>
                 
                          <div>
@@ -120,62 +121,16 @@
 
     </footer>
 
-    <script src="/MUM/Js/purecookie.js"></script>
-    <script src="/MUM/Js/Login.js"></script>
+   
              
 <script>
-/*function validate(){
-
- 
-
- var userM = document.getElementById("user").value;
- var passM = document.getElementById("password").value;
- var login = document.getElementById("Login");
- 
-$.ajax({processData: true,
-        //AJAX type is "Post".
-        type: "POST",
-        //Data will be sent to "ajax.php".
-        url: "/MUM/PhpRegister/Login.php",
-        
-        //Data, that will be sent to "ajax.php".
-        data: {
-            user: userM,
-            password: passM
-        },
-        //If result found, this funtion will be called.
-        success: function(html) {
-            //Assigning result to "display" div in "search.php" file.
-            console.log(html);
-            if(html==0){
-                  location.reload(false);
-                  $("#errorLoginPass").html('Parola sau user incorect!');
-                  document.getElementById("errorLoginPass").innerHTML="asdasdasdas";
-                  
-            } else if(html==1)
-            {
-            window.location.href = "/MUM/Pages/App.php?user="+userM;
-        }
-
-           
-           
 
 
-        }
-       
-    }); 
-  console.log(userM,passM);  
-
-
-
-
-
-}
-
-*/
 
 
 </script>
+<script src="/MUM/Js/purecookie.js"></script>
+    <script src="/MUM/Js/Login.js"></script>
 </body>
 
 

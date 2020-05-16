@@ -20,7 +20,7 @@ function insertMelodie() {
             modal.style.display = "none";
         }
     }
-    $('#Inserare').click(function() {
+    $('#Inserare').click(function(event) {
 
         var name = document.getElementById("numeleMelodieiInserare").value;
         var artist = document.getElementById("artistInserare").value;
@@ -36,8 +36,7 @@ function insertMelodie() {
             var data = zi + "-" + luna + "-" + an;
 
             $.ajax({
-                dataType: "text",
-                //AJAX type is "Post".
+
                 type: "POST",
                 //Data will be sent to "ajax.php".
                 url: "/MUM/PhpMusic/InserareMelodie.php",
@@ -55,15 +54,22 @@ function insertMelodie() {
                 //If result found, this funtion will be called.
                 success: function(html) {
 
-                    /* var a = document.createElement("script");
-                    a.src = "/Mum/Js/AfisareMelodii.js";
-                    document.body.appendChild(a);*/
+                    if (html == 1) {
+
+                        alert("Succes!");
+
+
+                    } else if (html == 2) {
+                        alert("Fail!");
+                    }
 
 
 
-
+                    event.preventDefault();
                 }
             });
+
         }
+
     });
 }

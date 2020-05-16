@@ -15,7 +15,7 @@ else {return 2;}
 ?>
                         
  
-<a onclick="fillerrorPass()">
+
 <?php  
 
 if (isset($_POST['user'])) 
@@ -24,6 +24,6 @@ if($a==1)
 { echo '1'  ;} 
  else echo '0';
   ?>
-</a>
+
  <?php } ?>
                  

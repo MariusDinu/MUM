@@ -13,13 +13,15 @@ function adaugaMelodie(){
       $baza= new BD();
       $sql = "INSERT INTO `music`( `Name`, `Artist`, `Album`, `Gen`, `Date`, `Local`) VALUES ('$name','$artist','$album','$gen','$data','$link')";
       $cerere = $baza::obtine_conexiune()->prepare($sql);
-      $cerere->execute();
-      $b=1;
-      echo $b;
+      if($cerere->execute())
+      return 1;
+      else return 2;
 }
  ?>
  <?php
- adaugaMelodie();
- 
+ $b=adaugaMelodie();
+ if($b==1) 
+{ echo '1'  ;} 
+ else echo '2';
  
 ?>
