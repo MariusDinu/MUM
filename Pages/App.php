@@ -72,7 +72,7 @@
 echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminului:".$_GET['user']."</div>"
 ?>
 
-<div class="casa" id="casa"> asdasdasdasd</div>
+
 <div class="video-player-inner-wrap" id="video-player-inner-wrap">
                   <div class="redare" id="redare"></div>
                   

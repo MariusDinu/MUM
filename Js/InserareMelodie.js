@@ -54,7 +54,6 @@ function insertMelodie() {
                 },
                 //If result found, this funtion will be called.
                 success: function(html) {
-                    $("#casa").html(html).show();
 
                     /* var a = document.createElement("script");
                     a.src = "/Mum/Js/AfisareMelodii.js";
