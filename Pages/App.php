@@ -13,7 +13,7 @@
         <div class="logo2">
             <a href="/">
                 <svg class="icon-logo-text">
-                <a href="HomePage.html"> </a>
+                <a href="/MUM/Pages/HomePage.php"> </a>
             </svg>
             </a>
         </div>
