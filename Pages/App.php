@@ -76,9 +76,15 @@ foreach ($cer->query($sql) as $row)
             <div class='main-nav'>
                 <ul class='main-sections'>
                     <li class='Home'>
-                        <a href='/MUM/Pages/HomePage.php'>
+                        <a href='/MUM/Pages/App.php?user=".$_GET['user']."'>
                             <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
                             <span>Home</span>
+                        </a>
+                    </li>
+                    <li class='Home'>
+                        <a onclick='"."AfisareAlbume()"."'>
+                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
+                            <span class>Albume</span>
                         </a>
                     </li>
                     </ul>
@@ -97,6 +103,7 @@ foreach ($cer->query($sql) as $row)
 
         }
 ?>
+
         <div class="search" role="search" id="search-area">
                 
                     <input type="search" required="required" name="" id="Search" class="search-field" value="">
@@ -113,7 +120,7 @@ foreach ($cer->query($sql) as $row)
 echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminului:".$_GET['user']."</div>"
 ?>
 
-
+<a onclick="AfisareAlbume()">asdasdasd</a>
 <button onclick="history.go(0)">Refresh</button>
 <button onclick="goBack()">Go Back</button>
 <button class="buttonInsert" id="Insert" data-toggle="modal" data-target="#music-Settings" onclick="insertMelodie()" >Adaugare</button> 
@@ -374,9 +381,11 @@ echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminu
 <div class="wrap" id="tabelAfisare" value="1"> 
 
 
-</div><div class="wrap" id="tabelSearch" value="1"> 
+</div>
+<div class="wrap" id="tabelSearch" value="1"> 
                 </div>
-               
+<div class="wrap" id="tabelAlbume" value="1"> 
+                </div>            
 </div>  
 
 <div class="pozitionare">
@@ -447,11 +456,6 @@ span.onclick = function() {
 }
 
 
-
-
-
-
-
 salvare.onclick=function(){
      modal.style.display = "none";
      var name=document.getElementById("numeleMelodiei").value;
@@ -505,7 +509,34 @@ window.onclick = function(event) {
 
 }
 </script>
+<script>
+function AfisareAlbume(){
 
+    var musicA= $("#user").attr('value');
+$.ajax({
+            //AJAX type is "Post".
+            type: "POST",
+            //Data will be sent to "ajax.php".
+            url: "/MUM/PhpMusic/AfisareAlbume.php",
+            //Data, that will be sent to "ajax.php".
+            data: {
+                verify: musicA
+               
+            },
+            //If result found, this funtion will be called.
+            success: function(html) {
+
+                $("#tabelAfisare").hide();
+                $("#tabelAlbume").html(html).show();
+                //Assigning result to "display" div in "search.php" file.
+               
+                
+
+            }
+        });
+}
+
+</script>
 <script>
 function playMusic(current){
 var play=current.id;
