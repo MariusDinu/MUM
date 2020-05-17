@@ -9,368 +9,30 @@
     </head>
 <body>
 
-<header class="site-header">
-        <div class="logo2">
-            <a href="/">
-                <svg class="icon-logo-text">
-                <a href="/MUM/Pages/HomePage.php"> </a>
-            </svg>
-            </a>
-        </div>
-<?php
-include "/xampp/htdocs/MUM/PhpRegister/connect.php";
-function verify(){
-$user=$_GET['user'];
 
-$baza= new BD();
-$sql = "SELECT * from register where UserName='$user'";
-$cer = $baza::obtine_conexiune();
-$cerere=$cer->prepare($sql);
-$cerere->execute();
-foreach ($cer->query($sql) as $row)
-{
-    if($row['Admin']==1)
-    return 1;
-    else return 0;
-   
-}
 
-}
+<?php 
+include 'TemplateNav.php';
 ?>
-        <?php    if(verify($_GET['user'])==1)
-{
-     echo   "<div class='header-middle-area'>
-            <div class='main-nav'>
-                <ul class='main-sections'>
-                <li class='Home'>
-                        <a href='/MUM/Pages/App.php'>
-                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
-                            <span>Melodii</span>
-                        </a>
-                    </li>
-                    <li class='Home'>
-                        <a href='/MUM/Pages/HomePage.php'>
-                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
-                            <span>Useri</span>
-                        </a>
-                    </li>
-                    <li class='Home'>
-                        <a href='/MUM/Pages/HomePage.php'>
-                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
-                            <span>Admin:".$_GET['user']."</span>
-                        </a>
-                    </li>
-                   
-
-
-
-
-
-                </ul>
-
-            </div>
-        </div>";}
-        else {
-
-          echo  "<div class='header-middle-area'>
-            <div class='main-nav'>
-                <ul class='main-sections'>
-                    <li class='Home'>
-                        <a href='/MUM/Pages/App.php?user=".$_GET['user']."'>
-                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li class='Home'>
-                        <a onclick='"."AfisareAlbume()"."'>
-                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
-                            <span class>Albume</span>
-                        </a>
-                    </li>
-                    </ul>
-                    </div>
-                    </div>";
-
-
-
-
-
-
-
-
-
-
-
-        }
-?>
-
-        <div class="search" role="search" id="search-area">
-                
-                    <input type="search" required="required" name="" id="Search" class="search-field" value="">
-                   
-                    <button type="submit" class="button-search">
-                        <span class="screen-reader-text">Search</span>
-                        
-                    </button>
-               
-            </div>
-        </div>
-    </header>
+       
 <?php    if(isset($_GET['user']))
 echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminului:".$_GET['user']."</div>"
 ?>
 
-<a onclick="AfisareAlbume()">asdasdasd</a>
+
 <button onclick="history.go(0)">Refresh</button>
 <button onclick="goBack()">Go Back</button>
 <button class="buttonInsert" id="Insert" data-toggle="modal" data-target="#music-Settings" onclick="insertMelodie()" >Adaugare</button> 
 <br></br>
-<div id="myModalModify" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <form action="" onsubmit="" class="room-settings" id="roomSettings" method="post">
-                    <fieldset>
-                        <p>
-                            <label for="Name">Numele melodiei</label>
-                            <input id="numeleMelodiei" name="numeleMelodiei" placeholder="Introdu noul nume" type="text" >
-                        </p>
-                        <p>
-                            <label for="Artist">Artist</label>
-                            <input id="artist" name="artist" placeholder="Introdu noul artist" type="text" >
-                        </p>
-                        <p>
-                            <label for="spec">Gen</label>
-                            <input id="gen" name="gen" placeholder="Introdu noul gen" type="text" >
-                            <p id="errorGen"></p> 
-                        </p>
-                        <p>
-                            <label for="spec">Album</label>
-                            <input id="album" name="album" placeholder="Introdu noul Album" type="text">
-                        </p>
-                        <p>
-                            <label for="idle">Data lansarii</label>
-<select id="zi" name="zi">
-  <option value=""></option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-  <option value="11">11</option>
-  <option value="12">12</option>
-  <option value="13">13</option>
-  <option value="14">14</option>
-  <option value="15">15</option>
-  <option value="16">16</option>
-  <option value="17">17</option>
-  <option value="18">18</option>
-  <option value="19">19</option>
-  <option value="20">20</option>
-  <option value="21">21</option>
-  <option value="22">22</option>
-  <option value="23">23</option>
-  <option value="24">24</option>
-  <option value="25">25</option>
-  <option value="26">26</option>
-  <option value="27">27</option>
-  <option value="28">28</option>
-  <option value="29">29</option>
-  <option value="30">30</option>
-  <option value="31">31</option>
-</select>
 
- <select id="luna" name="luna">
-  <option value=""></option>
-  <option value="1">Ianuarie</option>
-  <option value="2">Februarie</option>
-  <option value="3">Martie</option>
-  <option value="4">Aprilie</option>
-  <option value="5">Mai</option>
-  <option value="6">Iunie</option>
-  <option value="7">Iulie</option>
-  <option value="8">August</option>
-  <option value="9">Septembrie</option>
-  <option value="10">Octombrie</option>
-  <option value="11">Noiembrie</option>
-  <option value="12" >Decembrie</option>
-</select>
+<?php 
 
-<select id="an" name="an">
-  <option value=""></option>
-  <option value="1990">1990</option>
-  <option value="1991">1991</option>
-  <option value="1992">1992</option>
-  <option value="1993">1993</option>
-  <option value="1994">1994</option>
-  <option value="1995">1995</option>
-  <option value="1996">1996</option>
-  <option value="1997">1997</option>
-  <option value="1998">1998</option>
-  <option value="1999">1999</option>
-  <option value="2000">2000</option>
-  <option value="2001">2001</option>
-  <option value="2002">2002</option>
-  <option value="2003">2003</option>
-  <option value="2004">2004</option>
-  <option value="2005">2005</option>
-  <option value="2006">2006</option>
-  <option value="2007">2007</option>
-  <option value="2008">2008</option>
-  <option value="2009">2009</option>
-  <option value="2010">2010</option>
-  <option value="2011">2011</option>
-  <option value="2012">2012</option>
-  <option value="2013">2013</option>
-  <option value="2014">2014</option>
-  <option value="2015">2015</option>
-  <option value="2016">2016</option>
-  <option value="2017">2017</option>
-  <option value="2018">2018</option>
-  <option value="2019">2019</option>
-  <option value="2020">2020</option>
-</select>
+include 'TemplateModal.php';
 
-                        </p>
-                        <p>
-                            <label for="spec">Link</label>
-                            <input id="link" name="link" placeholder="Introdu noul link" type="text">
-                        </p>
-                    
-                        <button class="btn btn-success" id="Salvare" type="submit">Salvare</button>
-                    </fieldset>
-                </form>
-  </div>
 
-</div>
-<div id="myModalInsert" class="modal">
+?>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="closeInsert">&times;</span>
-    <form action="" onsubmit="" class="music-Settings" id="musicSettings" method="post">
-                    <fieldset>
-                        <p>
-                            <label for="Name">Numele melodiei</label>
-                            <input id="numeleMelodieiInserare" name="numeleMelodiei" placeholder="Introdu noul nume" type="text" required="required">
-                        </p>
-                        <p>
-                            <label for="Artist">Artist</label>
-                            <input id="artistInserare" name="artist" placeholder="Introdu noul artist" type="text">
-                        </p>
-                        <p>
-                            <label for="Geb">Gen</label>
-                            <input id="genInserare" name="gen" placeholder="Introdu noul gen" type="text" required="required">
-                        </p>
-                        <p>
-                            <label for="Album">Album</label>
-                            <input id="albumInserare" name="album" placeholder="Introdu noul Album" type="text">
-                        </p>
-                        <p>
-                            <label for="idle">Data lansarii</label>
-<select id="ziInserare" name="zi" required="required">
-  <option value=""></option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-  <option value="11">11</option>
-  <option value="12">12</option>
-  <option value="13">13</option>
-  <option value="14">14</option>
-  <option value="15">15</option>
-  <option value="16">16</option>
-  <option value="17">17</option>
-  <option value="18">18</option>
-  <option value="19">19</option>
-  <option value="20">20</option>
-  <option value="21">21</option>
-  <option value="22">22</option>
-  <option value="23">23</option>
-  <option value="24">24</option>
-  <option value="25">25</option>
-  <option value="26">26</option>
-  <option value="27">27</option>
-  <option value="28">28</option>
-  <option value="29">29</option>
-  <option value="30">30</option>
-  <option value="31">31</option>
-</select>
 
- <select id="lunaInserare" name="luna" required="required">
-  <option value=""></option>
-  <option value="1">Ianuarie</option>
-  <option value="2">Februarie</option>
-  <option value="3">Martie</option>
-  <option value="4">Aprilie</option>
-  <option value="5">Mai</option>
-  <option value="6">Iunie</option>
-  <option value="7">Iulie</option>
-  <option value="8">August</option>
-  <option value="9">Septembrie</option>
-  <option value="10">Octombrie</option>
-  <option value="11">Noiembrie</option>
-  <option value="12" >Decembrie</option>
-</select>
-
-<select id="anInserare" name="an" required="required">
-  <option value=""></option>
-  <option value="1990">1990</option>
-  <option value="1991">1991</option>
-  <option value="1992">1992</option>
-  <option value="1993">1993</option>
-  <option value="1994">1994</option>
-  <option value="1995">1995</option>
-  <option value="1996">1996</option>
-  <option value="1997">1997</option>
-  <option value="1998">1998</option>
-  <option value="1999">1999</option>
-  <option value="2000">2000</option>
-  <option value="2001">2001</option>
-  <option value="2002">2002</option>
-  <option value="2003">2003</option>
-  <option value="2004">2004</option>
-  <option value="2005">2005</option>
-  <option value="2006">2006</option>
-  <option value="2007">2007</option>
-  <option value="2008">2008</option>
-  <option value="2009">2009</option>
-  <option value="2010">2010</option>
-  <option value="2011">2011</option>
-  <option value="2012">2012</option>
-  <option value="2013">2013</option>
-  <option value="2014">2014</option>
-  <option value="2015">2015</option>
-  <option value="2016">2016</option>
-  <option value="2017">2017</option>
-  <option value="2018">2018</option>
-  <option value="2019">2019</option>
-  <option value="2020">2020</option>
-</select>
-
-                        </p>
-                        <p>
-                            <label for="Link">Link</label>
-                            <input id="linkInserare" name="link"  placeholder="Introdu noul link"   type="text" required="required">
-                            <p id="errorLink"></p> 
-                        </p>
-                    
-                        <button class="btn btn-success" id="Inserare" type="submit">Adaugare</button>
-                    </fieldset>
-                </form>
-  </div>
-                </div>
 
 
 
@@ -385,7 +47,11 @@ echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminu
 <div class="wrap" id="tabelSearch" value="1"> 
                 </div>
 <div class="wrap" id="tabelAlbume" value="1"> 
-                </div>            
+                </div>  
+<div class="wrap" id="tabelArtisti" value="1"> 
+                </div>    
+                <div class="wrap" id="tabelGenuri" value="1"> 
+                </div>           
 </div>  
 
 <div class="pozitionare">
@@ -393,6 +59,20 @@ echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminu
                   <div class="redare" id="redare"></div>
                   
 </div>
+    </div>
+
+
+    <div id="AlbumConfirmNumber">
+
+    </div>
+    <div id="ArtistConfirmNumber">
+
+    </div>
+    <div id="GenConfirmNumber">
+
+    </div>
+    <div id="MelodieConfirmNumber">
+
     </div>
 </body>
 
@@ -509,35 +189,7 @@ window.onclick = function(event) {
 
 }
 </script>
-<script>
-function AfisareAlbume(){
 
-    var musicA= $("#user").attr('value');
-$.ajax({
-            //AJAX type is "Post".
-            type: "POST",
-            //Data will be sent to "ajax.php".
-            url: "/MUM/PhpMusic/AfisareAlbume.php",
-            //Data, that will be sent to "ajax.php".
-            data: {
-                verify: musicA
-               
-            },
-            //If result found, this funtion will be called.
-            success: function(html) {
-
-                $("#tabelAfisare").hide();
-                $("#tabelSearch").hide();
-                $("#tabelAlbume").html(html).show();
-                //Assigning result to "display" div in "search.php" file.
-               
-                
-
-            }
-        });event.preventDefault();
-}
-
-</script>
 <script>
 function playMusic(current){
 var play=current.id;
@@ -570,6 +222,6 @@ document.getElementById("closeVideo").remove();
 </script>
 
 <script src="/MUM/Js/AfisareMelodii.js"></script>
-<script src="/MUM/Js/InserareMelodie.js"></script>
+<script src='/MUM/Js/InserareMelodie.js'></script>
 <script src="/MUM/Js/Search.js"></script>
 </html>

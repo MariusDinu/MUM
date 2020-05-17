@@ -109,8 +109,30 @@
     .video-player-embed {
         display: block;
         position: absolute;
-        bottom: 0;
+        bottom: 30px;
         right: 10px;
+        border: 10px solid green;
+        border-radius: 20px;
+    }
+    
+    button.closeVideo {
+        position: relative;
+        background-color: #f4511e;
+        border: none;
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.8;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    
+    button.closeVideo:hover {
+        opacity: 1
     }
     
     .pozitionare .video-player-inner-wrap {

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     //On pressing a key on "Search box" in "search.php" file. This function will be called.
     $("#Search").keyup(function() {
 
@@ -6,10 +7,35 @@ $(document).ready(function() {
         var search = $('#Search').val();
         var admin = $("#user").attr('value');
         //Validating, if "name" is empty.
-        if (admin == "") {
-            //Assigning empty value to "display" div in "search.php" file.
-            $("#Search").html("");
+        if (search == "") {
+            if (document.getElementById("AlbumConfirmNumber").value == 1) //Assigning empty value to "display" div in "search.php" file. {
+            {
+                $("#tabelSearch").hide();
+                $("#tabelAfisare").hide();
+                $("#tabelAlbume").show();
+                $("#tabelArtisti").hide();
+                $("#tabelGenuri").hide();
+            } else if (document.getElementById("ArtistConfirmNumber").value == 1) {
+                $("#tabelSearch").hide();
+                $("#tabelAfisare").hide();
+                $("#tabelAlbume").hide();
+                $("#tabelArtisti").show();
+                $("#tabelGenuri").hide();
+            } else if (document.getElementById("GenConfirmNumber").value == 1) {
+                $("#tabelSearch").hide();
+                $("#tabelAlbume").hide();
+                $("#tabelArtisti").hide();
+                $("#tabelGenuri").show();
+                $("#tableAfisare").hide();
+            } else if (document.getElementById("MelodieConfirmNumber").value == 1) {
+                $("#tabelSearch").hide();
+                $("#tabelAlbume").hide();
+                $("#tabelArtisti").hide();
+                $("#tabelGenuri").hide();
+                $("#tabelAfisare").show();
+            }
         }
+
         //If name is not empty.s
         else {
             //AJAX is called.
@@ -27,14 +53,21 @@ $(document).ready(function() {
                 //If result found, this funtion will be called.
                 success: function(html) {
                     //Assigning result to "display" div in "search.php" file.
+
+                    $("#tabelArtisti").hide();
                     $("#tabelAfisare").hide();
                     $("#tabelAlbume").hide();
+                    $("#tabelGenuri").hide();
                     $("#tabelSearch").html(html).show();
+
                     /*$("#tabelAfisare").html(html).show();*/
 
                 }
             });
 
         }
+
+
+
     });
 });
