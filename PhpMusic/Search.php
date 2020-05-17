@@ -2,7 +2,7 @@
 include "/xampp/htdocs/MUM/PhpRegister/connect.php";
 function afisareUserSearch($search_value){
     $bazaUser= new BD();
-    $sqlUser = "SELECT * FROM music order by id";
+    $sqlUser = "SELECT * FROM music where Name like '%".$search_value."%' order by id";
     $cerUser = $bazaUser::obtine_conexiune();
     $cerereUser=$cerUser->prepare($sqlUser);
     $cerereUser->execute();
@@ -13,13 +13,15 @@ function afisareUserSearch($search_value){
     
       echo "<div class='"."Melodie"."' id='".$row['Id']."'>".
       "<div class='"."first"."'>".
-      "<button onclick='playMusic(this)' id='".$row['Local']."' title='"."Play"."' class='b8 b9 ba ao bb bc bd be bf bg bh bi bj'><svg viewBox='"."0 0 26 26"."' xmlns='"."http://www.w3.org/2000/svg"."' style='"."width: 100%; height: 100%; color: white;"."'><title>Play</title><path d='"."M7.712 22.04a.732.732 0 0 1-.806.007.767.767 0 0 1-.406-.703V4.656c0-.31.135-.544.406-.703.271-.16.54-.157.806.006l14.458 8.332c.266.163.4.4.4.709 0 .31-.134.546-.4.71L7.712 22.04z"."' fill='"."currentColor"."' fill-rule='"."evenodd"."'></path></svg></button></div>".
+      "<button onclick='playMusic(this)' id='".$row['Local']."' title='"."Play"."' class='Play b8 b9 ba ao bb bc bd be bf bg bh bi bj'><svg viewBox='"."0 0 26 26"."' xmlns='"."http://www.w3.org/2000/svg"."' ><title>Play</title><path d='"."M7.712 22.04a.732.732 0 0 1-.806.007.767.767 0 0 1-.406-.703V4.656c0-.31.135-.544.406-.703.271-.16.54-.157.806.006l14.458 8.332c.266.163.4.4.4.709 0 .31-.134.546-.4.71L7.712 22.04z"."' fill='"."currentColor"."' fill-rule='"."evenodd"."'></path></svg></button></div>".
       "<a href='/MUM/Pages/Music.php?id=".$row['Id']."&object=".$row['Name']."'>".
       "<div class='second' id='".$row['Id']."'>".
-      "<p id='Nume:".$row['Name']."'>".$row['Name']."</p>".
-      "<p id='Artist:".$row['Artist']."'>".$row['Artist']."</p>".
-      "<p id='Gen:".$row['Gen']."'>".$row['Gen']."</p>".
-      "<p id='Album:".$row['Album']."'>".$row['Album']."</p>"
+      "<table style='"."width:100%"."'>".
+        "<tr> <th id='Nume:".$row['Name']."'>Nume: ".$row['Name']."</th></tr>".
+        "<tr> <th id='Artist:".$row['Artist']."'>Artist: ".$row['Artist']."</th></tr>".
+        "<tr> <th id='Gen:".$row['Gen']."'>Gen: ".$row['Gen']."</th></tr>".
+        "<tr> <th id='Album:".$row['Album']."'>Album: ".$row['Album']."</th></tr>"
+       ."</table>"
      ."</div></a></div> ";
      
     }
@@ -38,21 +40,21 @@ function afisareAdminSearch($search_value){
         echo 
         "<div class='"."Melodie"."' id='".$row['Id']."'>".
         "<div class='"."first"."'>".
-        "<button onclick='playMusic(this)' id='".$row['Local']."' title='"."Play"."' class='Play b8 b9 ba ao bb bc bd be bf bg bh bi bj'><svg viewBox='"."0 0 26 26"."' xmlns='"."http://www.w3.org/2000/svg"."' style='"."width: 100%; height: 100%; "."'><title>Play</title><path d='"."M7.712 22.04a.732.732 0 0 1-.806.007.767.767 0 0 1-.406-.703V4.656c0-.31.135-.544.406-.703.271-.16.54-.157.806.006l14.458 8.332c.266.163.4.4.4.709 0 .31-.134.546-.4.71L7.712 22.04z"."' fill='"."currentColor"."' fill-rule='"."evenodd"."'></path></svg></button></div>".
+        "<button onclick='playMusic(this)' id='".$row['Local']."' title='"."Play"."' class='Play b8 b9 ba ao bb bc bd be bf bg bh bi bj'><svg viewBox='"."0 0 26 26"."' xmlns='"."http://www.w3.org/2000/svg"."' ><title>Play</title><path d='"."M7.712 22.04a.732.732 0 0 1-.806.007.767.767 0 0 1-.406-.703V4.656c0-.31.135-.544.406-.703.271-.16.54-.157.806.006l14.458 8.332c.266.163.4.4.4.709 0 .31-.134.546-.4.71L7.712 22.04z"."' fill='"."currentColor"."' fill-rule='"."evenodd"."'></path></svg></button></div>".
         "<a class='"."form-inline"."' href='/MUM/Pages/Music.php?id=".$row['Id']."&object=".$row['Name']."'>".
         "<div class='second' id='Id' value='".$row['Id']."'>".
         "<table style='"."width:100%"."'>".
-        "<tr> <th id='Nume:".$row['Name']."'>".$row['Name']."</th>".
-        "<th id='Artist:".$row['Artist']."'>".$row['Artist']."</th>".
-        "<th id='Gen:".$row['Gen']."'>".$row['Gen']."</th>".
-        "<th id='Album:".$row['Album']."'>".$row['Album']."</th></tr>"
+        "<tr> <th id='Nume:".$row['Name']."'>Nume: ".$row['Name']."</th></tr>".
+        "<tr> <th id='Artist:".$row['Artist']."'>Artist: ".$row['Artist']."</th></tr>".
+        "<tr> <th id='Gen:".$row['Gen']."'>Gen: ".$row['Gen']."</th></tr>".
+        "<tr> <th id='Album:".$row['Album']."'>Album: ".$row['Album']."</th></tr>"
        ."</table></div></a>".
        "<button class='"."buttonAdmin"."'"." id='".$row['Id']."' data-toggle='"."modal"."' data-target='"."#room-settings"."' onclick='modifyMelodie(this)' value='".$row['Id']."'>Modify</button> ".
        "<button class='"."buttonAdmin"."'"." id='".$row['Id']."' onclick='deleteMelodie(this)' value='".$row['Id']."'>Delete</button> ".
        
        
        
-       "</div> <br></br>";
+       "</div></div> <br></br>";
        
         
       }}else
@@ -80,7 +82,7 @@ function afisareAdminSearch($search_value){
                 {
                   afisareAdminSearch($search_value);
                 }
-                else {
+                else if($row['Admin']=='0') {
                   afisareUserSearch($search_value);
                 }
     

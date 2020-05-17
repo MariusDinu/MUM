@@ -17,35 +17,50 @@
             </svg>
             </a>
         </div>
+<?php
+include "/xampp/htdocs/MUM/PhpRegister/connect.php";
+function verify(){
+$user=$_GET['user'];
 
+$baza= new BD();
+$sql = "SELECT * from register where UserName='$user'";
+$cer = $baza::obtine_conexiune();
+$cerere=$cer->prepare($sql);
+$cerere->execute();
+foreach ($cer->query($sql) as $row)
+{
+    if($row['Admin']==1)
+    return 1;
+    else return 0;
+   
+}
 
-        <div class="header-middle-area">
-            <div class="main-nav">
-                <ul class="main-sections">
-                <li class="Home">
-                        <a href="/MUM/Pages/HomePage.php">
-                            <svg id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#clip0)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"></path><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"></path><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"></path></g></svg>
-                            <span>Home</span>
+}
+?>
+        <?php    if(verify($_GET['user'])==1)
+{
+     echo   "<div class='header-middle-area'>
+            <div class='main-nav'>
+                <ul class='main-sections'>
+                <li class='Home'>
+                        <a href='/MUM/Pages/App.php'>
+                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
+                            <span>Melodii</span>
                         </a>
                     </li>
-                    <li class="Home">
-                        <a href="/MUM/Pages/HomePage.php">
-                            <svg id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#clip0)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"></path><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"></path><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"></path></g></svg>
-                            <span>Home</span>
+                    <li class='Home'>
+                        <a href='/MUM/Pages/HomePage.php'>
+                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
+                            <span>Useri</span>
                         </a>
                     </li>
-                    <li class="Home">
-                        <a href="/MUM/Pages/HomePage.php">
-                            <svg id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#clip0)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"></path><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"></path><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"></path></g></svg>
-                            <span>Home</span>
+                    <li class='Home'>
+                        <a href='/MUM/Pages/HomePage.php'>
+                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
+                            <span>Admin:".$_GET['user']."</span>
                         </a>
                     </li>
-                    <li class="Home">
-                        <a href="/MUM/Pages/HomePage.php">
-                            <svg id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#clip0)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"></path><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"></path><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"></path></g></svg>
-                            <span>Home</span>
-                        </a>
-                    </li>
+                   
 
 
 
@@ -54,8 +69,34 @@
                 </ul>
 
             </div>
-        </div>
+        </div>";}
+        else {
 
+          echo  "<div class='header-middle-area'>
+            <div class='main-nav'>
+                <ul class='main-sections'>
+                    <li class='Home'>
+                        <a href='/MUM/Pages/HomePage.php'>
+                            <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    </ul>
+                    </div>
+                    </div>";
+
+
+
+
+
+
+
+
+
+
+
+        }
+?>
         <div class="search" role="search" id="search-area">
                 
                     <input type="search" required="required" name="" id="Search" class="search-field" value="">
@@ -73,12 +114,8 @@ echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminu
 ?>
 
 
-<div class="video-player-inner-wrap" id="video-player-inner-wrap">
-                  <div class="redare" id="redare"></div>
-                  
-</div>
-
 <button onclick="history.go(0)">Refresh</button>
+<button onclick="goBack()">Go Back</button>
 <button class="buttonInsert" id="Insert" data-toggle="modal" data-target="#music-Settings" onclick="insertMelodie()" >Adaugare</button> 
 <br></br>
 <div id="myModalModify" class="modal">
@@ -333,14 +370,21 @@ echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminu
 
 
 
-<div class="containerC" >
-<div class="containerMusic" id="tabelAfisare" value="1"> 
+<div class="outer" >
+<div class="wrap" id="tabelAfisare" value="1"> 
 
 
-</div><div class="containerMusic" id="tabelSearch" value="1"> 
+</div><div class="wrap" id="tabelSearch" value="1"> 
                 </div>
-                <button onclick="goBack()">Go Back</button>
                
+</div>  
+
+<div class="pozitionare">
+<div class="video-player-inner-wrap" id="video-player-inner-wrap">
+                  <div class="redare" id="redare"></div>
+                  
+</div>
+    </div>
 </body>
 
 <script>
@@ -467,7 +511,7 @@ function playMusic(current){
 var play=current.id;
 var redarea=document.getElementById("redare");
 var clasaVideo=document.getElementById("video-player-inner-wrap");
-clasaVideo.innerHTML="<iframe class='"+"video-player-embed js-player"+"' width='"+"560"+"' height='"+"443"+"' class='"+"yvideo"+"' id='"+"video"+"' src='"+play+"' frameborder='"+"0"+"' allow='"+"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"+"' allowfullscreen></iframe>"+"<button onclick='"+"closePlayer()"+"' class='"+"closeVideo"+"' id='"+"closeVideo"+"'>Close</button>";
+clasaVideo.innerHTML="<iframe class='"+"video-player-embed js-player"+"' width='"+"400"+"' height='"+"300"+"' class='"+"yvideo"+"' id='"+"video"+"' src='"+play+"' frameborder='"+"0"+"' allow='"+"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"+"' allowfullscreen></iframe>"+"<button onclick='"+"closePlayer()"+"' class='"+"closeVideo"+"' id='"+"closeVideo"+"'>Close</button>";
 
 }
 
