@@ -17,7 +17,7 @@ body {
     padding-right: 15px;
 }
 
-div.footer-mycss {
+div.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -94,7 +94,7 @@ div.footer-mycss {
 
 .topnav {
     position: relative;
-    background-color: black;
+    background-color: whitesmoke;
     overflow: hidden;
     padding-bottom: 25px;
     padding-top: 25px;
@@ -198,6 +198,7 @@ div.footer-mycss {
 }
 
 .jumbotron {
+    display: none;
     text-align: center;
     background-color: #e9ecef;
     padding: 1rem .5rem;

@@ -2,7 +2,7 @@ button.buttonAdmin {
     -webkit-appearance: button;
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
-    color: buttontext;
+    color: blue;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
@@ -12,23 +12,24 @@ button.buttonAdmin {
     text-align: center;
     align-items: flex-start;
     cursor: default;
-    background-color: buttonface;
+    background-color: black;
     box-sizing: border-box;
-    margin: 0em;
+    margin: 2em;
     font: 400 13.3333px Arial;
     padding: 1px 6px;
     border-width: 2px;
     border-style: outset;
-    border-color: buttonface;
+    border-color: green;
     border-image: initial;
-    width: 20%;
+    width: 18%;
+    float: inline-end;
 }
 
 button.buttonInsert {
     -webkit-appearance: button;
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
-    color: buttontext;
+    color: blue;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
@@ -38,24 +39,27 @@ button.buttonInsert {
     text-align: center;
     align-items: flex-start;
     cursor: default;
-    background-color: buttonface;
+    background-color: black;
     box-sizing: border-box;
-    margin: 0em;
+    margin: 1em;
     font: 400 13.3333px Arial;
     padding: 1px 6px;
-    border-width: 2px;
+    border-radius: 1em;
+    border-width: 3px;
     border-style: outset;
-    border-color: buttonface;
+    border-color: darkgreen;
     border-image: initial;
     width: 20%;
     float: right;
+    padding: 1em;
+
 }
 
 button {
     -webkit-appearance: button;
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
-    color: buttontext;
+    color: blue;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
@@ -65,14 +69,14 @@ button {
     text-align: center;
     align-items: flex-start;
     cursor: default;
-    background-color: buttonface;
+    background-color: black;
     box-sizing: border-box;
-    margin: 0em;
+    margin: 1em;
     font: 400 13.3333px Arial;
     padding: 1px 6px;
     border-width: 2px;
     border-style: outset;
-    border-color: buttonface;
+    border-color: green;
     border-image: initial;
     width: 60px;
 }
@@ -82,6 +86,10 @@ button.Play {
     -webkit-writing-mode: horizontal-tb !important;
     cursor: pointer;
     background-color: black;
+    border-radius: 1em;
+    border-width: 3px;
+    border-color: green;
+    margin: 1em;
 }
 
 .containerMusic {
@@ -98,10 +106,15 @@ button.Play {
 }
 
 a.form-inline {
+    
     display: flex;
     width: 100%;
     margin: auto;
-    border: 3px solid green;
+    border: 2px solid green;
+    border-radius: 1em;
+    border-width: 3px;
+    border-color: green;
+    margin: 1em;
     padding: 10px;
 }
 
@@ -178,11 +191,17 @@ a.form-inline div.second {
 .close:hover,
 .close:focus {
     color: #000;
-    text-decoration: none;
+    text-decoration: red;
     cursor: pointer;
 }
 
-text-decoration: none;
-cursor: pointer;
-
+.Admin{
+    font-family: OpenSans, arial, "sans-serif";
+    color: blue;
+    font-size: 15px;
+    line-height: 1em;
+    display: block;
+    background-color: black;
+    margin-bottom: 1em;
+    padding: 4px;
 }

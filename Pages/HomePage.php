@@ -3,16 +3,17 @@
 <html>
 
 <head>
-    <link href="/Mum/Css/Layout.css" rel="stylesheet">
-    <link href="/Mum/Css/Plus.css" rel="stylesheet">
-    <link href="/Mum/Css/site.css" rel="stylesheet">
-    <link href="/Mum/Css/purecookie.css" rel="stylesheet">
+    <link href="/MUM/Css/Layout.css" rel="stylesheet">
+    <link href="/MUM/Css/Plus.css" rel="stylesheet">
+    <link href="/MUM/Css/site.css" rel="stylesheet">
+    <link href="/MUM/Css/purecookie.css" rel="stylesheet">
+    <link href="/MUM/Css/home.css" rel="stylesheet">
 </head>
 
 <body>
     <header class="site-header">
         <div class="logo2">
-            <a href="/">
+            <a href="/MUM/Pages/HomePage.php">
                 <svg class="icon-logo-text">
                 <a href="HomePage.html"> </a>
             </svg>
@@ -95,7 +96,7 @@
     </footer>
 
     <script src="/MUM/Js/purecookie.js"></script>
-]
+    
 </body>
 
 
