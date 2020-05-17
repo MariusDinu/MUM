@@ -527,13 +527,14 @@ $.ajax({
             success: function(html) {
 
                 $("#tabelAfisare").hide();
+                $("#tabelSearch").hide();
                 $("#tabelAlbume").html(html).show();
                 //Assigning result to "display" div in "search.php" file.
                
                 
 
             }
-        });
+        });event.preventDefault();
 }
 
 </script>

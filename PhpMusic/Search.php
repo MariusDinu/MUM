@@ -2,7 +2,7 @@
 include "/xampp/htdocs/MUM/PhpRegister/connect.php";
 function afisareUserSearch($search_value){
     $bazaUser= new BD();
-    $sqlUser = "SELECT * FROM music where Name like '%".$search_value."%' order by id";
+    $sqlUser = "SELECT * FROM music where Name like '%".$search_value."%'||Album like '%$search_value%'||Artist like '%$search_value%'||Gen like '%$search_value%' order by id";
     $cerUser = $bazaUser::obtine_conexiune();
     $cerereUser=$cerUser->prepare($sqlUser);
     $cerereUser->execute();
@@ -28,7 +28,7 @@ function afisareUserSearch($search_value){
     }}
 function afisareAdminSearch($search_value){
       $bazaAdmin= new BD();
-      $sqlAdmin = "SELECT * FROM music  where Name like '%".$search_value."%' order by id ";
+      $sqlAdmin = "SELECT * FROM music  where Name like '%".$search_value."%'||Album like '%$search_value%'||Artist like '%$search_value%'||Gen like '%$search_value%' order by id ";
       $cerAdmin = $bazaAdmin::obtine_conexiune();
       $cerereAdmin=$cerAdmin->prepare($sqlAdmin);
       $cerereAdmin->execute();
