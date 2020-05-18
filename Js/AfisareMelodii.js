@@ -18,6 +18,7 @@ $(document).ready(function() {
         //Assigning empty value to "display" div in "search.php" file.
         $("#user").html("asdasd").show();
     } else if (admin != "") {
+
         //AJAX is called.
         $.ajax({
             //AJAX type is "Post".
@@ -31,9 +32,11 @@ $(document).ready(function() {
             //If result found, this funtion will be called.
             success: function(html) {
                 //Assigning result to "display" div in "search.php" file.
-                $("#tabelAfisare").html(html).show();
+                {
+                    document.getElementById("MelodieConfirmNumber").value = "1";
+                    $("#tabelAfisare").html(html).show();
 
-
+                }
             }
         });
 

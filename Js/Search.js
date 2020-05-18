@@ -8,6 +8,7 @@ $(document).ready(function() {
         var admin = $("#user").attr('value');
         //Validating, if "name" is empty.
         if (search == "") {
+
             if (document.getElementById("AlbumConfirmNumber").value == 1) //Assigning empty value to "display" div in "search.php" file. {
             {
                 $("#tabelSearch").hide();
