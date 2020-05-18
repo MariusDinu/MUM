@@ -74,6 +74,11 @@ include 'TemplateModal.php';
     <div id="MelodieConfirmNumber">
 
     </div>
+
+<div class='userDetails' id='userDetails'>    </div>
+  <div id="Alb">
+  
+  </div>  
 </body>
 
 <script>
@@ -207,7 +212,11 @@ document.getElementById("closeVideo").remove();
 }
 
 </script>
-
+<script src="/MUM/Js/UserDetails.js"></script>
+<script src="/MUM/Js/AfisareAlbumSolo.js"></script>
+<script src="/MUM/Js/AfisareMelodii.js"></script>
+<script src='/MUM/Js/InserareMelodie.js'></script>
+<script src="/MUM/Js/Search.js"></script>
 
 <script>
 
@@ -221,7 +230,4 @@ document.getElementById("closeVideo").remove();
 
 </script>
 
-<script src="/MUM/Js/AfisareMelodii.js"></script>
-<script src='/MUM/Js/InserareMelodie.js'></script>
-<script src="/MUM/Js/Search.js"></script>
 </html>

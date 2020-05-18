@@ -6,6 +6,7 @@ $(document).ready(function() {
         document.getElementById("AlbumConfirmNumber").value = "0";
         document.getElementById("ArtistConfirmNumber").value = "0";
         document.getElementById("MelodieConfirmNumber").value = "0";
+
         var musicA = $("#user").attr('value');
         $.ajax({
             //AJAX type is "Post".
@@ -24,6 +25,8 @@ $(document).ready(function() {
                 $("#tabelSearch").hide();
                 $("#tabelAlbume").hide();
                 $("#tabelArtisti").hide();
+                $("#Alb").hide();
+                $("#userDetails").hide();
                 $("#tabelGenuri").html(html).show();
                 //Assigning result to "display" div in "search.php" file.
 

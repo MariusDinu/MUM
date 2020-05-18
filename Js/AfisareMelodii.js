@@ -63,6 +63,8 @@ $(document).ready(function() {
                 $("#tabelAlbume").hide();
                 $("#tabelArtisti").hide();
                 $("#tabelGenuri").hide();
+                $("#Alb").hide();
+                $("#userDetails").hide();
                 $("#tabelAfisare").html(html).show();
                 //Assigning result to "display" div in "search.php" file.
 

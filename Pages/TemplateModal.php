@@ -244,3 +244,38 @@
                 </form>
   </div>
                 </div>
+
+
+                <div id="myModalModifyUser" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closeUser">&times;</span>
+    <form action="" onsubmit="" class="room-settings1" id="roomSettings1" method="post">
+                    <fieldset>
+                        <p>
+                            <label for="Name">Numele nou:</label>
+                            <input id="numelenou" name="numelenou" placeholder="Introdu noul nume" type="text" >
+                        </p>
+                        <p>
+                            <label for="Artist">Parola noua:</label>
+                            <input id="parolanoua" name="parolanoua" placeholder="Introdu noua parola" type="text" >
+                        </p>
+                        <p>
+                            <label for="spec">Email nou:</label>
+                            <input id="emailnou" name="emailnou" placeholder="Introdu noul email" type="text" >
+                            <p id="errorGen"></p> 
+                        </p>
+                        <p>
+                        <label for="country" >Choose a Country:</label>
+                        <select id="country" name="country"> 
+                        <option value=""></option>
+                <option value="italia">Italia</option>
+                <option value="spania">Spania</option>
+                <option value="china">China</option>
+                <option value="belgia">Belgia</option>
+              </select></p>
+              <button class="btn btn-success" id="SalvareUser"  type="submit">Salvare</button>
+              </fieldset>
+                </form>
+  </div>
+                </div>

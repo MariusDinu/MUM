@@ -24,6 +24,7 @@ $(document).ready(function() {
                 $("#tabelSearch").hide();
                 $("#tabelAlbume").hide();
                 $("#tabelGenuri").hide();
+                $("#Alb").hide();
                 $("#tabelArtisti").html(html).show();
                 //Assigning result to "display" div in "search.php" file.
 
