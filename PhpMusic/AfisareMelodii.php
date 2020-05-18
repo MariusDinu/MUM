@@ -29,7 +29,7 @@ function afisareUser(){
       "<a class='"."form-inline"."' id='".$row['Id']."' onclick='AfisareMelodie(this)'>".
       "<div class='second' id='Id' value='".$row['Id']."'>".
       "<table style='"."width:100%"."'>".
-      "<tr><th id='Nume:".$row['Name']."'>Nume: ".$row['Name']."</th></tr>".
+      "<tr><th id='Nume:".$row['Name']."'>Nume Melodie: ".$row['Name']."</th></tr>".
       "<tr><th id='Artist:".$row['Artist']."'>Artist:".$row['Artist']."</th></tr>".
       "<tr><th id='Gen:".$row['Gen']."'>Gen: ".$row['Gen']."</th></tr>".
       "<tr><th id='Album:".$row['Album']."'>Album: ".$row['Album']."</th></tr>"
@@ -59,7 +59,7 @@ function afisareAdmin(){
         "<a class='"."form-inline"."' href='/MUM/Pages/music=?id=".$row['Id']."&object=".$row['Name']."'>".
         "<div class='second' id='Id' value='".$row['Id']."'>".
         "<table style='"."width:100%"."'>".
-        "<tr> <th id='Nume:".$row['Name']."'>".$row['Name']."</th></tr>".
+        "<tr> <th id='Nume:".$row['Name']."'>Nume Melodie: ".$row['Name']."</th></tr>".
         "<tr> <th id='Artist:".$row['Artist']."'>".$row['Artist']."</th></tr>".
         "<tr> <th id='Gen:".$row['Gen']."'>".$row['Gen']."</th></tr>".
         "<tr> <th id='Album:".$row['Album']."'>".$row['Album']."</th></tr>"

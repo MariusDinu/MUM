@@ -5,27 +5,32 @@ include "connect.php";
 
 function detailsUser(){
 
-    /*$user=$_POST['user'];
+    $user=$_POST['user'];
+    
     $name=$_POST['name'];
     $email=$_POST['email'];
     $parola=$_POST['parola'];
-    $tara=$_POST['tara'];*/
+    $tara=$_POST['tara'];
     $baza= new BD();
-    
+   $sql="SELECT * from register where UserName like '$user'";
    
    $cer= $baza::obtine_conexiune();
- 
-   
-   
-    $sqlname = "   UPDATE `register` SET `Name`='asdasdasdasdasd' WHERE Id='1' ";
-  //  $sqlemail = "  UPDATE `register` SET `Email`='$name' WHERE UserName='b'";
-  //  $sqlparola = "  UPDATE `register` SET `UserPassword`='$parola' WHERE UserName='b'";
-  ///  $sqltara = "  UPDATE `register` SET `Country`='$name' WHERE UserName='b'";
-  //  $sqlparolaConfirm="  UPDATE `register` SET `ConfirmUserPassword`='$parola' WHERE UserName='b'";
+   $cerere=$cer->prepare($sql);
+   $cerere->execute();
+   $abc=$cerere->fetchAll();
+   foreach( $cer->query($sql) as $row){
+   $sqlname = "UPDATE `register` SET `UserName`='$name' WHERE Id='".$row['Id']."'";
+      
+
+    $sqlemail = "  UPDATE `register` SET `Email`='$email' WHERE Id='".$row['Id']."'";
+    $sqlparola = "  UPDATE `register` SET `UserPassword`='$parola' WHERE Id='".$row['Id']."'";
+    $sqltara = "  UPDATE `register` SET `Country`='$tara' WHERE Id='".$row['Id']."'";
+    $sqlparolaConfirm="  UPDATE `register` SET `ConfirmUserPassword`='$parola' WHERE Id='".$row['Id']."'";
      
- 
-  
- /* if($email==""){}
+ if($name==""){}else
+   {$cerereAdmin=$cer->prepare($sqlname);
+       $cerereAdmin->execute();}
+  if($email==""){}
      else
        {$cerereAdmin=$cer->prepare($sqlemail);
        $cerereAdmin->execute();}
@@ -43,20 +48,26 @@ function detailsUser(){
      else
        {$cerereAdmin=$cer->prepare($sqltara);
        $cerereAdmin->execute();}
-  */$cerereAdmin=$cer->prepare($sqlname);
-       $cerereAdmin->execute();
+  
      
     
-    
+}
     
    
   }
 
 
-  detailsUser();
+  
   ?>
 
 
 
 
 
+?>
+<?php
+
+detailsUser();
+
+
+?>

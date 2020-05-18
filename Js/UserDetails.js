@@ -14,12 +14,13 @@ function ContUser() {
     salvare.onclick = function() {
 
         modal.style.display = "none";
-        /*  var name = document.getElementById("numelenou").value;
-                      var email = document.getElementById("emailnou").value;
-                      var parola = document.getElementById("parolanoua").value;
-                      var tara = document.getElementById("country").value;
-                      var user = document.getElementById("user").value;
-*/
+        var name = document.getElementById("numelenou").value;
+        var email = document.getElementById("emailnou").value;
+        var parola = document.getElementById("parolanoua").value;
+        var tara = document.getElementById("country").value;
+
+        console.log(name);
+        console.log(contA);
         $.ajax({
             //AJAX type is "Post".
             type: "POST",
@@ -27,15 +28,17 @@ function ContUser() {
             url: "/MUM/PhpRegister/UserDetails.php",
             //Data, that will be sent to "ajax.php".
             data: {
-                /* user: user,
+                user: contA,
                 name: name,
                 email: email,
                 parola: parola,
-                tara: tara*/
+                tara: tara
 
             },
             //If result found, this funtion will be called.
             success: function() {
+
+                window.location.replace("http://localhost/MUM/Pages/App.php?user=" + name);
 
             }
 
@@ -45,9 +48,10 @@ function ContUser() {
 
 
 
+
         });
 
-
+        event.preventDefault();
 
 
 
