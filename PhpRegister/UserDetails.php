@@ -1,8 +1,6 @@
 <?php 
 
-include "connect.php";
-
-
+include '../PhpRegister/connect.php';
 function detailsUser(){
 
     $user=$_POST['user'];

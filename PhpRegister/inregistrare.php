@@ -1,5 +1,6 @@
 <?php
-include "/xampp/htdocs/MUM/PhpRegister/connect.php";
+
+include '../PhpRegister/connect.php';
 function inregistrare(){
     
      $email_value=$_POST['email'];

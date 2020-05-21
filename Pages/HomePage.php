@@ -4,13 +4,13 @@
 
 <head>
     <link href="/MUM/Css/Layout.css" rel="stylesheet">
-    <link href="/MUM/Css/Plus.css" rel="stylesheet">
-    <link href="/MUM/Css/site.css" rel="stylesheet">
+    <link href="/MUM/Css/App.css" rel="stylesheet">
     <link href="/MUM/Css/purecookie.css" rel="stylesheet">
     <link href="/MUM/Css/home.css" rel="stylesheet">
 </head>
 
 <body>
+ 
     <header class="site-header">
         <div class="logo2">
             <a href="/MUM/Pages/HomePage.php">
@@ -18,6 +18,20 @@
                 <a href="HomePage.html"> </a>
             </svg>
             </a>
+            <div class="search" role="search" id="search-area">
+            <div class="chw-widget">
+                <form role="search" method="get" id="searchform" class="search-form" action="https://css-tricks.com/">
+                    <label class="screen-reader-text" id="search-label" for="search-input">Search for:</label>
+                    <input type="search" required="" name="s" id="search-input" class="search-field" value="">
+                    <input type="hidden" name="orderby" value="relevance">
+                    <input type="hidden" name="post_type" value="post,page,guide">
+                    <button type="submit" class="button-search">
+                        <span class="screen-reader-text">Search</span>
+                       
+                    </button>
+                </form>
+            </div>
+        </div>
         </div>
 
 
@@ -59,29 +73,9 @@
             </div>
         </div>
 
-        <div class="search" role="search" id="search-area">
-            <div class="chw-widget">
-                <form role="search" method="get" id="searchform" class="search-form" action="https://css-tricks.com/">
-                    <label class="screen-reader-text" id="search-label" for="search-input">Search for:</label>
-                    <input type="search" required="" name="s" id="search-input" class="search-field" value="">
-                    <input type="hidden" name="orderby" value="relevance">
-                    <input type="hidden" name="post_type" value="post,page,guide">
-                    <button type="submit" class="button-search">
-                        <span class="screen-reader-text">Search</span>
-                        <svg class="icon-search" width="26px" height="26px">
-                            <use xlink:href="#icon-search"></use>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </div>
+       
     </header>
 
-
-<div class="jumbotron">
-<h1>Create a Jumbotron</h1>
-    <p>This is a simple jumbotron-style component for calling...</p>
-    <button type="button">Learn more</button>  </div>
 
 
 

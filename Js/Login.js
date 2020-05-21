@@ -28,7 +28,7 @@ $(document).ready(function() {
                     $("#errorLoginPass").html('Parola sau user incorect!').show();
 
 
-                } else if (html == 1) {
+                } else if (html == 1){
                     window.location.href = "/MUM/Pages/App.php?user=" + userM;
                 }
 

@@ -5,9 +5,21 @@
                 <a href="/MUM/Pages/HomePage.php"> </a>
             </svg>
             </a>
+            
+ <div class="search" role="search" id="search-area">
+                
+                <input type="search" required="required" name="" id="Search" class="search-field" value="">
+               
+                <button type="submit" class="button-search">
+                    <span class="screen-reader-text">Search</span>
+                    
+                </button>
+           
+        </div>
+    </div>
         </div>
 <?php
-include "/xampp/htdocs/MUM/PhpRegister/connect.php";
+include '../PhpRegister/connect.php';
 function verify(){
 $user=$_GET['user'];
 
@@ -116,15 +128,4 @@ foreach ($cer->query($sql) as $row)
 
         }
 ?>
- <div class="search" role="search" id="search-area">
-                
-                <input type="search" required="required" name="" id="Search" class="search-field" value="">
-               
-                <button type="submit" class="button-search">
-                    <span class="screen-reader-text">Search</span>
-                    
-                </button>
-           
-        </div>
-    </div>
 </header>

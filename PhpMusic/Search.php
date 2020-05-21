@@ -1,5 +1,5 @@
 <?php 
-include "/xampp/htdocs/MUM/PhpRegister/connect.php";
+include '../PhpRegister/connect.php';
 function afisareUserSearch($search_value){
     $bazaUser= new BD();
     $sqlUser = "SELECT * FROM music where Name like '%".$search_value."%'||Album like '%$search_value%'||Artist like '%$search_value%'||Gen like '%$search_value%' order by id";

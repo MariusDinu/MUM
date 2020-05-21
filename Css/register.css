@@ -1,5 +1,5 @@
 .message {
-    margin-top: 1em;
+    margin-top: 100em;
     text-align: center;
     text-decoration-color: aliceblue;
     color: aliceblue;
@@ -13,7 +13,7 @@
 body,
 html {
     font-family: Ringside Regular A, Ringside Regular B, Rubik, Lato, Lucida Grande, Lucida Sans Unicode, Tahoma, Sans-Serif;
-    background-color: #161616;
+    
     width: 99%;
 }
 
@@ -76,7 +76,6 @@ html {
 .login-register-form-section .btn-custom:hover {
     width: 100%;
     background-color: #312d3c;
-    ;
     border-color: #45433E;
 }
 
@@ -232,9 +231,9 @@ html {
     }
     .login-register-form-section .nav-tabs>li>a,
     .login-register-form-section .nav-tabs>li.active>a {
-        width: screen.width;
-        text-align: center;
-        border-radius: 0;
+        width: max-content;
+        text-align:center;
+        border-radius: 5px;
     }
     #tab_log {
         align-self: center;
@@ -253,7 +252,7 @@ html {
     }
     .login-register-form-section .btn-custom {
         font-size: 16px;
-        width: screen.width;
+        width: max-content;
         height: 40px;
         border-radius: 5px;
     }

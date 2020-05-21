@@ -1,5 +1,5 @@
 <?php
-include "/xampp/htdocs/MUM/PhpRegister/connect.php";
+include '../PhpRegister/connect.php';
 function cautaEmailAndPass(){
       $user_value=$_POST['user'];
       $pass_value=$_POST['password'];

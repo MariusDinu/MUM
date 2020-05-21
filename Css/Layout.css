@@ -29,12 +29,11 @@ html::-webkit-scrollbar-track {
 .site-header,
 .site-header .logo {
     position: relative;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     background-color: black;
-    height: max-content;
+    height:min-content;
+    
 }
 
 img.mylogo {
@@ -46,7 +45,7 @@ img.mylogo {
     transition: 0s;
     -webkit-box-flex: 0;
     align-self: stretch;
-    width: 500px;
+    width: 60%;
     border-right: 1px solid #201c29;
     background-image: url(/MUM/Images/Pulsefinal.png);
     background-repeat: no-repeat;
