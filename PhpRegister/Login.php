@@ -18,12 +18,11 @@ else {return 2;}
 
 <?php  
 
-if (isset($_POST['user'])) 
- { $a=cautaEmailAndPass();
+$a=cautaEmailAndPass();
 if($a==1) 
-{ echo '1'  ;} 
- else echo '0';
+{ echo '1';} 
+ else {echo '0';}
   ?>
 
- <?php } ?>
+ 
                  

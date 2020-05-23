@@ -27,10 +27,9 @@
     body {
         background-color: black;
     }
-
-    .Admin{
-       
-        color:  #1ee6f4;
+    
+    .Admin {
+        color: #1ee6f4;
     }
     
     button.buttonInsert {
@@ -47,7 +46,7 @@
         text-align: center;
         align-items: flex-start;
         cursor: default;
-        background-color:  #1ee6f4;
+        background-color: #1ee6f4;
         box-sizing: border-box;
         margin: 5px;
         font: 400 13.3333px Arial;
@@ -74,7 +73,7 @@
         text-align: center;
         align-items: flex-start;
         cursor: default;
-        background-color:  #1ee6f4;
+        background-color: #1ee6f4;
         box-sizing: border-box;
         margin: 0px;
         font: 400 13.3333px Arial;
@@ -92,21 +91,19 @@
         cursor: pointer;
         background-color: black;
         border-radius: 20px;
-        margin: 5px ;
+        margin: 5px;
         float: left;
-        
     }
-
+    
     button.button-search {
-
         width: 15%;
     }
-    .search-field{
+    
+    .search-field {
         width: 98%;
         background-color: greenyellow;
-        
     }
-
+    
     div.containerC {
         display: flex;
     }
@@ -139,6 +136,8 @@
     div.showOneMelodie {
         background-color: white;
     }
+    
+    div.User {}
     
     .video-player-embed {
         display: block;

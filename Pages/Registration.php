@@ -87,18 +87,18 @@
                     </div>
             
                 </form>
-                    <form class="form-horizontal" method="post" action="/MUM/Pages/Succes.php">
+                    <form class="form-horizontal" method="post" >
                         <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" id="email"  name="email" required=""> 
+                        <input type="text" placeholder="Enter Email" id="email"  name="email" required="required"> 
                         <div id="display"></div>
                         <label for="Username"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" id="username" name="username" value="" required="" >
+                        <input type="text" placeholder="Enter Username" id="username" name="username" value="" required="required" >
                         <div id="displayUser"></div>
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" id="password"  name="password" required="" >
+                        <input type="password" placeholder="Enter Password" id="password"  name="password" required="required" >
                         <div id="password-error"></div>
                         <label for="psw-repeat"><b>Repeat Password</b></label>
-                        <input type="password" placeholder="Repeat Password" id="confirmPassword"  name="confirmPassword" required="">
+                        <input type="password" placeholder="Repeat Password" id="confirmPassword"  name="confirmPassword" required="required">
                         <div id="message"></div>
                         <hr>
                         <p>By creating an account you agree to our <a href="#">Terms &amp; Privacy</a>.</p>

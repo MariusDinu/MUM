@@ -88,7 +88,7 @@
                 <div id="show-registration"> </div>
                     </form>
                    
-                    <form>
+                    <form class="form-horizontal" method="post">
                         <label for="Username"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" id="user" name="user" value="" required="" >
                        
@@ -130,7 +130,7 @@
 
 </script>
 <script src="/MUM/Js/purecookie.js"></script>
-    <script src="/MUM/Js/Login.js"></script>
+ <script src="/MUM/Js/Login.js"></script>
 </body>
 
 

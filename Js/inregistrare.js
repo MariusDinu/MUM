@@ -4,39 +4,45 @@ $(document).ready(function() {
         //Hiding "display" div in "search.php" file.
         $('#show-registration').hide();
     }
-    $("#register").click(function() {
+    var reg = document.getElementById('register');
+    reg.onclick = function() {
 
-        var registerButton = $('#register').val();
-        var emailButton = $('email').val();
-        var userButton = $('username').val();
-        var passButton = $('password').val();
-        var passConfirmButton = $('confirmPassword').val();
-        var countryButton = $('country').val();
+
+        var emailButton = document.getElementById("email").value;
+        var userButton = document.getElementById("username").value;
+        var passButton = document.getElementById("password").value;
+        var passConfirmButton = document.getElementById("confirmPassword").value;
+        var countryButton = document.getElementById("country").value;
         //If name is not empty.
-        {
-            //AJAX is called.
-            $.ajax({
-                //AJAX type is "Post".
-                type: "POST",
-                //Data will be sent to "ajax.php".
-                url: "/MUM/PhpRegister/inregistrare.php",
-                //Data, that will be sent to "ajax.php".
-                data: {
-                    register: registerButton,
-                    email: emailButton,
-                    username: userButton,
-                    password: passButton,
-                    confirmPassword: passConfirmButton,
-                    country: countryButton
+        //AJAX is called.
+        $.ajax({
+            //AJAX type is "Post".
+            type: "POST",
+            //Data will be sent to "ajax.php".
+            url: "/MUM/PhpRegister/inregistrare.php",
+            //Data, that will be sent to "ajax.php".
+            data: {
 
-                },
-                //If result found, this funtion will be called.
-                success: function(html) {
+                email: emailButton,
+                username: userButton,
+                password: passButton,
+                confirmPassword: passConfirmButton,
+                country: countryButton
 
-                    $("show-registration").html(html).show();
+            },
+            //If result found, this funtion will be called.
+            success: function(html) {
+                console.log(html);
+                if (html == 1) {
+                    window.location.href = "/MUM/Pages/Succes.php";
+                } else
+                    alert(html);
 
-                }
-            });
-        }
-    });
+
+            }
+        });
+
+
+
+    }
 });
