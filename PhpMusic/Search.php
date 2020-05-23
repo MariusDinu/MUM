@@ -78,11 +78,11 @@ function afisareAdminSearch($search_value){
         $ver_user=$cerere->fetchAll();
         foreach($cer->query($sql_user) as $row)
         {
-                if($row['Admin']==1)
+                if($row['AdminLevel']==1)
                 {
                   afisareAdminSearch($search_value);
                 }
-                else if($row['Admin']=='0') {
+                else if($row['AdminLevel']=='0') {
                   afisareUserSearch($search_value);
                 }
     

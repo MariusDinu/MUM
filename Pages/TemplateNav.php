@@ -22,7 +22,7 @@ $cerere->execute();
 if($cerere->rowCount()==1)
 foreach ($cer->query($sql) as $row)
 {
-    if($row['Admin']==1)
+    if($row['AdminLevel']==1)
     return 1;
     else return 0;
    
@@ -42,7 +42,7 @@ else return 3;
                         </a>
                     </li>
                     <li class='Home'>
-                        <a id='Useri' >
+                        <a id='Useri'  >
                             <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
                             <span>Useri</span>
                         </a>
@@ -63,6 +63,26 @@ else return 3;
 
             </div>
         </div>
+        <div class='search' role='search' id='search-area'>
+                
+        <input type='search' required='required' name='' id='Search' class='search-field' value=''>
+       
+        <button type='submit' class='button-search'>
+            <span class='screen-reader-text'>Search</span>
+            
+        </button>
+   
+</div>
+        <div class='search' role='search' id='user-search-area'>
+                
+                    <input type='search' required='required' name='' id='SearchUser' class='search-field' value=''>
+                   
+                    <button type='submit' class='button-search'>
+                        <span class='screen-reader-text'>Search</span>
+                        
+                    </button>
+               
+            </div>         
         ";
        
       
@@ -106,7 +126,19 @@ else return 3;
             </li>
                     </ul>
                     </div>
-                    </div>";
+                    </div>
+                    
+                    <div class='search' role='search' id='search-area'>
+                
+                    <input type='search' required='required' name='' id='Search' class='search-field' value=''>
+                   
+                    <button type='submit' class='button-search'>
+                        <span class='screen-reader-text'>Search</span>
+                        
+                    </button>
+               
+            </div>            
+                    ";
                    
                    
 
@@ -121,16 +153,7 @@ else return 3;
         }
         else {echo "error";}
 ?>
-<div class="search" role="search" id="search-area">
-                
-                <input type="search" required="required" name="" id="Search" class="search-field" value="">
-               
-                <button type="submit" class="button-search">
-                    <span class="screen-reader-text">Search</span>
-                    
-                </button>
-           
-        </div>
+
 </header> 
 
 <?php
@@ -205,9 +228,9 @@ echo "<button onclick='history.go(0)'>Refresh</button>
          },
          //If result found, this funtion will be called.
          success: function(html) {
-             //Assigning result to display div in search.php file.
-             /*$('#tabelAfisare').html(html).show();*/
-              /*location.reload();*/
+             console.log(html);
+             
+             document.getElementById('UseriVer').value='1';
              var a=document.createElement('script');
              a.src='/Mum/Js/AfisareUseri.js';
              document.body.appendChild(a);

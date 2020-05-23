@@ -2,8 +2,9 @@
 include '../PhpRegister/connect.php';
 
 function afisareAdmin(){
+      $search_value=$_POST['search'];
       $bazaAdmin= new BD();
-      $sqlAdmin = "SELECT * FROM register where AdminLevel=0";
+      $sqlAdmin = "SELECT * FROM register where UserName like '%".$search_value."%' && AdminLevel=0";
       $cerAdmin = $bazaAdmin::obtine_conexiune();
       $cerereUser=$cerAdmin->prepare($sqlAdmin);
     $cerereUser->execute();
