@@ -3,7 +3,7 @@
     <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js "></script>
     
-    
+   
     <link href="/Mum/Css/App.css" rel="stylesheet">
     <link href="/MUM/Css/Layout.css" rel="stylesheet">
     </head>
@@ -84,6 +84,16 @@ include 'TemplateModal.php';
 <script>
 function goBack() {
   window.history.back();
+}
+function ArtisitiConf(){
+  
+<?php 
+
+include 'AfisareArtisiti.php';
+
+
+?>
+
 }
 </script>
 

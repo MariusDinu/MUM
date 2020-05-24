@@ -26,14 +26,10 @@ html::-webkit-scrollbar-track {
     animation: none;
 }
 
-.site-header,
-.site-header .logo {
-    position: relative;
+.site-header, .site-header .logo {
     display: flex;
     align-items: center;
     background-color: black;
-    height:min-content;
-    
 }
 
 img.mylogo {
@@ -60,6 +56,7 @@ img.mylogo {
 .site-header .header-middle-area {
     z-index: 1;
     flex: 1;
+    display: flex;
 }
 
 .site-header .main-nav .main-sections {
@@ -67,7 +64,6 @@ img.mylogo {
 }
 
 .site-header .main-nav .main-sections>li {
-
     flex: 1;
     height: var(--nav-height)
 }
@@ -96,8 +92,7 @@ img.mylogo {
     transition: .1s
 }
 
-.site-header .main-nav .main-sections>li>a:focus,
-.site-header .main-nav .main-sections>li>a:hover {
+.site-header .main-nav .main-sections>li>a:focus, .site-header .main-nav .main-sections>li>a:hover {
     -webkit-text-fill-color: #fff;
     background: #201c29
 }
@@ -147,10 +142,7 @@ body.home .site-header .logo>a:before {
     transform: rotate(2turn);
 }
 
-.site-header .main-nav .mobile-nav-button,
-.site-header .main-nav .mobile-other-nav,
-.site-header .main-nav .mobile-social,
-.site-header .main-nav hr {
+.site-header .main-nav .mobile-nav-button, .site-header .main-nav .mobile-other-nav, .site-header .main-nav .mobile-social, .site-header .main-nav hr {
     display: none;
 }
 
@@ -194,7 +186,6 @@ body.home .site-header .logo>a:before {
 }
 
 .site-header .main-nav>ul>li.Sign-up>a:before {
-    
     background-image: linear-gradient(270deg, #ff8a00, #e52e71);
     position: relative;
     top: 0;
@@ -209,7 +200,6 @@ body.home .site-header .logo>a:before {
 }
 
 .site-header .main-nav>ul>li.Home>a:before {
-    
     background-image: linear-gradient(270deg, #ff8a00, #e52e71);
     position: relative;
     top: 0;
@@ -223,52 +213,42 @@ body.home .site-header .logo>a:before {
     fill: rgba(139, 195, 74, .2);
 }
 
-.site-header .main-nav:focus>ul>li:first-child svg,
-.site-header .main-nav:hover>ul>li:first-child svg {
+.site-header .main-nav:focus>ul>li:first-child svg, .site-header .main-nav:hover>ul>li:first-child svg {
     stroke: purple;
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(2) svg,
-.site-header .main-nav:hover>ul>li:nth-child(2) svg {
+.site-header .main-nav:focus>ul>li:nth-child(2) svg, .site-header .main-nav:hover>ul>li:nth-child(2) svg {
     stroke: blue;
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(3) svg,
-.site-header .main-nav:hover>ul>li:nth-child(3) svg {
+.site-header .main-nav:focus>ul>li:nth-child(3) svg, .site-header .main-nav:hover>ul>li:nth-child(3) svg {
     stroke: black;
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(4) svg,
-.site-header .main-nav:hover>ul>li:nth-child(4) svg {
+.site-header .main-nav:focus>ul>li:nth-child(4) svg, .site-header .main-nav:hover>ul>li:nth-child(4) svg {
     stroke: black;
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(5) svg,
-.site-header .main-nav:hover>ul>li:nth-child(5) svg {
+.site-header .main-nav:focus>ul>li:nth-child(5) svg, .site-header .main-nav:hover>ul>li:nth-child(5) svg {
     stroke: black;
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(6) svg,
-.site-header .main-nav:hover>ul>li:nth-child(6) svg {
+.site-header .main-nav:focus>ul>li:nth-child(6) svg, .site-header .main-nav:hover>ul>li:nth-child(6) svg {
     stroke: #4caf50
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(7) svg,
-.site-header .main-nav:hover>ul>li:nth-child(7) svg {
+.site-header .main-nav:focus>ul>li:nth-child(7) svg, .site-header .main-nav:hover>ul>li:nth-child(7) svg {
     stroke: #8bc34a
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(8) svg,
-.site-header .main-nav:hover>ul>li:nth-child(8) svg {
+.site-header .main-nav:focus>ul>li:nth-child(8) svg, .site-header .main-nav:hover>ul>li:nth-child(8) svg {
     stroke: #ffeb3b
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(9) svg,
-.site-header .main-nav:hover>ul>li:nth-child(9) svg {
+.site-header .main-nav:focus>ul>li:nth-child(9) svg, .site-header .main-nav:hover>ul>li:nth-child(9) svg {
     stroke: #607d8b
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(10) svg,
-.site-header .main-nav:hover>ul>li:nth-child(10) svg {
+.site-header .main-nav:focus>ul>li:nth-child(10) svg, .site-header .main-nav:hover>ul>li:nth-child(10) svg {
     stroke: black;
 }

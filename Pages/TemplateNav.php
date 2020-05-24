@@ -6,7 +6,7 @@
             </svg>
             </a>
             
- <div class="search" role="search" id="search-area">
+        <div class="search" role="search" id="search-area">
                 
                 <input type="search" required="required" name="" id="Search" class="search-field" value="">
                
@@ -16,7 +16,6 @@
                 </button>
            
         </div>
-    </div>
         </div>
 <?php
 include '../PhpRegister/connect.php';
@@ -70,7 +69,8 @@ foreach ($cer->query($sql) as $row)
                 </ul>
 
             </div>
-        </div>";
+        </div>
+        </header>";
     
     
     }
@@ -111,7 +111,7 @@ foreach ($cer->query($sql) as $row)
             </li>
                     </ul>
                     </div>
-                    </div>";
+                    </div></header>";
 
                     echo"<script src='/MUM/Js/AfisareGenuri.js'></script>
                     <script src='/MUM/Js/AfisareArtisti.js'></script>
@@ -128,4 +128,3 @@ foreach ($cer->query($sql) as $row)
 
         }
 ?>
-</header>
