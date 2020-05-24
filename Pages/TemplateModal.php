@@ -279,3 +279,38 @@
                 </form>
   </div>
                 </div>
+
+
+                <div id="myModalModifyAdmin" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closeAdmin">&times;</span>
+    <form action="" onsubmit="" class="room-settingsAdmin" id="roomSettingsAdmin" method="post">
+                    <fieldset>
+                        <p>
+                            <label for="Name">Numele nou:</label>
+                            <input id="numelenouAdmin" name="numelenou" placeholder="Introdu noul nume" type="text" >
+                        </p>
+                        <p>
+                            <label for="Artist">Parola noua:</label>
+                            <input id="parolanouaAdmin" name="parolanoua" placeholder="Introdu noua parola" type="text" >
+                        </p>
+                        <p>
+                            <label for="spec">Email nou:</label>
+                            <input id="emailnouAdmin" name="emailnou" placeholder="Introdu noul email" type="text" >
+                            <p id="errorGen"></p> 
+                        </p>
+                        <p>
+                        <label for="country" >Choose a Country:</label>
+                        <select id="countryAdmin" name="country"> 
+                        <option value=""></option>
+                <option value="italia">Italia</option>
+                <option value="spania">Spania</option>
+                <option value="china">China</option>
+                <option value="belgia">Belgia</option>
+              </select></p>
+              <button class="btn btn-success" id="SalvareAdmin"  type="submit">Salvare</button>
+              </fieldset>
+                </form>
+  </div>
+                </div>

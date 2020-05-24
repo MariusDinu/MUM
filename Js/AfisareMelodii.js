@@ -11,7 +11,8 @@ $(document).ready(function() {
     //On pressing a key on "Search box" in "search.php" file. This function will be called.
 
     //Assigning search box value to javascript variable named as "name".
-
+    $("#search-area").show();
+    $("#user-search-area").hide();
     var admin = $("#user").attr('value');
     //Validating, if "name" is empty.
     if (admin == "") {
@@ -44,6 +45,8 @@ $(document).ready(function() {
 
     var mel = document.getElementById('MelodieConfirm');
     mel.onclick = function() {
+        $("#search-area").show();
+        $("#user-search-area").hide();
         document.getElementById("AlbumConfirmNumber").value = "0";
         document.getElementById("GenConfirmNumber").value = "0";
         document.getElementById("ArtistConfirmNumber").value = "0";
@@ -68,6 +71,7 @@ $(document).ready(function() {
                 $("#tabelGenuri").hide();
                 $("#Alb").hide();
                 $("#userDetails").hide();
+                $("#tabelUseri").hide();
                 $("#tabelAfisare").html(html).show();
                 //Assigning result to "display" div in "search.php" file.
 

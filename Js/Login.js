@@ -1,6 +1,7 @@
 $(document).ready(function() {
     //On pressing a key on "Search box" in "search.php" file. This function will be called.
-    $("#Login").click(function(event) {
+    var log = document.getElementById('Login');
+    log.onclick = function() {
         //Assigning search box value to javascript variable named as "name".
         var userM = document.getElementById("user").value;
         var passM = document.getElementById("password").value;
@@ -13,7 +14,6 @@ $(document).ready(function() {
             type: "POST",
             //Data will be sent to "ajax.php".
             url: "/MUM/PhpRegister/Login.php",
-            cache: false,
             //Data, that will be sent to "ajax.php".
             data: {
                 user: userM,
@@ -22,13 +22,14 @@ $(document).ready(function() {
             //If result found, this funtion will be called.
             success: function(html) {
                 //Assigning result to "display" div in "search.php" file.
-
+                console.log(html);
+                alert(html);
                 if (html == 0) {
 
                     $("#errorLoginPass").html('Parola sau user incorect!').show();
 
 
-                } else if (html == 1){
+                } else if (html == 1) {
                     window.location.href = "/MUM/Pages/App.php?user=" + userM;
                 }
 
@@ -39,6 +40,6 @@ $(document).ready(function() {
             }
 
         });
-        event.preventDefault();
-    });
+
+    }
 });

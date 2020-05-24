@@ -1,38 +1,21 @@
 $(document).ready(function() {
 
     //On pressing a key on "Search box" in "search.php" file. This function will be called.
-    $("#Search").keyup(function() {
+    $("#SearchUser").keyup(function() {
 
         //Assigning search box value to javascript variable named as "name".
-        var search = $('#Search').val();
+        var search = $('#SearchUser').val();
         var admin = $("#user").attr('value');
         //Validating, if "name" is empty.
         if (search == "") {
 
-            if (document.getElementById("AlbumConfirmNumber").value == 1) //Assigning empty value to "display" div in "search.php" file. {
-            {
+            if (document.getElementById("UserConfirmNumber").value == 1) {
                 $("#tabelSearch").hide();
                 $("#tabelAfisare").hide();
-                $("#tabelAlbume").show();
-                $("#tabelArtisti").hide();
-                $("#tabelGenuri").hide();
-            } else if (document.getElementById("ArtistConfirmNumber").value == 1) {
-                $("#tabelSearch").hide();
-                $("#tabelAfisare").hide();
-                $("#tabelAlbume").hide();
-                $("#tabelArtisti").show();
-                $("#tabelGenuri").hide();
-            } else if (document.getElementById("GenConfirmNumber").value == 1) {
-                $("#tabelSearch").hide();
-                $("#tabelAlbume").hide();
-                $("#tabelArtisti").hide();
-                $("#tabelGenuri").show();
-                $("#tableAfisare").hide();
+                $("#tabelUseri").show();
             } else if (document.getElementById("MelodieConfirmNumber").value == 1) {
                 $("#tabelSearch").hide();
-                $("#tabelAlbume").hide();
-                $("#tabelArtisti").hide();
-                $("#tabelGenuri").hide();
+                $("#tableUseri").hide();
                 $("#tabelAfisare").show();
             }
         }
@@ -44,7 +27,7 @@ $(document).ready(function() {
                 //AJAX type is "Post".
                 type: "POST",
                 //Data will be sent to "ajax.php".
-                url: "/MUM/PhpMusic/Search.php",
+                url: "/MUM/PhpRegister/SearchUser.php",
                 //Data, that will be sent to "ajax.php".
                 data: {
                     //Assigning value of "name" into "search" variable.

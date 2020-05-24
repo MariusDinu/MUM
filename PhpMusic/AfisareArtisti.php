@@ -78,7 +78,7 @@ function afisareMelodii(){
     $ver_user=$cerere->fetchAll();
     foreach($cer->query($sql_user) as $row)
     {
-            if($row['Admin']==1)
+            if($row['AdminLevel']==1)
             {
               afisareAdmin();
             }

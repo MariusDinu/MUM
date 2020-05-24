@@ -10,23 +10,29 @@ function inregistrare(){
      $country=$_POST['country'];
 
       $baza= new BD();
-      $sql = "INSERT INTO register(Email,UserName,UserPassword,ConfirmUserPassword,Country,Admin) values (:email,:username,:pass,:passConfirm,:country,:admin)";
+      $sql = "INSERT INTO register(Email,UserName,UserPassword,ConfirmUserPassword,Country,AdminLevel) values (:email,:username,:pass,:passConfirm,:country,:adminLevel)";
       $cerere = $baza::obtine_conexiune()->prepare($sql);
-      return $cerere->execute([
+      if( $cerere->execute([
    'email' => $email_value,
    'username' => $user_value,
    'pass'=> $pass_value,
    'passConfirm'=>$passConfirm_value,
    'country'=>$country,
-   'admin'=>0]);
+   'adminLevel'=>0]))
+   return 1;
+   else return 2;
 }
  
- inregistrare();
+ 
 ?>
-<a onclick="fillRegister()">
-<?php 
-echo 'Inregistrarea a reusit!'; 
+
+<?php
+ $a=inregistrare();
+ if($a==1)
+ echo '1';
+ else echo '2';
+
 
   ?>
- </a>
+ 
  

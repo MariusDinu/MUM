@@ -45,7 +45,8 @@
         text-align: center;
         cursor: default;
         background-color: #1ee6f4;
-        margin: 5em;
+        box-sizing: border-box;
+        margin: 5px;
         font: 400 13.3333px Arial;
         padding: 10px 60px;
         border-width: 3px;
@@ -132,6 +133,8 @@
     div.showOneMelodie {
         background-color: white;
     }
+
+    div.User {}
 
     .video-player-embed {
         display: block;
