@@ -224,7 +224,7 @@ function AddFavorite(current) {
 }
 
   
-  else  if((document.getElementById('MelodieConfirmNumber').value == '1') || (document.getElementById('AlbumConfirmNumber').value = '1') ||
+  else  if((document.getElementById('SearchConfirmNumber').value == '0')||(document.getElementById('MelodieConfirmNumber').value == '1') || (document.getElementById('AlbumConfirmNumber').value = '1') ||
   (document.getElementById('GenConfirmNumber').value == '1') ||
   (document.getElementById('ArtistConfirmNumber').value == '1') ||
   (document.getElementById('FavoriteConfirmNumber').value == '1')) { $.ajax({
@@ -311,7 +311,34 @@ function deleteFavorite(current) {
                
             }
         });
-    }
+    } else if(document.getElementById('SearchConfirmNumber').value == '1')
+    {
+        $.ajax({
+
+            type: 'POST',
+    
+            url: '/MUM/PhpMusic/DeleteFavoriteAfisare.php',
+    
+            data: {
+                user: musicA,
+                musicIdDelete: music
+            },
+            //If result found, this funtion will be called.
+            success: function(html) {
+                console.log(html);
+                var a=document.createElement('script');
+                a.src='/Mum/Js/Search.js';
+                document.body.appendChild(a);
+                $('#Search').keyup();
+                $('#tabelFavorite').hide();
+                $('#tabelSearch').show();
+    
+               
+               
+            }
+        });
+  
+  }
       
 
 }

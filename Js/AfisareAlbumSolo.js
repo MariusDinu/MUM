@@ -27,7 +27,7 @@ function AfisareAlbum(current) {
             $("#listMusic").html(html).show();
             //Assigning result to "display" div in "search.php" file.
 
-            document.getElementById("ArtistConfirmNumber").value = "1";
+            document.getElementById("AlbumConfirmNumber").value = "1";
 
 
 
@@ -57,7 +57,7 @@ function AfisareGen(current) {
         },
         //If result found, this funtion will be called.
         success: function(html) {
-
+            $("#tabelArtisti ").hide();
             $("#tabelAfisare ").hide();
             $("#tabelSearch").hide();
             $("#tabelAlbume").hide();
@@ -68,7 +68,7 @@ function AfisareGen(current) {
             $("#listGenMusic").html(html).show();
             //Assigning result to "display" div in "search.php" file.
 
-            document.getElementById("ArtistConfirmNumber").value = "1";
+            document.getElementById("GenConfirmNumber").value = "1";
 
 
 
