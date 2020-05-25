@@ -186,7 +186,48 @@ function AddFavorite(current) {
     var id = current.value;
     var user ='".$_GET['user']."';
     console.log(user);
+  if(document.getElementById('SearchConfirmNumber').value == '1')
+  {
     $.ajax({
+
+        type: 'POST',
+        //Data will be sent to 
+        url: '/MUM/PhpMusic/AddFavorite.php',
+        //Data, that will be sent
+        data: {
+            id: id,
+            user: user
+
+        },
+        //If result found, this funtion will be called.
+        success: function(html) {
+            console.log(html);
+            if (html == 1) {
+
+                alert('Succes!');
+
+
+
+            } else if (html == 2) {
+                alert('Fail!');
+            }
+            var a=document.createElement('script');
+             a.src='/Mum/Js/Search.js';
+             document.body.appendChild(a);
+             $('#Search').keyup();
+            $('#tabelFavorite').hide();
+            $('#tabelAfisare').hide();
+
+        }
+    });
+
+}
+
+  
+  else  if((document.getElementById('MelodieConfirmNumber').value == '1') || (document.getElementById('AlbumConfirmNumber').value = '1') ||
+  (document.getElementById('GenConfirmNumber').value == '1') ||
+  (document.getElementById('ArtistConfirmNumber').value == '1') ||
+  (document.getElementById('FavoriteConfirmNumber').value == '1')) { $.ajax({
 
         type: 'POST',
         //Data will be sent to 
@@ -212,17 +253,18 @@ function AddFavorite(current) {
             var a=document.createElement('script');
              a.src='/Mum/Js/AfisareMelodii.js';
              document.body.appendChild(a);
-
-
+            $('#tabelFavorite').hide();
+            $('#tabelSearch').hide();
 
         }
-    });
+    });} 
 }
 function deleteFavorite(current) {
     var music = current.value;
     var musicA ='".$_GET['user']."';
   
- $.ajax({
+ if(document.getElementById('FavoriteConfirmNumber').value == '1'){
+     $.ajax({
 
         type: 'POST',
 
@@ -234,16 +276,42 @@ function deleteFavorite(current) {
         },
         //If result found, this funtion will be called.
         success: function(html) {
-            alert(html);
+            console.log(html);
             var a=document.createElement('script');
-            a.src='/Mum/Js/AfisareFavorite.js';
+            a.src='/Mum/Js/AfisareFavoriteAll.js';
             document.body.appendChild(a);
-            
-
+            $('#tabelAfisare').hide();
+            $('#tabelSearch').hide();
 
            
+           
         }
-    });
+    });} else if(document.getElementById('MelodieConfirmNumber').value == '1') {
+        
+        $.ajax({
+
+            type: 'POST',
+    
+            url: '/MUM/PhpMusic/DeleteFavoriteAfisare.php',
+    
+            data: {
+                user: musicA,
+                musicIdDelete: music
+            },
+            //If result found, this funtion will be called.
+            success: function(html) {
+                console.log(html);
+                var a=document.createElement('script');
+                a.src='/Mum/Js/AfisareMelodii.js';
+                document.body.appendChild(a);
+                $('#tabelFavorite').hide();
+                $('#tabelSearch').hide();
+    
+               
+               
+            }
+        });
+    }
       
 
 }

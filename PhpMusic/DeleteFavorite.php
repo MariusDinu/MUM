@@ -1,5 +1,5 @@
 <?php 
-include "AfisareMelodii.php";
+include '../PhpRegister/connect.php';
 
 function deleteMelodie(){
   
@@ -9,7 +9,9 @@ function deleteMelodie(){
   $sqlDelete = "DELETE FROM `favorite` WHERE id='$musicId' and UserName='$user_value'";
   $cerDelete = $bazaDelete::obtine_conexiune();
   $cerereAdmin=$cerDelete->prepare($sqlDelete);
-  $cerereAdmin->execute();
+ if( $cerereAdmin->execute())
+ return 1;
+ else return 2;
 
   
   
@@ -17,7 +19,10 @@ function deleteMelodie(){
 ?>
 
 <?php
-deleteMelodie();
+$b=deleteMelodie();
+if($b==1)
+echo '1';
+else echo '2';
 ?>
 
 <?php  ?>

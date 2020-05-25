@@ -9,7 +9,10 @@ function fillMusic(Value) {
 
 $(document).ready(function() {
     //On pressing a key on "Search box" in "search.php" file. This function will be called.
-
+    document.getElementById("AlbumConfirmNumber").value = "0";
+    document.getElementById("GenConfirmNumber").value = "0";
+    document.getElementById("ArtistConfirmNumber").value = "0";
+    document.getElementById("FavoriteConfirmNumber").value = "0";
     //Assigning search box value to javascript variable named as "name".
     $("#search-area").show();
     $("#user-search-area").hide();

@@ -8,7 +8,7 @@ $(document).ready(function() {
         var admin = $("#user").attr('value');
         //Validating, if "name" is empty.
         if (search == "") {
-
+            document.getElementById("SearchConfirmNumber").value = "0";
             if (document.getElementById("AlbumConfirmNumber").value == 1) //Assigning empty value to "display" div in "search.php" file. {
             {
                 $("#tabelSearch").hide();
@@ -38,6 +38,7 @@ $(document).ready(function() {
                 $("#tabelGenuri").hide();
                 $("#tabelFavorite").hide();
                 $("#tabelAfisare").show();
+
             } else if (document.getElementById("FavoriteConfirmNumber").value == 1) {
                 $("#tabelSearch").hide();
                 $("#tabelAlbume").hide();
@@ -45,6 +46,7 @@ $(document).ready(function() {
                 $("#tabelGenuri").hide();
                 $("#tabelAfisare").hide();
                 $("#tabelFavorite").show();
+
             }
         }
 
@@ -71,7 +73,9 @@ $(document).ready(function() {
                     $("#tabelAlbume").hide();
                     $("#tabelGenuri").hide();
                     $("#tabelUseri").hide();
+                    $("#tabelFavorite").hide();
                     $("#tabelSearch").html(html).show();
+                    document.getElementById("SearchConfirmNumber").value = "1";
 
                     /*$("#tabelAfisare").html(html).show();*/
 

@@ -78,6 +78,9 @@ include 'TemplateModal.php';
     <div id="FavoriteConfirmNumber">
 
     </div>
+    <div id="SearchConfirmNumber">
+
+</div>
 
 <div class='userDetails' id='userDetails'>    </div>
   <div id="Alb">
