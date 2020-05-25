@@ -61,6 +61,8 @@ include 'TemplateModal.php';
                   
 </div>
     </div>
+
+   
 <div id="UseriVer" ></div>
 <div id="UserConfirmNumber" ></div>
     <div id="AlbumConfirmNumber">

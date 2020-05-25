@@ -8,20 +8,36 @@ function adaugaMelodie(){
     $link=$_POST['linkM'];
     $album=$_POST['albumM'];
     $data=$_POST['dataM'];
-    
+    $local=$_POST['local'];
 
       $baza= new BD();
-      $sql = "INSERT INTO `music`( `Name`, `Artist`, `Album`, `Gen`, `Date`, `Local`) VALUES ('$name','$artist','$album','$gen','$data','$link')";
-      $cerere = $baza::obtine_conexiune()->prepare($sql);
+      $sqlLink = "INSERT INTO `music`( `Name`, `Artist`, `Album`, `Gen`, `Date`, `Local`) VALUES ('$name','$artist','$album','$gen','$data','$link')";
+      $adresa="/MUM/PhpMusic/uploads/".$local;
+      $sqlLocal = "INSERT INTO `music`( `Name`, `Artist`, `Album`, `Gen`, `Date`, `Local`) VALUES ('$name','$artist','$album','$gen','$data','$adresa')";
+     /* if($local=="")
+      {$cerere = $baza::obtine_conexiune()->prepare($sqlLink);
       if($cerere->execute())
       return 1;
-      else return 2;
+      else return 2;}
+      else {*/
+        $dir='./uploads/';
+        $audio=$dir.basename($_FILES['audiofile']['name']);
+        move_uploaded_file($_FILES['audiofile']['tmp_name'],$audio);
+        $cerere = $baza::obtine_conexiune()->prepare($sqlLocal);
+        if($cerere->execute())
+        return 1;
+        else return 2;
+        
+
+    /*  }*/
 }
+
  ?>
  <?php
  $b=adaugaMelodie();
  if($b==1) 
 { echo '1'  ;} 
  else echo '2';
+ 
  
 ?>
