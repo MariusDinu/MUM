@@ -126,7 +126,7 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="closeInsert">&times;</span>
-    <form action="" onsubmit="" class="music-Settings" id="musicSettings" method="POST" enctype="multipart/form-data">
+    <forms action="" class="music-Settings" id="musicSettings" method="POST" enctype="multipart/form-data">
                     <fieldset>
                         <p>
                             <label for="Name">Numele melodiei</label>

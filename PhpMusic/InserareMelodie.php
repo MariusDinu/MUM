@@ -20,9 +20,7 @@ function adaugaMelodie(){
       return 1;
       else return 2;}
       else {*/
-        $dir='./uploads/';
-        $audio=$dir.basename($_FILES['audiofile']['name']);
-        move_uploaded_file($_FILES['audiofile']['tmp_name'],$audio);
+       
         $cerere = $baza::obtine_conexiune()->prepare($sqlLocal);
         if($cerere->execute())
         return 1;

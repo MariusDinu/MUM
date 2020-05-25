@@ -87,7 +87,30 @@ include 'TemplateModal.php';
 <div class='userDetails' id='userDetails'>    </div>
   <div id="Alb">
   
-  </div>  
+  </div> 
+  
+  
+  
+  
+  <?php
+$uploaddir = '../uploads/';
+$uploadfile = $uploaddir . basename($_FILES['audiofile']['name']);
+
+echo '<pre>';
+if (move_uploaded_file($_FILES['audiofile']['tmp_name'],$uploadfile)) {
+    echo "File is valid, and was successfully uploaded.\n";
+} else {
+    echo "Possible file upload attack!\n";
+}
+
+echo 'Here is some more debugging info:';
+print_r($_FILES);
+
+print "</pre>";
+
+?>
+  
+
 </body>
 
 <script>
