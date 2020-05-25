@@ -220,7 +220,7 @@ function AddFavorite(current) {
 }
 function deleteFavorite(current) {
     var music = current.value;
-    var musicA = document.getElementById('user').value;
+    var musicA ='".$_GET['user']."';
   
  $.ajax({
 
@@ -234,7 +234,13 @@ function deleteFavorite(current) {
         },
         //If result found, this funtion will be called.
         success: function(html) {
-           
+            alert(html);
+            var a=document.createElement('script');
+            a.src='/Mum/Js/AfisareFavorite.js';
+            document.body.appendChild(a);
+            
+
+
            
         }
     });

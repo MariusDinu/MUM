@@ -51,7 +51,7 @@ $(document).ready(function() {
         document.getElementById("GenConfirmNumber").value = "0";
         document.getElementById("ArtistConfirmNumber").value = "0";
         document.getElementById("FavoriteConfirmNumber").value = "0";
-        var musicA = $("#user").val();
+        var musicA = $("#user").attr('value');
         console.log(musicA);
         $.ajax({
             //AJAX type is "Post".
@@ -60,7 +60,7 @@ $(document).ready(function() {
             url: "/MUM/PhpMusic/AfisareMelodii.php",
             //Data, that will be sent to "ajax.php".
             data: {
-                verify: musicA
+                verify: admin
 
             },
             //If result found, this funtion will be called.
@@ -85,6 +85,7 @@ $(document).ready(function() {
 
 
             }
+
         });
 
 
