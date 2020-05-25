@@ -20,6 +20,7 @@ function AfisareAlbum(current) {
             $("#tabelAfisare ").hide();
             $("#tabelSearch").hide();
             $("#tabelAlbume").hide();
+            $("#tabelFavorite").hide();
             $("#tabelGenuri").hide();
             $("#userDetails").hide();
             $("#Alb").show();
@@ -61,6 +62,7 @@ function AfisareGen(current) {
             $("#tabelSearch").hide();
             $("#tabelAlbume").hide();
             $("#tabelGenuri").hide();
+            $("#tabelFavorite").hide();
             $("#userDetails").hide();
             $("#Alb").show();
             $("#listGenMusic").html(html).show();
@@ -101,6 +103,7 @@ function AfisareArtist(current) {
             $("#tabelAfisare ").hide();
             $("#tabelSearch").hide();
             $("#tabelAlbume").hide();
+            $("#tabelFavorite").hide();
             $("#tabelGenuri").hide();
             $("#userDetails").hide();
             $("#Alb").show();
@@ -125,6 +128,7 @@ function AfisareMelodie(current) {
     $("#tabelAfisare").hide();
     $("#tabelSearch").hide();
     $("#tabelGenuri").hide();
+    $("#tabelFavorite").hide();
     $("#tabelAlbume").hide();
     $("#userDetails").hide();
     $("#Alb").show();

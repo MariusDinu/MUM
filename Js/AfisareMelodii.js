@@ -50,7 +50,9 @@ $(document).ready(function() {
         document.getElementById("AlbumConfirmNumber").value = "0";
         document.getElementById("GenConfirmNumber").value = "0";
         document.getElementById("ArtistConfirmNumber").value = "0";
-        var musicA = $("#user").attr('value');
+        document.getElementById("FavoriteConfirmNumber").value = "0";
+        var musicA = $("#user").val();
+        console.log(musicA);
         $.ajax({
             //AJAX type is "Post".
             type: "POST",
@@ -72,6 +74,7 @@ $(document).ready(function() {
                 $("#Alb").hide();
                 $("#userDetails").hide();
                 $("#tabelUseri").hide();
+                $("#tabelFavorite").hide();
                 $("#tabelAfisare").html(html).show();
                 //Assigning result to "display" div in "search.php" file.
 

@@ -14,18 +14,21 @@ $(document).ready(function() {
                 $("#tabelSearch").hide();
                 $("#tabelAfisare").hide();
                 $("#tabelAlbume").show();
+                $("#tabelFavorite").hide();
                 $("#tabelArtisti").hide();
                 $("#tabelGenuri").hide();
             } else if (document.getElementById("ArtistConfirmNumber").value == 1) {
                 $("#tabelSearch").hide();
                 $("#tabelAfisare").hide();
                 $("#tabelAlbume").hide();
+                $("#tabelFavorite").hide();
                 $("#tabelArtisti").show();
                 $("#tabelGenuri").hide();
             } else if (document.getElementById("GenConfirmNumber").value == 1) {
                 $("#tabelSearch").hide();
                 $("#tabelAlbume").hide();
                 $("#tabelArtisti").hide();
+                $("#tabelFavorite").hide();
                 $("#tabelGenuri").show();
                 $("#tableAfisare").hide();
             } else if (document.getElementById("MelodieConfirmNumber").value == 1) {
@@ -33,7 +36,15 @@ $(document).ready(function() {
                 $("#tabelAlbume").hide();
                 $("#tabelArtisti").hide();
                 $("#tabelGenuri").hide();
+                $("#tabelFavorite").hide();
                 $("#tabelAfisare").show();
+            } else if (document.getElementById("FavoriteConfirmNumber").value == 1) {
+                $("#tabelSearch").hide();
+                $("#tabelAlbume").hide();
+                $("#tabelArtisti").hide();
+                $("#tabelGenuri").hide();
+                $("#tabelAfisare").hide();
+                $("#tabelFavorite").show();
             }
         }
 

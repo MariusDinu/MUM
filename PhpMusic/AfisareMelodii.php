@@ -33,12 +33,15 @@ function afisareUser(){
       "<tr><th id='Artist:".$row['Artist']."'>Artist:".$row['Artist']."</th></tr>".
       "<tr><th id='Gen:".$row['Gen']."'>Gen: ".$row['Gen']."</th></tr>".
       "<tr><th id='Album:".$row['Album']."'>Album: ".$row['Album']."</th></tr>"
-     ."</table></div></a>".
+     ."</table></div></a>";
+     if(verifyButton($row['Name'])==1)
+     {
+       echo  "<button class='"."buttonFavoritAdd"."'"." id='".$row['Id']."' data-toggle='"."modal"."' data-target='"."#room-settings"."' onclick='AddFavorite(this)' value='".$row['Id']."'>Adaugare la favorite</button> ";
+     }
+     else {echo  "<button class='"."buttonFavoriteAdded"."'"." id='".$row['Id']."' onclick='deleteFavorite(this)' value='".$row['Id']."'><span>Adaugat</span></button> ";};
      
      
-     
-     
-     "</div> <br></br>";
+     echo "</div> <br></br>";
      
       
     }}
@@ -74,7 +77,18 @@ function afisareAdmin(){
        
         
       }}
+function verifyButton($input){
+  $user_value=$_POST['verify'];
+  $baza= new BD();
+  $sql = "SELECT * FROM favorite where UserName='$user_value' and NumeMelodie='$input'";
+  $cer = $baza::obtine_conexiune();
+  $cerere=$cer->prepare($sql);
+  $cerere->execute();
+  if($cerere->rowCount()==1)
+ {return 2;}
+else {return 1;}
 
+}
 function afisareMelodii(){
     $user_value=$_POST['verify'];
     $baza= new BD();

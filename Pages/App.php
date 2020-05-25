@@ -9,14 +9,14 @@
     </head>
 <body>
 
-
-
 <?php 
 include 'TemplateNav.php';
 ?>
+
+
        
 <?php    if(isset($_GET['user']))
-echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'>Numele adminului:".$_GET['user']."</div>"
+echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'></div>"
 ?>
 
 
@@ -50,7 +50,9 @@ include 'TemplateModal.php';
 <div class="wrap" id="tabelArtisti" value="1"> 
                 </div>    
 <div class="wrap" id="tabelGenuri" value="1"> 
-                </div>           
+                </div>  
+                <div class="wrap" id="tabelFavorite" value="1"> 
+                </div>         
 </div>  
 
 <div class="pozitionare">
@@ -73,6 +75,9 @@ include 'TemplateModal.php';
     <div id="MelodieConfirmNumber">
 
     </div>
+    <div id="FavoriteConfirmNumber">
+
+    </div>
 
 <div class='userDetails' id='userDetails'>    </div>
   <div id="Alb">
@@ -84,16 +89,7 @@ include 'TemplateModal.php';
 function goBack() {
   window.history.back();
 }
-function ArtisitiConf(){
-  
-<?php 
 
-include 'AfisareArtisiti.php';
-
-
-?>
-
-}
 </script>
 
 

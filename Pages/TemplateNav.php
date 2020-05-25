@@ -124,6 +124,12 @@ else return 3;
                     <span> Cont: ".$_GET['user']."</span>
                 </a>
             </li>
+            <li class='Home'>
+                    <a id='Favorite'>
+                        <svg id='icon-nav-videos' viewBox='0 0 40 40'><g clip-path='url(#clip0)'><path d='M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z'></path><path d='M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z'></path><path d='M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z'></path></g></svg>
+                        <span class>Favorite</span>
+                    </a>
+                </li>
                     </ul>
                     </div>
                     </div>
@@ -169,9 +175,73 @@ echo "<button onclick='history.go(0)'>Refresh</button>
         <script src='/MUM/Js/AfisareArtisti.js'></script>
         <script src='/MUM/Js/AfisareAlbume.js'></script>
         <script src='/MUM/Js/AfisareAlbumSolo.js'></script>
+        <script src='/MUM/Js/AfisareFavorite.js'></script>
+        
+       
 <script src='/MUM/Js/AfisareMelodii.js'></script>
 <script src='/MUM/Js/InserareMelodie.js'></script>
 <script src='/MUM/Js/Search.js'></script>
+<script>
+function AddFavorite(current) {
+    var id = current.value;
+    var user ='".$_GET['user']."';
+    console.log(user);
+    $.ajax({
+
+        type: 'POST',
+        //Data will be sent to 
+        url: '/MUM/PhpMusic/AddFavorite.php',
+        //Data, that will be sent
+        data: {
+            id: id,
+            user: user
+
+        },
+        //If result found, this funtion will be called.
+        success: function(html) {
+            console.log(html);
+            if (html == 1) {
+
+                alert('Succes!');
+
+
+
+            } else if (html == 2) {
+                alert('Fail!');
+            }
+            var a=document.createElement('script');
+             a.src='/Mum/Js/AfisareMelodii.js';
+             document.body.appendChild(a);
+
+
+
+        }
+    });
+}
+function deleteFavorite(current) {
+    var music = current.value;
+    var musicA = document.getElementById('user').value;
+  
+ $.ajax({
+
+        type: 'POST',
+
+        url: '/MUM/PhpMusic/DeleteFavorite.php',
+
+        data: {
+            user: musicA,
+            musicIdDelete: music
+        },
+        //If result found, this funtion will be called.
+        success: function(html) {
+           
+           
+        }
+    });
+      
+
+}
+ </script>
         <script src='/MUM/Js/UserDetails.js'></script>
        ";}
       else if(verify($_GET['user'])==1){echo "<script src='/MUM/Js/AdminDetails.js'></script>
@@ -212,6 +282,7 @@ echo "<button onclick='history.go(0)'>Refresh</button>
  
  
  }</script>
+ 
  <script>
  function deleteUser(current) {
      var id = current.value;

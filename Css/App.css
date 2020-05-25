@@ -23,15 +23,15 @@
         border-color: rgb(7, 66, 155);
         width: 30%;
     }
-
+    
     body {
         background-color: black;
     }
-
+    
     .Admin {
         color: #1ee6f4;
     }
-
+    
     button.buttonInsert {
         -webkit-appearance: button;
         text-rendering: auto;
@@ -55,7 +55,7 @@
         border-color: rgb(7, 66, 155);
         width: 15%;
     }
-
+    
     button {
         -webkit-appearance: button;
         -webkit-writing-mode: horizontal-tb !important;
@@ -81,7 +81,7 @@
         border-color: rgb(7, 66, 155);
         width: 15%;
     }
-
+    
     button.Play {
         -webkit-appearance: button;
         -webkit-writing-mode: horizontal-tb !important;
@@ -91,20 +91,20 @@
         margin: 5px;
         float: left;
     }
-
+    
     button.button-search {
         width: 15%;
     }
-
+    
     .search-field {
         width: 98%;
         background-color: greenyellow;
     }
-
+    
     div.containerC {
         display: flex;
     }
-
+    
     .containerMusic {
         height: 100%;
         background-color: white;
@@ -113,29 +113,29 @@
         float: left;
         justify-content: space-between;
     }
-
+    
     .pozitionare {
         display: block;
     }
-
+    
     div.showOneAlbum {
         background-color: white;
     }
-
+    
     div.showOneGen {
         background-color: white;
     }
-
+    
     div.showOneArtist {
         background-color: white;
     }
-
+    
     div.showOneMelodie {
         background-color: white;
     }
-
+    
     div.User {}
-
+    
     .video-player-embed {
         display: block;
         position: absolute;
@@ -146,7 +146,7 @@
         height: min-content;
         width: min-content;
     }
-
+    
     button.closeVideo {
         position: relative;
         background-color: #f4511e;
@@ -163,23 +163,23 @@
         border-radius: 20px;
         width: 100%;
     }
-
+    
     button.closeVideo:hover {
         opacity: 1
     }
-
+    
     .pozitionare .video-player-inner-wrap {
         position: fixed;
         z-index: 3000002;
     }
-
+    
     .video-player-inner-wrap {
         bottom: 10px;
         float: right;
         z-index: 99 !important;
         right: 10px;
     }
-
+    
     a.form-inline {
         height: 100px;
         display: flex;
@@ -189,21 +189,21 @@
         /* padding: 10px; */
         /* float: left;*/
     }
-
+    
     a.form-inline div.second {
         display: flex;
         width: 100%;
         align-content: space-between;
         border-color: red;
     }
-
+    
     .Melodie .second .ver {
         background-color: red;
         display: inline;
         width: 100px;
         height: 100px;
     }
-
+    
     .Melodie .first button svg {
         width: 100%;
         height: 100%;
@@ -211,14 +211,14 @@
         background-color: blue;
         border-radius: 20px;
     }
-
+    
     .Melodie .first {
         background-color: black;
         height: 50px;
         float: right;
         border-radius: 20px;
     }
-
+    
     .modal {
         display: none;
         /* Hidden by default */
@@ -241,9 +241,8 @@
         background-color: rgba(0, 0, 0, 0.4);
         /* Black w/ opacity */
     }
-
     /* Modal Content */
-
+    
     .modal-content {
         background-color: #fefefe;
         margin: auto;
@@ -251,27 +250,27 @@
         border: 1px solid #888;
         width: 80%;
     }
-
     /* The Close Button */
-
+    
     .close {
         color: #aaaaaa;
         float: right;
         font-size: 28px;
         font-weight: bold;
     }
-
-    .close:hover, .close:focus {
+    
+    .close:hover,
+    .close:focus {
         color: #000;
         text-decoration: none;
         cursor: pointer;
     }
-
+    
     .outer {
         background-color: black;
         margin-bottom: 15px;
     }
-
+    
     .wrap {
         overflow: hidden;
         flex: 4;
@@ -281,14 +280,14 @@
         background-color: black;
         display: flex;
     }
-
+    
     .listMusic .second .ver {
         background-color: red;
         display: inline;
         width: 100px;
         height: 100px;
     }
-
+    
     .listMusic .first button svg {
         width: 100%;
         height: 100%;
@@ -296,14 +295,14 @@
         background-color: blue;
         border-radius: 20px;
     }
-
+    
     .listMusic .first {
         background-color: black;
         height: 50px;
         float: right;
         border-radius: 20px;
     }
-
+    
     .listMusic {
         width: 200px;
         padding-bottom: 30px;
@@ -313,7 +312,7 @@
         border-radius: 20px;
         margin: 5px;
     }
-
+    
     .Melodie {
         width: 200px;
         padding-bottom: 30px;
@@ -323,7 +322,7 @@
         border-radius: 20px;
         margin: 5px;
     }
-
+    
     .item2 {
         width: 23%;
         padding-bottom: 30px;
@@ -331,7 +330,7 @@
         position: relative;
         border-bottom: 0px solid red;
     }
-
+    
     .Melodie:nth-child(4n + 1):after {
         content: "";
         position: absolute;
@@ -340,18 +339,60 @@
         bottom: 0;
         border-bottom: 0px solid red;
     }
-
+    
     @media (max-width: 768px) {
-        .item:nth-child(2n + 1):nth-last-child(2):after, .item:nth-child(2n + 1):nth-last-child(1):after {
+        .item:nth-child(2n + 1):nth-last-child(2):after,
+        .item:nth-child(2n + 1):nth-last-child(1):after {
             display: none;
         }
         .item {
             width: 43%;
         }
     }
-
+    
     @media (min-width: 768px) {
-        .item:nth-child(4n + 1):nth-last-child(4):after, .item:nth-child(4n + 1):nth-last-child(4):after, .item:nth-child(4n + 1):nth-last-child(2):after, .item:nth-child(4n + 1):nth-last-child(1):after {
+        .item:nth-child(4n + 1):nth-last-child(4):after,
+        .item:nth-child(4n + 1):nth-last-child(4):after,
+        .item:nth-child(4n + 1):nth-last-child(2):after,
+        .item:nth-child(4n + 1):nth-last-child(1):after {
             display: none;
         }
+    }
+    
+    button.buttonFavoriteAdded {
+        -webkit-appearance: button;
+        -webkit-writing-mode: horizontal-tb !important;
+        text-rendering: auto;
+        color: rgb(129, 123, 123);
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 2px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        align-items: flex-start;
+        cursor: default;
+        background-color: #1ee6f4;
+        box-sizing: border-box;
+        margin: 5px;
+        font: 400 13.3333px Arial;
+        padding: 1px 6px;
+        border-width: 3px;
+        border-radius: 0.5em;
+        border-style: outset;
+        border-color: rgb(7, 66, 155);
+        width: 30%;
+    }
+    
+    button.buttonFavoriteAdded:hover span {
+        display: none
+    }
+    
+    button.buttonFavoriteAdded:hover:before {
+        content: "Delete!";
+    }
+    
+    button.buttonFavoriteAdded:hover {
+        background-color: green;
     }

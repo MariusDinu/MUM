@@ -6,6 +6,7 @@ $(document).ready(function() {
         document.getElementById("AlbumConfirmNumber").value = "0";
         document.getElementById("GenConfirmNumber").value = "0";
         document.getElementById("MelodieConfirmNumber").value = "0";
+        document.getElementById("FavoriteConfirmNumber").value = "0";
         var musicA = $("#user").attr('value');
         $.ajax({
             //AJAX type is "Post".
@@ -23,6 +24,7 @@ $(document).ready(function() {
                 $("#tabelAfisare ").hide();
                 $("#tabelSearch").hide();
                 $("#tabelAlbume").hide();
+                $("#tabelFavorite").hide();
                 $("#tabelGenuri").hide();
                 $("#Alb").hide();
                 $("#tabelArtisti").html(html).show();
