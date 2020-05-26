@@ -20,7 +20,10 @@ $(document).ready(function() {
     //Validating, if "name" is empty.
     if (admin == "") {
         //Assigning empty value to "display" div in "search.php" file.
-        $("#user").html("asdasd").show();
+        if ($("#code").val() == '') {} else {
+
+
+        }
     } else if (admin != "") {
 
         //AJAX is called.

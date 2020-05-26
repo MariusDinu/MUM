@@ -5,7 +5,7 @@ function adaugaMelodie(){
     $name=$_POST['nameM'];
     $artist=$_POST['artistM'];
     $gen=$_POST['genM'];
-    $link='a';
+    $link=$_POST['local'];
     $album=$_POST['albumM'];
     $data=$_POST['dataM'];
     $local=$_POST['local'];
@@ -18,8 +18,10 @@ function adaugaMelodie(){
       
      
        
-        $cerere = $baza::obtine_conexiune()->prepare($sqlLocal);
-        $cerere->execute();
+        $cerere = $baza::obtine_conexiune()->prepare($sqlLink);
+        if($cerere->execute())
+        return 1;
+        else return 2;
        
 
 
@@ -28,8 +30,10 @@ function adaugaMelodie(){
 
  ?>
  <?php
- adaugaMelodie();
-
+ $a=adaugaMelodie();
+if ($a==1)
+echo '1';
+else echo '2';
  
  
 ?>

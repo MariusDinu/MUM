@@ -237,12 +237,9 @@
                             <label for="Link">Link</label>
                             <input id="linkInserare" name="link"  placeholder="Introdu noul link"   type="text" >
                             <label> Or </label>
-                            Live Demo
+                          
 
-                            <form action="" method="POST" enctype="multipart/form-data">
-         <input type="file" name="image" />
-         <input type="submit"/>
-      </form>
+                            
                            
 
                             <p id="errorLink"></p> 

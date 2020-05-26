@@ -65,22 +65,16 @@ else return 3;
         </div>
         <div class='search' role='search' id='search-area'>
                 
-        <input type='search' required='required' name='' id='Search' class='search-field' value=''>
+        <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='Search' class='search-field' value=''>
        
-        <button type='submit' class='button-search'>
-            <span class='screen-reader-text'>Search</span>
-            
-        </button>
+        
    
 </div>
         <div class='search' role='search' id='user-search-area'>
                 
-                    <input type='search' required='required' name='' id='SearchUser' class='search-field' value=''>
+                    <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='SearchUser' class='search-field' value=''>
                    
-                    <button type='submit' class='button-search'>
-                        <span class='screen-reader-text'>Search</span>
-                        
-                    </button>
+                  
                
             </div>         
         ";
@@ -136,12 +130,9 @@ else return 3;
                     
                     <div class='search' role='search' id='search-area'>
                 
-                    <input type='search' required='required' name='' id='Search' class='search-field' value=''>
+                    <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='Search' class='search-field' value=''>
                    
-                    <button type='submit' class='button-search'>
-                        <span class='screen-reader-text'>Search</span>
-                        
-                    </button>
+                    
                
             </div>            
                     ";
@@ -171,7 +162,7 @@ echo "<button onclick='history.go(0)'>Refresh</button>
       ?>
 
       <?php 
-      if(verify($_GET['user'])==0){ echo  "<script src='/MUM/Js/AfisareGenuri.js'></script>
+      if((verify($_GET['user'])==0)||(isset($_GET['code']))){ echo  "<script src='/MUM/Js/AfisareGenuri.js'></script>
         <script src='/MUM/Js/AfisareArtisti.js'></script>
         <script src='/MUM/Js/AfisareAlbume.js'></script>
         <script src='/MUM/Js/AfisareAlbumSolo.js'></script>

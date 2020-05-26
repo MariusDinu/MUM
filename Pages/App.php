@@ -6,17 +6,23 @@
    
     <link href="/Mum/Css/App.css" rel="stylesheet">
     <link href="/MUM/Css/Layout.css" rel="stylesheet">
+    <link href="/MUM/Css/Feed.css" rel="stylesheet">
     </head>
 <body>
 
 <?php 
 include 'TemplateNav.php';
 ?>
+<div class='mycontainer'>
+<?php
+include '../Feed/Feed.php';
 
-
+?>
        
 <?php    if(isset($_GET['user']))
-echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'></div>"
+echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'></div>";
+if(isset($_GET['code']))
+echo "<div class='"."Admin"."' id='code' value='".$_GET['code']."'></div>";
 ?>
 
 
@@ -61,33 +67,7 @@ include 'TemplateModal.php';
                   
 </div>
     </div>
-    <?php
-   if(isset($_FILES['image'])){
-      $errors= array();
-      $file_name = $_FILES['image']['name'];
-      $file_size =$_FILES['image']['size'];
-      $file_tmp =$_FILES['image']['tmp_name'];
-      $file_type=$_FILES['image']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
-      
-      $extensions= array("jpeg","jpg","png");
-      
-      if(in_array($file_ext,$extensions)=== false){
-         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-      }
-      
-      if($file_size > 2097152){
-         $errors[]='File size must be excately 2 MB';
-      }
-      
-      if(empty($errors)==true){
-         move_uploaded_file($file_tmp,"uploads/".$file_name);
-         echo "Success";
-      }else{
-         print_r($errors);
-      }
-   }
-?>
+   
    
 <div id="UseriVer" ></div>
 <div id="UserConfirmNumber" ></div>
@@ -115,10 +95,10 @@ include 'TemplateModal.php';
   
   </div> 
   
+</div>
   
   
-  
-  <input type='file' id='audiofile' name='audiofile'/>
+ 
   
 
 </body>

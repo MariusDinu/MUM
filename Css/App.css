@@ -275,10 +275,10 @@
         overflow: hidden;
         flex: 4;
         flex-flow: row wrap;
-        width: 80%;
         margin: 0 auto;
         background-color: black;
         display: flex;
+        padding-left: 100px;
     }
     
     .listMusic .second .ver {

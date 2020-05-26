@@ -22,12 +22,11 @@ function insertMelodie() {
     }
 
     $('#Inserare').click(function(event) {
-        event.preventDefault();
+
         var name = document.getElementById("numeleMelodieiInserare").value;
         var artist = document.getElementById("artistInserare").value;
         var gen = document.getElementById("genInserare").value;
         var link = document.getElementById("linkInserare").value;
-        var local = document.getElementById("audiofile").value.split(/(\\|\/)/g).pop();
         var album = document.getElementById("albumInserare").value;
         var zi = document.getElementById("ziInserare").value;
         var luna = document.getElementById("lunaInserare").value;
@@ -49,7 +48,7 @@ function insertMelodie() {
                     nameM: name,
                     artistM: artist,
                     genM: gen,
-                    local: local,
+                    local: link,
                     albumM: album,
                     dataM: data,
                     musicAdmin: musicA,
@@ -59,7 +58,7 @@ function insertMelodie() {
 
                 //If result found, this funtion will be called.
                 success: function(html) {
-
+                    console.log(html);
                     if (html == 1) {
 
 
@@ -73,6 +72,7 @@ function insertMelodie() {
 
                 }
             });
+
 
 
 
