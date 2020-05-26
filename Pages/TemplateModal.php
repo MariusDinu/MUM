@@ -126,8 +126,8 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="closeInsert">&times;</span>
-    <forms action="" class="music-Settings" id="musicSettings" method="POST" enctype="multipart/form-data">
-                    <fieldset>
+    <form  class="music-Settings" id="musicSettings" method="POST" enctype="multipart/form-data">
+                   
                         <p>
                             <label for="Name">Numele melodiei</label>
                             <input id="numeleMelodieiInserare" name="numeleMelodiei" placeholder="Introdu noul nume" type="text" required="required">
@@ -237,15 +237,19 @@
                             <label for="Link">Link</label>
                             <input id="linkInserare" name="link"  placeholder="Introdu noul link"   type="text" >
                             <label> Or </label>
-                            
-                            <input type='file' id='audiofile' name='audiofile'/>
+                            Live Demo
+
+                            <form action="" method="POST" enctype="multipart/form-data">
+         <input type="file" name="image" />
+         <input type="submit"/>
+      </form>
                            
 
                             <p id="errorLink"></p> 
                         </p>
                     
                         <button class="btn btn-success"  id="Inserare" type="submit">Adaugare</button>
-                    </fieldset>
+                   
                 </form>
                
   </div>

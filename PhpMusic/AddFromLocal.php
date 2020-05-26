@@ -1,15 +1,23 @@
 <?php
 
-function add(){
-$dir='uploads/';
-$audio=$dir.basename($_FILES['audiofile']['name']);
-if(move_uploaded_file($_FILES['audiofile']['tmp_name'],$audio))
-return 1;
-else return 2;
 
+
+ 
+ 
+$name = $_FILES['audiofile']['name'];
+
+$temp_name = $_FILES['audiofile']['tmp_name']; // tmp_name
+
+if(isset($name)){
+if(!empty($name)){
+
+$location = '../uploads/';
 }
+if(move_uploaded_file($temp_name, $location.$name)){
+echo 'uploaded';
+}
+}  else {
+echo 'please uploaded';
+}
+?>
 
-?>
-<?php 
-add();
-?>

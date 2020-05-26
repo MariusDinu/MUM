@@ -33,12 +33,12 @@ function insertMelodie() {
         var luna = document.getElementById("lunaInserare").value;
         var an = document.getElementById("anInserare").value;
 
+
+
         if ((name == "") || (gen == "") || (zi == "") || (luna == "") || (an = "")) {} else {
             modal.style.display = "none";
             var data = zi + "-" + luna + "-" + an;
-            var prop = document.getElementById("audiofile").value.split(/(\\|\/)/g).pop();
-            var form_data = new FormData();
-            form_data.append("audiofile", prop);
+
             $.ajax({
 
                 type: "POST",
@@ -56,7 +56,7 @@ function insertMelodie() {
 
 
                 },
-                form_data,
+
                 //If result found, this funtion will be called.
                 success: function(html) {
 
