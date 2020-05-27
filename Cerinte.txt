@@ -21,25 +21,29 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 7.Crearea unui script pentru adaugarea,eliminarea,afisarea lor.
 //Pagini
 8.Layout pagina-guest *
-9.Pagina Home *
+9.Pagina Home 
 10.Pagina Register *
 11.Pagina Login *
-12.Pagina About *
+12.Pagina About 
 13.Pagina Succes *
 14.Pagina UserHome (pagina principala a aplicatiei) *
-15.Pagina UserSettings
+15.Pagina UserSettings *
 //Aplicatie bazata pe baza de date a melodiilor
 16.Aplicatie Web 
  
-  * Organizarea pe criterii 
+  * Organizarea pe criterii *
   * Statistici in formate deschise 
-  * Diversele anunturi ca flux RSS
+  * Diversele anunturi ca flux RSS 
   {
-       * Top 10     
+       * Top 10     *
        * Comentarii recente
        * Melodii adaugate recent - 
 } 
-  * Liste de melodii preferate import/export 
-  * Cautare 
-  * Recomandari
-  
+  * Liste de melodii preferate import/export  
+  * Cautare /*
+  * Logout   
+  * Afisare Melodie + comentarii
+  * bazele de date
+  * trimitere de email la inregistrare 
+  * conditie scriere email cu @
+                    parola cu litere si cifre

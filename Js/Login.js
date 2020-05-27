@@ -6,7 +6,7 @@ $(document).ready(function() {
         var userM = document.getElementById("user").value;
         var passM = document.getElementById("password").value;
         //Validating, if "name" is empty.
-
+        console.log(userM);
         //AJAX is called.
         $.ajax({
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
             success: function(html) {
                 //Assigning result to "display" div in "search.php" file.
                 console.log(html);
-                alert(html);
+
                 if (html == 0) {
 
                     $("#errorLoginPass").html('Parola sau user incorect!').show();
@@ -41,5 +41,6 @@ $(document).ready(function() {
 
         });
 
+        event.preventDefault();
     }
 });

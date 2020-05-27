@@ -359,6 +359,32 @@
         }
     }
     
+    button.buttonFavoritAdd {
+        -webkit-appearance: button;
+        -webkit-writing-mode: horizontal-tb !important;
+        text-rendering: auto;
+        color: rgb(129, 123, 123);
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 2px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        align-items: flex-start;
+        cursor: default;
+        background-color: #1ee6f4;
+        box-sizing: border-box;
+        margin: 5px;
+        font: 400 13.3333px Arial;
+        padding: 1px 6px;
+        border-width: 3px;
+        border-radius: 0.5em;
+        border-style: outset;
+        border-color: rgb(7, 66, 155);
+        width: 60%;
+    }
+    
     button.buttonFavoriteAdded {
         -webkit-appearance: button;
         -webkit-writing-mode: horizontal-tb !important;
@@ -382,7 +408,7 @@
         border-radius: 0.5em;
         border-style: outset;
         border-color: rgb(7, 66, 155);
-        width: 30%;
+        width: 60%;
     }
     
     button.buttonFavoriteAdded:hover span {
