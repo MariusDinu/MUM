@@ -321,3 +321,37 @@
                 </form>
   </div>
                 </div>
+
+                <div id="myModalFav" class="modal">
+                <div class="modal-content">
+    <span class="closeFav">&times;</span>
+<form>
+<fieldset>
+                        <p>
+                            <label for="Lista">Alege Lista:</label>
+                            <select id='Lista' >
+<?php 
+include '../PhpRegister/connect.php';
+$bazaUsere= new BD();
+$a=$_GET['user'];
+$sqlSearch="Select * from favorite where UserName='$a'";
+$cerUsere = $bazaUsere::obtine_conexiune();
+$cerereUsere=$cerUsere->prepare($sqlSearch);
+$cerereUsere->execute(); 
+$abc=$cerereUsere->fetchAll();
+foreach($cerUsere->query($sqlSearch) as $row){ 
+$b=$row['Listafavorite'];
+echo "<option value='$b'> $b </option> ";
+}
+?>
+
+
+
+                            </select>
+                        </p>
+</fieldset>
+
+</form>
+</div>
+</div>
+              

@@ -9,7 +9,11 @@
     <link href="/MUM/Css/Feed.css" rel="stylesheet">
     </head>
 <body>
-
+<?php    if(isset($_GET['user']))
+echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'></div>";
+if(isset($_GET['code']))
+echo "<div class='"."Admin"."' id='code' value='".$_GET['code']."'></div>";
+?>
 <?php 
 include 'TemplateNav.php';
 ?>
@@ -19,11 +23,7 @@ include '../Feed/Feed.php';
 
 ?>
        
-<?php    if(isset($_GET['user']))
-echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'></div>";
-if(isset($_GET['code']))
-echo "<div class='"."Admin"."' id='code' value='".$_GET['code']."'></div>";
-?>
+
 
 
 
@@ -51,14 +51,15 @@ include 'TemplateModal.php';
                 </div>
 <div class="wrap" id="tabelAlbume" value="1"> 
                 </div>
-                <div class="wrap" id="tabelUseri" value="1"> 
+<div class="wrap" id="tabelUseri" value="1"> 
                 </div>   
 <div class="wrap" id="tabelArtisti" value="1"> 
                 </div>    
 <div class="wrap" id="tabelGenuri" value="1"> 
                 </div>  
-                <div class="wrap" id="tabelFavorite" value="1"> 
-                </div>         
+<div class="wrap" id="tabelFavorite" value="1"> 
+                </div>
+                          
 </div>  
 
 <div class="pozitionare">
@@ -97,7 +98,7 @@ include 'TemplateModal.php';
   
 </div>
   
-  
+  <button id='Casa' onclick='afisarefav()'>Casa</button>
  
   
 
@@ -109,8 +110,23 @@ function goBack() {
 }
 
 </script>
+<script>
+function afisarefav(){
+ var modal = document.getElementById('myModalFav');
+ var btn = document.getElementById('myBtn');
+ 
+ var span = document.getElementsByClassName('closeFav')[0];
+ var salvare=document.getElementById('Salvare');
+ modal.style.display = 'block';
+ 
+ span.onclick = function() {
+   modal.style.display = 'none';
+ }
 
 
+}
+
+</script>
 
 
 

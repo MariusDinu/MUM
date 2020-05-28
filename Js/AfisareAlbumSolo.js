@@ -137,3 +137,32 @@ function AfisareMelodie(current) {
 
 
 }
+
+function AfisareListaFavorite(current) {
+
+    var lista = current.id;
+    var user = $('#user').attr('value');
+    $.ajax({
+
+        type: 'POST',
+        //Data will be sent to 
+        url: '/MUM/PhpMusic/AfisareListaFavorite.php',
+        //Data, that will be sent
+        data: {
+            lista: lista,
+            user: user
+
+        },
+        //If result found, this funtion will be called.
+        success: function(html) {
+
+
+            $('#tabelFavorite').html(html).show();
+            $('#tabelAfisare').hide();
+
+        }
+    });
+
+
+
+}

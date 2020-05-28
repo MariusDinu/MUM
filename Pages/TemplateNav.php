@@ -173,7 +173,10 @@ echo "<button onclick='history.go(0)'>Refresh</button>
 <script src='/MUM/Js/InserareMelodie.js'></script>
 <script src='/MUM/Js/Search.js'></script>
 <script>
+
 function AddFavorite(current) {
+
+
     var id = current.value;
     var user ='".$_GET['user']."';
     console.log(user);
@@ -271,6 +274,7 @@ function deleteFavorite(current) {
             var a=document.createElement('script');
             a.src='/Mum/Js/AfisareFavoriteAll.js';
             document.body.appendChild(a);
+       
             $('#tabelAfisare').hide();
             $('#tabelSearch').hide();
 
