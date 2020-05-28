@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     var gen = document.getElementById('GenConfirm');
     gen.onclick = function() {
+        $("#AddLista").hide();
         document.getElementById("AlbumConfirmNumber").value = "0";
         document.getElementById("ArtistConfirmNumber").value = "0";
         document.getElementById("MelodieConfirmNumber").value = "0";
@@ -30,7 +31,7 @@ $(document).ready(function() {
                 $("#userDetails").hide();
                 $("#tabelGenuri").html(html).show();
                 //Assigning result to "display" div in "search.php" file.
-
+                $("#AddLista").hide();
                 document.getElementById("GenConfirmNumber").value = "1";
 
 

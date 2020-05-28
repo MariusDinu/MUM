@@ -21,6 +21,7 @@ function afisareUser(){
     $cerereUser=$cerUser->prepare($sqlUser);
     $cerereUser->execute();
     $abc=$cerereUser->fetchAll();
+    
     foreach( $cerUser->query($sqlUser) as $row){
      
     

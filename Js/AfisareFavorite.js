@@ -18,6 +18,7 @@ $(document).ready(function() {
         document.getElementById("GenConfirmNumber").value = "0";
         document.getElementById("ArtistConfirmNumber").value = "0";
         document.getElementById("MelodieConfirmNumber").value = "0";
+        $("#AddLista").show();
         var musicA = $("#user").attr('value');
         $.ajax({
             //AJAX type is "Post".

@@ -32,6 +32,10 @@
         color: #1ee6f4;
     }
     
+    div.baraButoane {
+        display: flow-root;
+    }
+    
     button.buttonInsert {
         -webkit-appearance: button;
         text-rendering: auto;
@@ -42,6 +46,32 @@
         text-indent: 0px;
         text-shadow: none;
         display: inline-block;
+        float: left;
+        text-align: center;
+        cursor: default;
+        background-color: #1ee6f4;
+        box-sizing: border-box;
+        margin: 5px;
+        font: 400 13.3333px Arial;
+        padding: 10px 60px;
+        border-width: 3px;
+        border-radius: 0.5em;
+        border-style: outset;
+        border-color: rgb(7, 66, 155);
+        width: 15%;
+    }
+    
+    button.buttonLogout {
+        -webkit-appearance: button;
+        text-rendering: auto;
+        color: rgb(129, 123, 123);
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        float: right;
         text-align: center;
         cursor: default;
         background-color: #1ee6f4;

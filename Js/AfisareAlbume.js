@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     var album = document.getElementById('AlbumConfirm');
     album.onclick = function() {
+        $("#AddLista").hide();
         document.getElementById("ArtistConfirmNumber").value = "0";
         document.getElementById("GenConfirmNumber").value = "0";
         document.getElementById("MelodieConfirmNumber").value = "0";
@@ -29,7 +30,7 @@ $(document).ready(function() {
                 $("#userDetails").hide();
                 $("#tabelAlbume").html(html).show();
                 //Assigning result to "display" div in "search.php" file.
-
+                $("#AddLista").hide();
 
                 document.getElementById("AlbumConfirmNumber").value = "1";
 

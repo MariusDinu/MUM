@@ -3,6 +3,7 @@ include '/xampp/htdocs/MUM/PhpRegister/connect.php';
 function addFavorite(){
     $user_value=$_POST['user'];
     $favorit=$_POST['id'];
+    $lista=$_POST['lista'];
     $bazaUser= new BD();
     $sqlUser = "SELECT * FROM music where Id='$favorit'";
    
@@ -16,7 +17,7 @@ function addFavorite(){
         $gen=$row['Gen'];
         $album=$row['Album'];
         $local=$row['Local'];
-         $sqlFavorit = "INSERT INTO `favorite`(`NumeMelodie`, `UserName`, `ListaFavorite`, `Album`, `Gen`, `Artist`, `Local`) VALUES ('$name','$user_value','abc','$album','$gen','$artist','$local')";
+         $sqlFavorit = "INSERT INTO `favorite`(`NumeMelodie`, `UserName`, `ListaFavorite`, `Album`, `Gen`, `Artist`, `Local`) VALUES ('$name','$user_value','$lista','$album','$gen','$artist','$local')";
         $cerereUser=$cerUser->prepare($sqlFavorit);
         if($cerereUser->execute())
         return 1;

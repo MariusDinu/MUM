@@ -98,7 +98,7 @@ include 'TemplateModal.php';
   
 </div>
   
-  <button id='Casa' onclick='afisarefav()'>Casa</button>
+  
  
   
 
@@ -110,23 +110,9 @@ function goBack() {
 }
 
 </script>
-<script>
-function afisarefav(){
- var modal = document.getElementById('myModalFav');
- var btn = document.getElementById('myBtn');
- 
- var span = document.getElementsByClassName('closeFav')[0];
- var salvare=document.getElementById('Salvare');
- modal.style.display = 'block';
- 
- span.onclick = function() {
-   modal.style.display = 'none';
- }
 
 
-}
 
-</script>
 
 
 

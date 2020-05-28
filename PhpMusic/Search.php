@@ -25,7 +25,7 @@ function afisareUserSearch($search_value){
        
        if(verifyButton($row['Name'])==1)
      {
-       echo  "<button class='"."buttonFavoritAdd"."'"." id='".$row['Id']."' data-toggle='"."modal"."' data-target='"."#room-settings"."' onclick='AddFavorite(this)' value='".$row['Id']."'>Adaugare la favorite</button> ";
+       echo  "<button class='"."buttonFavoritAdd"."'"." id='".$row['Id']."' data-toggle='"."modal"."' data-target='"."#room-settings"."' onclick='afisarefav(this)' value='".$row['Id']."'>Adaugare la favorite</button> ";
      }
      else {echo  "<button class='"."buttonFavoriteAdded"."'"." id='".$row['Id']."' onclick='deleteFavorite(this)' value='".$row['Id']."'><span>Adaugat</span></button> ";};
      

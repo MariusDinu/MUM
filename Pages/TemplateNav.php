@@ -155,9 +155,13 @@ else return 3;
 
 <?php
 
-echo "<button onclick='history.go(0)'>Refresh</button>
-        <button onclick='goBack()'>Go Back</button>
-        <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Adaugare</button> 
+echo "  <div class='baraButoane'>
+        <button class='buttonInsert' onclick='history.go(0)'>Refresh Pagina</button>
+      
+        <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Adaugare Melodie</button> 
+        <button class='buttonInsert' id='AddLista' onclick='insertLista()' >Adaugare Lista</button>
+        <button class='buttonLogout' id='Logout' onclick='logout()' >Logout Aplicatie</button>
+        </div>
         <br></br>";
       ?>
 
@@ -173,11 +177,166 @@ echo "<button onclick='history.go(0)'>Refresh</button>
 <script src='/MUM/Js/InserareMelodie.js'></script>
 <script src='/MUM/Js/Search.js'></script>
 <script>
+function insertLista(){
+    var modal = document.getElementById('myModalInsertLista');
+   
+    
+    var span = document.getElementsByClassName('closeInsertLista')[0];
+    var insert=document.getElementById('InserareListaNoua');
+    modal.style.display = 'block';
+    
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
 
-function AddFavorite(current) {
+    insert.onclick = function() {var name=document.getElementById('ListaNouaInserare').value;var user=$('#user').attr('value');
+        modal.style.display = 'none';
+    event.preventDefault(); 
+    $.ajax({
+    type: 'POST',
+    //Data will be sent to 
+    url: '/MUM/PhpMusic/AddLista.php',
+    //Data, that will be sent
+    data: {
+        user: user,
+        name: name 
+    },
+    //If result found, this funtion will be called.
+    success: function(html) {
+        console.log(html);
+        if (html == 1) {
+
+            alert('Succes!');
+            
+    
+    
+        } else if (html == 2) {
+            alert('Fail!');
+        }
+        var a=document.createElement('script');
+             a.src='/Mum/Js/AfisareFavoriteAll.js';
+             document.body.appendChild(a);
+    }
+});  }
 
 
-    var id = current.value;
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+
+    }
+</script>
+<script>
+function afisarefav(current){
+ var modal = document.getElementById('myModalFav');
+ var btn = document.getElementById('myBtn');
+ var id=current.value;
+ var span = document.getElementsByClassName('closeFav')[0];
+ var salvare=document.getElementById('AdaugareFav');
+ modal.style.display = 'block';
+ 
+ span.onclick = function() {
+   modal.style.display = 'none';
+ }
+
+salvare.onclick=function (){
+  modal.style.display = 'none';
+var lista=document.getElementById('Lista').value;
+var user=$('#user').attr('value');event.preventDefault();
+if(document.getElementById('SearchConfirmNumber').value == '1')
+  {
+$.ajax({
+
+type: 'POST',
+//Data will be sent to 
+url: '/MUM/PhpMusic/AddFavorite.php',
+//Data, that will be sent
+data: {
+    id: id,
+    user: user,
+    lista: lista
+
+},
+//If result found, this funtion will be called.
+success: function(html) {
+    console.log(html);
+    if (html == 1) {
+
+        alert('Succes!');
+        
+
+
+    } else if (html == 2) {
+        alert('Fail!');
+    }
+    var a=document.createElement('script');
+             a.src='/Mum/Js/Search.js';
+             document.body.appendChild(a);
+             $('#Search').keyup();
+            $('#tabelFavorite').hide();
+            $('#tabelAfisare').hide();
+
+}
+});
+  }
+  else 
+  if((document.getElementById('SearchConfirmNumber').value == '0')||(document.getElementById('MelodieConfirmNumber').value == '1') || (document.getElementById('AlbumConfirmNumber').value = '1') ||
+  (document.getElementById('GenConfirmNumber').value == '1') ||
+  (document.getElementById('ArtistConfirmNumber').value == '1') ||
+  (document.getElementById('FavoriteConfirmNumber').value == '1')) { $.ajax({
+
+        type: 'POST',
+        //Data will be sent to 
+        url: '/MUM/PhpMusic/AddFavorite.php',
+        //Data, that will be sent
+        data: {
+            id: id,
+            user: user,
+            lista: lista
+
+        },
+        //If result found, this funtion will be called.
+        success: function(html) {
+            console.log(html);
+            if (html == 1) {
+
+                alert('Succes!');
+
+
+
+            } else if (html == 2) {
+                alert('Fail!');
+            }
+            var a=document.createElement('script');
+             a.src='/Mum/Js/AfisareMelodii.js';
+             document.body.appendChild(a);
+            $('#tabelFavorite').hide();
+            $('#tabelSearch').hide();
+
+        }
+    });} 
+}
+ window.onclick = function(event) {
+   if (event.target == modal) {
+     modal.style.display = 'none';
+   }
+ }
+
+}
+
+</script>
+<script>
+function logout(){
+
+    window.location.href = 'http://localhost/MUM/Pages/HomePage.php';
+}
+function AddFavorite() {
+
+
+    var id = name;
     var user ='".$_GET['user']."';
     console.log(user);
   if(document.getElementById('SearchConfirmNumber').value == '1')

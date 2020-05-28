@@ -331,7 +331,7 @@
                             <label for="Lista">Alege Lista:</label>
                             <select id='Lista' >
 <?php 
-include '../PhpRegister/connect.php';
+
 $bazaUsere= new BD();
 $a=$_GET['user'];
 $sqlSearch="Select * from favorite where UserName='$a'";
@@ -340,7 +340,7 @@ $cerereUsere=$cerUsere->prepare($sqlSearch);
 $cerereUsere->execute(); 
 $abc=$cerereUsere->fetchAll();
 foreach($cerUsere->query($sqlSearch) as $row){ 
-$b=$row['Listafavorite'];
+$b=$row['ListaFavorite'];
 echo "<option value='$b'> $b </option> ";
 }
 ?>
@@ -349,9 +349,26 @@ echo "<option value='$b'> $b </option> ";
 
                             </select>
                         </p>
+                        <button class="btn btn-success" id="AdaugareFav"  type="submit">Adaugare</button>
 </fieldset>
 
 </form>
 </div>
 </div>
               
+<div id="myModalInsertLista" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closeInsertLista">&times;</span>
+    <form action="" onsubmit="" class="room-settingsAdmin"  method="post">
+                    <fieldset>
+                        <p>
+                            <label for="ListaNoua">Lista noua:</label>
+                            <input id="ListaNouaInserare" name="ListaNouaInserare" placeholder="Introdu noul nume" type="text" >
+                        </p>
+                        <button class="btn btn-success" id="InserareListaNoua"  type="submit">Adaugare Lista</button>
+                        </fieldset>
+
+</form>
+</div>
+</div>
