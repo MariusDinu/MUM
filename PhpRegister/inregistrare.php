@@ -8,7 +8,7 @@ function inregistrare(){
      $pass_value=$_POST['password'];
      $passConfirm_value=$_POST['confirmPassword'];
      $country=$_POST['country'];
-
+    
       $baza= new BD();
       $sql = "INSERT INTO register(Email,UserName,UserPassword,ConfirmUserPassword,Country,AdminLevel) values (:email,:username,:pass,:passConfirm,:country,:adminLevel)";
       $cerere = $baza::obtine_conexiune()->prepare($sql);

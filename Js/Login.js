@@ -1,12 +1,15 @@
 $(document).ready(function() {
     //On pressing a key on "Search box" in "search.php" file. This function will be called.
     var log = document.getElementById('Login');
-    log.onclick = function() {
+    log.onclick = function(event) {
+
         //Assigning search box value to javascript variable named as "name".
         var userM = document.getElementById("user").value;
         var passM = document.getElementById("password").value;
         //Validating, if "name" is empty.
         console.log(userM);
+
+
         //AJAX is called.
         $.ajax({
 
@@ -40,7 +43,8 @@ $(document).ready(function() {
             }
 
         });
-
         event.preventDefault();
+
     }
+
 });
