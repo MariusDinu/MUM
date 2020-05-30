@@ -3,6 +3,8 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport">
     <link href="/Mum/Css/Layout.css" rel="stylesheet">
   
     <link href="/Mum/Css/site.css" rel="stylesheet">

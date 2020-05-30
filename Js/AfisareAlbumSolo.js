@@ -124,6 +124,7 @@ function AfisareArtist(current) {
 function AfisareMelodie(current) {
 
     var name = current.id;
+    var user = $("#user").attr('value');
     $("#tabelArtisti").hide();
     $("#tabelAfisare").hide();
     $("#tabelSearch").hide();
@@ -132,8 +133,34 @@ function AfisareMelodie(current) {
     $("#tabelAlbume").hide();
     $("#userDetails").hide();
     $("#Alb").show();
-    document.getElementById("Alb").innerHTML = "<div class='showOneMelodie' id='showOneMelodie'> " +
-        name + "</div>";
+    document.getElementById("Alb").innerHTML = "<div class='showOneMelodie' id='showOneMelodie'><div class='showDetailsMelodie'>" +
+        "</div> <div class= 'showMelodieComments' id ='showMelodieComments'> " + " </div> " +
+        "<input class='adaugareComentariu' id='adaugareComentariu' name='adaugareComentariu' placeholder='Scrie un comentariu nou...' type='text' > " +
+        " <button class='buttonComentariu' id = 'buttonComentariu' type = 'submit'' > Adaugare Comentariu </button>" +
+        " </div > ";
+    $.ajax({
+        type: "POST",
+        //Data will be sent to "ajax.php".
+        url: "/MUM/PhpMusic/AfisareComentarii.php",
+        //Data, that will be sent to "ajax.php".
+        data: {
+            id: name,
+            user: user
+
+        },
+        success: function(html) {
+            console.log(html);
+            $('#showMelodieComments').html(html).show();
+
+
+
+        }
+
+
+
+
+
+    });
 
 
 }

@@ -3,13 +3,14 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
     <link href="/Mum/Css/Layout.css" rel="stylesheet">
   
 
     <link href="/Mum/Css/site.css" rel="stylesheet">
     <link href="/Mum/Css/purecookie.css" rel="stylesheet">
     <link href="/Mum/Css/register.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
 </head>
 

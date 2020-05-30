@@ -3,6 +3,7 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
     <link href="/MUM/Css/Layout.css" rel="stylesheet">
     <link href="/MUM/Css/App.css" rel="stylesheet">
     <link href="/MUM/Css/purecookie.css" rel="stylesheet">

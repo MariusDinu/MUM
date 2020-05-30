@@ -42,7 +42,7 @@ $(document).ready(function() {
                 {
                     document.getElementById("MelodieConfirmNumber").value = "1";
                     $("#tabelAfisare").html(html).show();
-                    $("#AddLista").hide();
+                    // $("#AddLista").hide();
                 }
             }
         });
@@ -72,7 +72,7 @@ $(document).ready(function() {
             //If result found, this funtion will be called.
             success: function(html) {
 
-                $("#AddLista").hide();
+                // $("#AddLista").hide();
                 $("#tabelSearch").hide();
                 $("#tabelAlbume").hide();
                 $("#tabelArtisti").hide();

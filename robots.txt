@@ -1,0 +1,7 @@
+# Group 1
+User-agent: Googlebot
+Disallow: /App.php?user=Marius/
+
+# Group 2
+User-agent: *
+Allow: /
