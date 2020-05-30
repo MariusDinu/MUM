@@ -2,29 +2,36 @@ rss {
     display: block;
     font-family: verdana, arial;
     float: right;
-    width: 300px;
+    width: 20vh;
+    font-size: 0.8em;
+    border: 0.2em solid silver;
+    background-color: black;
 }
 
 div.mycontainer {}
 
 title {
+    box-sizing: border-box;
     display: block;
+    font-size: 1.2em;
     margin: 5px;
     padding: 2px;
-    color: gray;
-    background-color: black;
-    border-bottom: 1px solid silver;
+    color: silver;
+    background-color: green;
+    border: 0.2em solid silver;
 }
 
 link {
     display: block;
-    font-size: small;
+    font-size: x-small;
     padding-left: 10px;
 }
 
 item {
     display: block;
-    padding: 2px 30px 2px 30px;
+    border: black solid 1em;
+    border-radius: 0.5em;
+    font-size: 0.6em;
 }
 
 docs {
@@ -37,15 +44,8 @@ docs {
     border: 1px solid silver;
 }
 
-
 /* all hidden elements */
 
-language,
-lastBuildDate,
-ttl,
-guid,
-category,
-description,
-pubDate {
+language, lastBuildDate, ttl, guid, category, description, pubDate {
     display: none;
 }

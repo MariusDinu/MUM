@@ -5,7 +5,22 @@
                 <a href="/MUM/Pages/HomePage.php"> </a>
             </svg>
             </a>
+            
+            
 </div>
+<button class='buttonLogout' id='Logout' onclick='logout()' >Logout </button>
+
+<?php
+
+echo "  <div class='baraButoane'>
+        <button class='buttonInsert' onclick='history.go(0)'>Refresh Pagina</button>
+      
+        <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Adaugare Melodie</button> 
+        <button class='buttonInsert' id='AddLista' onclick='insertLista()' >Adaugare Lista</button>
+        </div>
+        <br></br>";
+      ?>
+ 
             
  
     
@@ -57,26 +72,28 @@ else return 3;
 
 
 
-
-
                 </ul>
 
-            </div>
-        </div>
+                <div>
+
         <div class='search' role='search' id='search-area'>
                 
         <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='Search' class='search-field' value=''>
        
-        
-   
-</div>
         <div class='search' role='search' id='user-search-area'>
                 
                     <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='SearchUser' class='search-field' value=''>
                    
                   
                
-            </div>         
+            </div> 
+   
+</div>
+</div> 
+            </div>
+        </div>
+      
+                
         ";
        
       
@@ -128,6 +145,7 @@ else return 3;
                     </div>
                     </div>
                     
+        <button class='buttonLogout' id='Logout' onclick='logout()' >Logout Aplicatie</button>
                     <div class='search' role='search' id='search-area'>
                 
                     <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='Search' class='search-field' value=''>
@@ -160,7 +178,6 @@ echo "  <div class='baraButoane'>
       
         <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Adaugare Melodie</button> 
         <button class='buttonInsert' id='AddLista' onclick='insertLista()' >Adaugare Lista</button>
-        <button class='buttonLogout' id='Logout' onclick='logout()' >Logout Aplicatie</button>
         </div>
         <br></br>";
       ?>

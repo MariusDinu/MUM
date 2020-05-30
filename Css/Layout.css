@@ -57,6 +57,7 @@ img.mylogo {
     z-index: 1;
     flex: 1;
     display: flex;
+    flex-flow: column;
 }
 
 .site-header .main-nav .main-sections {
