@@ -40,8 +40,8 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
        * Melodii adaugate recent - 
 } 
   * Liste de melodii preferate import/export  
-  * Cautare /*
-  * Logout   
+  * Cautare *
+  * Logout   *
   * Afisare Melodie + comentarii *css-hover* 
   * bazele de date
   * trimitere de email la inregistrare 
