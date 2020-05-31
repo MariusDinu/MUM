@@ -13,10 +13,10 @@
 <?php
 
 echo "  <div class='baraButoane'>
-        <button class='buttonInsert' onclick='history.go(0)'>Refresh Pagina</button>
+        <button id='refresh' class='buttonInsert' onclick='history.go(0)'>Refresh</button>
       
-        <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Adaugare Melodie</button> 
-        <button class='buttonInsert' id='AddLista' onclick='insertLista()' >Adaugare Lista</button>
+        <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Melodie</button> 
+        <button class='buttonInsert' id='AddLista' onclick='insertLista()' >Lista</button>
         </div>
         <br></br>";
       ?>

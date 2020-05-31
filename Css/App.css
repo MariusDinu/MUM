@@ -28,7 +28,7 @@
         display: flex;
         position: absolute;
         top: 6em;
-        left: 13em;
+        left: 8em;
     }
 
     button.buttonInsert {
@@ -36,20 +36,43 @@
         text-rendering: auto;
         color: rgb(129, 123, 123);
         text-shadow: none;
-        display: inline-block;
-        float: left;
+        display: flex;
         text-align: center;
         cursor: pointer;
-        background-color: #1ee6f4;
+        background-color: white;
         font: 400 13.3333px Arial;
         border-width: 0.8;
         border-radius: 0.5em;
         border-style: outset;
         border-color: rgb(7, 66, 155);
-        width: 25%;
+        width: min-content;
         font-size: 1em;
-        margin: 1px;
-        height: 2.5em;
+        height: min-content;
+        flex-direction: row;
+        background-image: url(/MUM/Images/add.png);
+        background-size: contain;
+        background-repeat: repeat-y;
+    }
+
+    #refresh {
+        -webkit-appearance: button;
+        text-rendering: auto;
+        color: rgb(129, 123, 123);
+        text-shadow: none;
+        display: flex;
+        text-align: center;
+        cursor: pointer;
+        background-color: white;
+        font: 400 13.3333px Arial;
+        border-width: 0.8;
+        border-radius: 0.5em;
+        border-style: outset;
+        border-color: rgb(7, 66, 155);
+        width: min-content;
+        font-size: 1em;
+        height: min-content;
+        flex-direction: row;
+        background-image: unset;
     }
 
     button.buttonLogout {
