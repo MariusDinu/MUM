@@ -1,6 +1,6 @@
 <header class="site-header">
         <div class="logo2">
-            <a href="/">
+            <a >
                 <svg class="icon-logo-text">
                 <a href="/MUM/Pages/HomePage.php"> </a>
             </svg>
@@ -145,7 +145,7 @@ else return 3;
                     </div>
                     </div>
                     
-        <button class='buttonLogout' id='Logout' onclick='logout()' >Logout Aplicatie</button>
+       
                     <div class='search' role='search' id='search-area'>
                 
                     <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='Search' class='search-field' value=''>
@@ -171,16 +171,7 @@ else return 3;
 
 </header> 
 
-<?php
 
-echo "  <div class='baraButoane'>
-        <button class='buttonInsert' onclick='history.go(0)'>Refresh Pagina</button>
-      
-        <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Adaugare Melodie</button> 
-        <button class='buttonInsert' id='AddLista' onclick='insertLista()' >Adaugare Lista</button>
-        </div>
-        <br></br>";
-      ?>
 
       <?php 
       if(verify($_GET['user'])==0){ echo  "<script src='/MUM/Js/AfisareGenuri.js'></script>
