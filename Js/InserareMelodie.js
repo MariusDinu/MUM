@@ -32,11 +32,12 @@ function insertMelodie() {
         var luna = document.getElementById("lunaInserare").value;
         var an = document.getElementById("anInserare").value;
 
+        console.log(an);
 
-
-        if ((name == "") || (gen == "") || (zi == "") || (luna == "") || (an = "")) {} else {
+        if ((name == "") || (gen == "") || (zi == "") || (luna == "") || (an == "")) {} else {
             modal.style.display = "none";
-            var data = zi + "-" + luna + "-" + an;
+            var datacopie = zi + "-" + luna;
+            var data = datacopie + "-" + an;
 
             $.ajax({
 

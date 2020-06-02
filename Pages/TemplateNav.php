@@ -179,6 +179,7 @@ else return 3;
         <script src='/MUM/Js/AfisareAlbume.js'></script>
         <script src='/MUM/Js/AfisareAlbumSolo.js'></script>
         <script src='/MUM/Js/AfisareFavorite.js'></script>
+       
         
        
 <script src='/MUM/Js/AfisareMelodii.js'></script>

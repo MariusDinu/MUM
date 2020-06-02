@@ -23,10 +23,13 @@ echo "<div class='"."Admin"."' id='code' value='".$_GET['code']."'></div>";
 include 'TemplateNav.php';
 ?>
 <div class='mycontainer'>
+  <div class='rss'>
 <?php
+include '../Feed/FeedViews.php';
 include '../Feed/Feed.php';
+include '../Feed/FeedComments.php';
 
-?>
+?></div>
        
 
 

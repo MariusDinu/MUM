@@ -30,9 +30,8 @@ function afisareUser(){
       "<div class='second' id='Id' value='".$row['ListaFavorite']."'>".
       "<table style='"."width:100%"."'>".
       "<tr><th id='Nume'>Nume Lista: ".$row['ListaFavorite']."</th></tr>"
-     ."</table></div></a>";
-    
-     
+     ."</table></div></a>".
+    "<a class='buttonExport' id='".$row['ListaFavorite']."' href='/MUM/PhpMusic/ExportCsv.php?user=".$user_value."&lista=".$row['ListaFavorite']."'> Export to Csv </a>";
      echo "</div> <br></br>";
      
       

@@ -2,9 +2,9 @@
 
 
 $bazaAdmin= new BD();
-$sqlAdmin = "SELECT * FROM music ORDER BY Date limit 10";
+$sqlViews = "SELECT Id,count(*)as number,IdMelodie FROM `views` group by IdMelodie order by number DESC Limit 3";
 $cerAdmin = $bazaAdmin::obtine_conexiune();
-$cerereAdmin=$cerAdmin->prepare($sqlAdmin);
+$cerereAdmin=$cerAdmin->prepare($sqlViews);
 $cerereAdmin->execute();
 $abc=$cerereAdmin->fetchAll();
 
@@ -17,10 +17,14 @@ echo "<language> en-us</language>";
 
 
 
-foreach( $cerAdmin->query($sqlAdmin) as $row){
+foreach( $cerAdmin->query($sqlViews) as $row){
 
 echo "<item xmlns:dc='".$row['Id']."'>";
-echo "<title>".$row['Name']."</title>";
+$id=$row['IdMelodie'];
+$view=$row['number'];
+$sqlMusic="Select * from music where Id='$id'";
+foreach( $cerAdmin->query($sqlMusic) as $row){
+echo "<title>Nume: ".$row['Name']." Views: ".$view."</title>";}
 echo "</item>";
 }
 

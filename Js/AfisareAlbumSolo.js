@@ -121,6 +121,52 @@ function AfisareArtist(current) {
 
 }
 
+function adaugareComentariu() {
+    var text = document.getElementById('adaugareComentariu').value;
+    var user = $("#user").attr('value');
+    var music = $('#IdOneView').attr('value');
+    $.ajax({
+        type: "POST",
+        //Data will be sent to "ajax.php".
+        url: "/MUM/PhpMusic/AdaugareComentariu.php",
+        //Data, that will be sent to "ajax.php".
+        data: {
+            music: music,
+            user: user,
+            text: text
+
+        },
+        success: function(html) {
+            console.log('Succes');
+
+            $.ajax({
+                type: "POST",
+                //Data will be sent to "ajax.php".
+                url: "/MUM/PhpMusic/AfisareComentarii.php",
+                //Data, that will be sent to "ajax.php".
+                data: {
+                    id: music,
+                    user: user
+
+                },
+                success: function(html) {
+                    console.log('Succes');
+                    $('#showMelodieComments').html(html).show();
+                    document.getElementById('adaugareComentariu').value = '';
+
+
+                }
+
+
+
+            });
+        }
+
+    });
+}
+
+
+
 function AfisareMelodie(current) {
 
     var name = current.id;
@@ -133,10 +179,10 @@ function AfisareMelodie(current) {
     $("#tabelAlbume").hide();
     $("#userDetails").hide();
     $("#Alb").show();
-    document.getElementById("Alb").innerHTML = "<div class='showOneMelodie' id='showOneMelodie'><div class='showDetailsMelodie'>" +
-        "</div> <div class= 'showMelodieComments' id ='showMelodieComments'> " + " </div> " +
+    document.getElementById("Alb").innerHTML = "<div class='showOneMelodie' id='showOneMelodie'><div class='showDetailsMelodie' id='showDetailsMelodie'>" +
+        "</div> <div class='boxComments' id='boxComments'><div class= 'showMelodieComments' id ='showMelodieComments'> " + " </div> " +
         "<input class='adaugareComentariu' id='adaugareComentariu' name='adaugareComentariu' placeholder='Scrie un comentariu nou...' type='text' > " +
-        " <button class='buttonComentariu' id = 'buttonComentariu' type = 'submit'' > Adaugare Comentariu </button>" +
+        " <button class='buttonComentariu' id = 'buttonComentariu' onclick='adaugareComentariu()' > Adaugare Comentariu </button> </div>" +
         " </div > ";
     $.ajax({
         type: "POST",
@@ -161,6 +207,54 @@ function AfisareMelodie(current) {
 
 
     });
+    $.ajax({
+        type: "POST",
+        //Data will be sent to "ajax.php".
+        url: "/MUM/PhpMusic/Melodie.php",
+        //Data, that will be sent to "ajax.php".
+        data: {
+            id: name,
+            user: user
+
+        },
+        success: function(html) {
+            console.log(html);
+            $('#showDetailsMelodie').html(html).show();
+
+
+
+        }
+
+
+
+
+
+    });
+    $.ajax({
+        type: "POST",
+        //Data will be sent to "ajax.php".
+        url: "/MUM/PhpMusic/Views.php",
+        //Data, that will be sent to "ajax.php".
+        data: {
+            id: name,
+            user: user
+
+        },
+        success: function(html) {
+            console.log(html);
+            $('#Views').html(html).show();
+
+
+
+        }
+
+
+
+
+
+    });
+
+
 
 
 }
