@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
     <head>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free Web tutorials">
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="author" content="John Doe">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-   
-    <link href="/Mum/Css/App.css" rel="stylesheet">
-    <link href="/MUM/Css/Layout.css" rel="stylesheet">
-    <link href="/MUM/Css/Feed.css" rel="stylesheet">
+ <?php header('Cache-Control: max-age=31536000,public');?>
+  
+  
+    <link type="text/css" href="/Mum/Css/App.css" rel="stylesheet" />
+    <link type="text/css" href="/MUM/Css/Layout.css" rel="stylesheet" />
+  
     </head>
 <body>
+<main>
 <?php    if(isset($_GET['user']))
 echo "<div class='"."Admin"."' id='user' value='".$_GET['user']."'></div>";
 if(isset($_GET['code']))
@@ -106,11 +110,12 @@ include 'TemplateModal.php';
   
 </div>
   
-  
+  </main>
  
   
-
+<footer><p>Author: Hege Refsnes</p></footer>
 </body>
+
 
 <script>
 function goBack() {

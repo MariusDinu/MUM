@@ -2,7 +2,7 @@
         <div class="logo2">
             <a >
                 <svg class="icon-logo-text">
-                <a href="/MUM/Pages/HomePage.php"> </a>
+                <a href="/MUM/Pages/HomePage.php"> Logo </a>
             </svg>
             </a>
             
@@ -77,12 +77,10 @@ else return 3;
                 <div>
 
         <div class='search' role='search' id='search-area'>
-                
-        <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='Search' class='search-field' value=''>
+          <label for='Search'> Cautare</label>      
+        <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='Search' id='Search' class='search-field' value=''>
        
-        <div class='search' role='search' id='user-search-area'>
-                
-                    <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='SearchUser' class='search-field' value=''>
+       
                    
                   
                
@@ -147,8 +145,8 @@ else return 3;
                     
        
                     <div class='search' role='search' id='search-area'>
-                
-                    <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='' id='Search' class='search-field' value=''>
+                    <label for='Search'> Cautare</label>  
+                    <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='Search' id='Search' class='search-field' value=''>
                    
                     
                
@@ -174,7 +172,9 @@ else return 3;
 
 
       <?php 
-      if(verify($_GET['user'])==0){ echo  "<script src='/MUM/Js/AfisareGenuri.js'></script>
+      if(verify($_GET['user'])==0){ echo  "
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script src='/MUM/Js/AfisareGenuri.js'></script>
         <script src='/MUM/Js/AfisareArtisti.js'></script>
         <script src='/MUM/Js/AfisareAlbume.js'></script>
         <script src='/MUM/Js/AfisareAlbumSolo.js'></script>
@@ -508,7 +508,9 @@ function deleteFavorite(current) {
  </script>
         <script src='/MUM/Js/UserDetails.js'></script>
        ";}
-      else if(verify($_GET['user'])==1){echo "<script src='/MUM/Js/AdminDetails.js'></script>
+      else if(verify($_GET['user'])==1){echo "
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script src='/MUM/Js/AdminDetails.js'></script>
         <script src='/MUM/Js/AfisareAlbumSolo.js'></script>
  <script src='/MUM/Js/AfisareMelodii.js'></script>
  <script src='/MUM/Js/InserareMelodie.js'></script>

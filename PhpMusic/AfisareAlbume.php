@@ -29,7 +29,7 @@ function afisareUser(){
       "<a class='"."form-inline"."' id='".$row['Album']."' onclick='"."AfisareAlbum(this)'>".
       "<div class='second' id='Id' >".
       "<table style='"."width:100%"."'>".
-      "<tr><th id='Album:".$row['Album']."'>Album: ".$row['Album']."</th></tr>"
+      "<tr><th id='Album'>Album: ".$row['Album']."</th></tr>"
      ."</table></div></a>".
      
      

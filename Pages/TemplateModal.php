@@ -15,7 +15,7 @@
                         <p>
                             <label for="spec">Gen</label>
                             <input id="gen" name="gen" placeholder="Introdu noul gen" type="text" >
-                            <p id="errorGen"></p> 
+                            
                         </p>
                         <p>
                             <label for="spec">Album</label>
@@ -137,7 +137,7 @@
                             <input id="artistInserare" name="artist" placeholder="Introdu noul artist" type="text">
                         </p>
                         <p>
-                            <label for="Geb">Gen</label>
+                            <label for="Gen">Gen</label>
                             <input id="genInserare" name="gen" placeholder="Introdu noul gen" type="text" required="required">
                         </p>
                         <p>
@@ -270,7 +270,7 @@
                         <p>
                             <label for="spec">Email nou:</label>
                             <input id="emailnou" name="emailnou" placeholder="Introdu noul email" type="text" >
-                            <p id="errorGen"></p> 
+                            
                         </p>
                         <p>
                         <label for="country" >Choose a Country:</label>
@@ -305,7 +305,7 @@
                         <p>
                             <label for="spec">Email nou:</label>
                             <input id="emailnouAdmin" name="emailnou" placeholder="Introdu noul email" type="text" >
-                            <p id="errorGen"></p> 
+                             
                         </p>
                         <p>
                         <label for="country" >Choose a Country:</label>
