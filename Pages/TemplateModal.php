@@ -372,3 +372,37 @@ echo "<option value='$b'> $b </option> ";
 </form>
 </div>
 </div>
+
+<div id="TopM" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closeTopM">&times;</span>
+    <fieldset>
+      <a class='buttonExport' id='buttonCsvTopM' href='/MUM/PhpMusic/TopM.php?button=csv'> CSV </a>
+      <a class='buttonExport' id='buttonPdfTopM' href='/MUM/PhpMusic/TopM.php?button=pdf'> PDF </a>
+
+   </fieldset>
+</div>
+</div>
+<div id="TopV" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closeTopV">&times;</span>
+    <fieldset>
+      <a class='buttonExport' id='buttonCsvTopV' href='/MUM/PhpMusic/TopV.php?button=csv'> CSV </a>
+      <a class='buttonExport' id='buttonPdfTopV' href='/MUM/PhpMusic/TopV.php?button=pdf'> PDF </a>
+
+   </fieldset>
+</div>
+</div>
+<div id="TopC" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closeTopC">&times;</span>
+    <fieldset>
+      <a class='buttonExport' id='buttonCsvTopC' href='/MUM/PhpMusic/TopC.php?button=csv'> CSV </a>
+      <a class='buttonExport' id='buttonPdfTopC' href='/MUM/PhpMusic/TopC.php?button=pdf'> PDF </a>
+
+   </fieldset>
+</div>
+</div>

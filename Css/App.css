@@ -702,6 +702,10 @@
     
     channel title {}
     
+    button.download {
+        width: fit-content;
+    }
+    
     title {
         box-sizing: border-box;
         display: block;

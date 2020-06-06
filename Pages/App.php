@@ -27,7 +27,11 @@ echo "<div class='"."Admin"."' id='code' value='".$_GET['code']."'></div>";
 include 'TemplateNav.php';
 ?>
 <div class='mycontainer'>
-  <div class='rss'>
+ 
+  <div class='rss'> 
+  <button class='download' id='buttonTopM' onclick='TopM()'>Top10</button>
+  <button class='download' onclick='TopV()'>TopViews</button>
+  <button class='download' onclick='TopC()'>TopComments</button>
 <?php
 include '../Feed/FeedViews.php';
 include '../Feed/Feed.php';
@@ -141,6 +145,87 @@ clasaVideo.innerHTML="<iframe class='"+"video-player-embed js-player"+"' width='
 function closePlayer(){
 document.getElementById("video").remove();
 document.getElementById("closeVideo").remove();
+
+
+}
+function TopM(){
+var modal = document.getElementById('TopM');
+ var btn = document.getElementById('myBtn');
+ 
+ var span = document.getElementsByClassName('closeTopM')[0];
+var csv=document.getElementById('buttonCsvTopM');
+var pdf=document.getElementById('buttonPdfTopM');
+ modal.style.display = 'block';
+ 
+ span.onclick = function() {
+   modal.style.display = 'none';
+ }
+csv.onclick=function(){
+  modal.style.display = 'none';
+
+}
+pdf.onclick=function(){
+  modal.style.display = 'none';
+}
+window.onclick = function(event) {
+   if (event.target == modal) {
+     modal.style.display = 'none';
+   }
+ }
+
+
+}
+function TopV(){
+var modal = document.getElementById('TopV');
+ var btn = document.getElementById('myBtn');
+ 
+ var span = document.getElementsByClassName('closeTopM')[0];
+var csv=document.getElementById('buttonCsvTopV');
+var pdf=document.getElementById('buttonPdfTopV');
+ modal.style.display = 'block';
+ 
+ span.onclick = function() {
+   modal.style.display = 'none';
+ }
+csv.onclick=function(){
+  modal.style.display = 'none';
+
+}
+pdf.onclick=function(){
+  modal.style.display = 'none';
+}
+window.onclick = function(event) {
+   if (event.target == modal) {
+     modal.style.display = 'none';
+   }
+ }
+
+
+}
+function TopC(){
+var modal = document.getElementById('TopC');
+ var btn = document.getElementById('myBtn');
+ 
+ var span = document.getElementsByClassName('closeTopC')[0];
+var csv=document.getElementById('buttonCsvTopC');
+var pdf=document.getElementById('buttonPdfTopC');
+ modal.style.display = 'block';
+ 
+ span.onclick = function() {
+   modal.style.display = 'none';
+ }
+csv.onclick=function(){
+  modal.style.display = 'none';
+
+}
+pdf.onclick=function(){
+  modal.style.display = 'none';
+}
+window.onclick = function(event) {
+   if (event.target == modal) {
+     modal.style.display = 'none';
+   }
+ }
 
 
 }
