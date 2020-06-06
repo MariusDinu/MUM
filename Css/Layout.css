@@ -26,7 +26,8 @@ html::-webkit-scrollbar-track {
     animation: none;
 }
 
-.site-header, .site-header .logo {
+.site-header,
+.site-header .logo {
     display: flex;
     align-items: center;
     background-color: black;
@@ -93,7 +94,8 @@ img.mylogo {
     transition: .1s
 }
 
-.site-header .main-nav .main-sections>li>a:focus, .site-header .main-nav .main-sections>li>a:hover {
+.site-header .main-nav .main-sections>li>a:focus,
+.site-header .main-nav .main-sections>li>a:hover {
     -webkit-text-fill-color: #fff;
     background: #201c29
 }
@@ -143,7 +145,10 @@ body.home .site-header .logo>a:before {
     transform: rotate(2turn);
 }
 
-.site-header .main-nav .mobile-nav-button, .site-header .main-nav .mobile-other-nav, .site-header .main-nav .mobile-social, .site-header .main-nav hr {
+.site-header .main-nav .mobile-nav-button,
+.site-header .main-nav .mobile-other-nav,
+.site-header .main-nav .mobile-social,
+.site-header .main-nav hr {
     display: none;
 }
 
@@ -210,46 +215,58 @@ body.home .site-header .logo>a:before {
 }
 
 .site-header .main-nav>ul>li.Sign-in svg {
-    stroke: #8bc34a;
+    stroke: red;
     fill: rgba(139, 195, 74, .2);
 }
 
-.site-header .main-nav:focus>ul>li:first-child svg, .site-header .main-nav:hover>ul>li:first-child svg {
-    stroke: purple;
+.site-header .main-nav:focus>ul>li:first-child svg,
+.site-header .main-nav:hover>ul>li:first-child svg {
+    stroke: rgb(190, 3, 190);
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(2) svg, .site-header .main-nav:hover>ul>li:nth-child(2) svg {
-    stroke: blue;
+.site-header .main-nav:focus>ul>li:nth-child(2) svg,
+.site-header .main-nav:hover>ul>li:nth-child(2) svg {
+    stroke: rgb(34, 34, 201);
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(3) svg, .site-header .main-nav:hover>ul>li:nth-child(3) svg {
+.site-header .main-nav:focus>ul>li:nth-child(3) svg,
+.site-header .main-nav:hover>ul>li:nth-child(3) svg {
+    stroke: rgb(187, 202, 45);
+}
+
+.site-header .main-nav:focus>ul>li:nth-child(4) svg,
+.site-header .main-nav:hover>ul>li:nth-child(4) svg {
+    stroke: rgb(25, 236, 173);
+}
+
+.site-header .main-nav:focus>ul>li:nth-child(5) svg,
+.site-header .main-nav:hover>ul>li:nth-child(5) svg {
     stroke: black;
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(4) svg, .site-header .main-nav:hover>ul>li:nth-child(4) svg {
-    stroke: black;
-}
-
-.site-header .main-nav:focus>ul>li:nth-child(5) svg, .site-header .main-nav:hover>ul>li:nth-child(5) svg {
-    stroke: black;
-}
-
-.site-header .main-nav:focus>ul>li:nth-child(6) svg, .site-header .main-nav:hover>ul>li:nth-child(6) svg {
+.site-header .main-nav:focus>ul>li:nth-child(6) svg,
+.site-header .main-nav:hover>ul>li:nth-child(6) svg {
     stroke: #4caf50
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(7) svg, .site-header .main-nav:hover>ul>li:nth-child(7) svg {
+.site-header .main-nav:focus>ul>li:nth-child(7) svg,
+.site-header .main-nav:hover>ul>li:nth-child(7) svg {
     stroke: #8bc34a
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(8) svg, .site-header .main-nav:hover>ul>li:nth-child(8) svg {
+.site-header .main-nav:focus>ul>li:nth-child(8) svg,
+.site-header .main-nav:hover>ul>li:nth-child(8) svg {
     stroke: #ffeb3b
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(9) svg, .site-header .main-nav:hover>ul>li:nth-child(9) svg {
+.site-header .main-nav:focus>ul>li:nth-child(9) svg,
+.site-header .main-nav:hover>ul>li:nth-child(9) svg {
     stroke: #607d8b
 }
 
-.site-header .main-nav:focus>ul>li:nth-child(10) svg, .site-header .main-nav:hover>ul>li:nth-child(10) svg {
+.site-header .main-nav:focus>ul>li:nth-child(10) svg,
+.site-header .main-nav:hover>ul>li:nth-child(10) svg {
     stroke: black;
 }
+
+input #Search {}

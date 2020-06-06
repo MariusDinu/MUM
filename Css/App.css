@@ -234,6 +234,18 @@
         width: 45px;
     }
     
+    button.PlayMelodie {
+        -webkit-appearance: button;
+        -webkit-writing-mode: horizontal-tb !important;
+        cursor: pointer;
+        background-color: black;
+        border-radius: 60px;
+        margin: 5px;
+        float: right;
+        width: 100px;
+        height: 100px;
+    }
+    
     button.button-search {
         width: 15%;
     }
@@ -258,13 +270,33 @@
         height: 2.5em;
     }
     
+    label.rec {
+        background-color: #c53c3c;
+        color: antiquewhite;
+        /* height: 200px; */
+        /* width: 300px; */
+        font-size: xx-large;
+        border-radius: 20px;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    
     .search-field {
         position: relative;
         width: 98%;
         bottom: 0em;
-        background-color: greenyellow;
+        background-color: rgb(45, 43, 43);
         -webkit-appearance: searchfield;
-        color: black;
+        color: rgb(31, 180, 31);
+        height: 50px;
+        border-radius: 20px;
+        border-color: black;
+    }
+    
+    input.search-field::placeholder {
+        color: rgb(31, 180, 31);
     }
     
     div.containerC {
