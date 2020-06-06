@@ -27,11 +27,24 @@ echo "<div class='"."Admin"."' id='code' value='".$_GET['code']."'></div>";
 include 'TemplateNav.php';
 ?>
 <div class='mycontainer'>
- 
+<?php
+
+echo "  <div class='baraButoane'>
+<div class='buttonUtil'>        
+<button class='buttonLogout' id='Logout' onclick='logout()' >Logout </button>
+        <button id='refresh' class='buttonInsert' onclick='history.go(0)'>Refresh</button>
+      
+        <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Melodie</button> 
+        <button class='buttonInsert' id='AddLista' onclick='insertLista()' >Lista</button> </div>
+        <div class='buttonDownload' >
+        <button class='download' id='buttonTopM' onclick='TopM()'>Top10</button>
+        <button class='download' onclick='TopV()'>TopViews</button>
+        <button class='download' onclick='TopC()'>TopComments</button></div>
+          <br><br> </div>
+        ";
+      ?>
   <div class='rss'> 
-  <button class='download' id='buttonTopM' onclick='TopM()'>Top10</button>
-  <button class='download' onclick='TopV()'>TopViews</button>
-  <button class='download' onclick='TopC()'>TopComments</button>
+  
 <?php
 include '../Feed/FeedViews.php';
 include '../Feed/Feed.php';

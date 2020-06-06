@@ -31,7 +31,7 @@ function afisareUser(){
       "<table style='"."width:100%"."'>".
       "<tr><th id='Nume'>Nume Lista: ".$row['ListaFavorite']."</th></tr>"
      ."</table></div></a>".
-    "<a class='buttonExport' id='".$row['ListaFavorite']."' href='/MUM/PhpMusic/ExportCsv.php?user=".$user_value."&lista=".$row['ListaFavorite']."'> Export to Csv </a>";
+    "<a class='buttonExport' id='".$row['ListaFavorite']."' href='/MUM/PhpMusic/Export.php?user=".$user_value."&lista=".$row['ListaFavorite']."'> Export </a>";
      echo "</div> <br></br>";
      
       

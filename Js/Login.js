@@ -2,7 +2,7 @@ $(document).ready(function() {
     //On pressing a key on "Search box" in "search.php" file. This function will be called.
     var log = document.getElementById('Login');
     log.onclick = function(event) {
-        event.preventDefault();
+
         $("#errorLoginPass").show();
         //Assigning search box value to javascript variable named as "name".
         var userM = document.getElementById("user").value;
@@ -44,6 +44,7 @@ $(document).ready(function() {
             }
 
         });
+        event.preventDefault();
 
 
     }
