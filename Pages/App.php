@@ -3,16 +3,18 @@
 
     <head>
 
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free Web tutorials">
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="author" content="John Doe">
- <?php header('Cache-Control: max-age=31536000,public');?>
+ <?php
+ header('Cache-Control: max-age=31536000,public');?>
   
-  
-    <link type="text/css" href="/Mum/Css/App.css" rel="stylesheet" />
+ <link rel="preload" href="/Mum/Css/App.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
+   
     <link type="text/css" href="/MUM/Css/Layout.css" rel="stylesheet" />
   
     </head>
@@ -31,7 +33,7 @@ include 'TemplateNav.php';
 
 echo "  <div class='baraButoane'>
 <div class='buttonUtil'>        
-<button class='buttonLogout' id='Logout' onclick='logout()' >Logout </button>
+<a class='buttonLogout' id='Logout' onclick='logout()' >Logout </a>
         <button id='refresh' class='buttonInsert' onclick='history.go(0)'>Refresh</button>
       
         <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Melodie</button> 

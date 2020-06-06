@@ -1,793 +1,777 @@
-            button.buttonAdmin {
-                -webkit-appearance: button;
-                -webkit-writing-mode: horizontal-tb !important;
-                text-rendering: optimizeLegibility;
-                color: white;
-                flex-grow: 1;
-                text-align: center;
-                cursor: pointer;
-                background-color: red;
-                margin-top: 1.2em;
-                font: 400 13.3333px Arial;
-                padding: 1px 6px;
-                border-radius: 20px;
-                border-color: #ce0909;
-                width: 34%;
-            }
-            
-            body {
-                background-color: black;
-            }
-            
-            .Admin {
-                color: #1ee6f4;
-            }
-            
-            div.baraButoane {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            
-            div.comment {
-                display: flow-root;
-                margin-bottom: 20px;
-                margin-top: 20px;
-                margin-right: 15px;
-                margin-left: 15px;
-            }
-            
-            #Alb {
-                background-color: black;
-                width: 80%;
-            }
-            
-            div.comment #right {
-                float: right;
-                color: red;
-                background-color: white;
-                border-radius: 20px;
-                font-size: 20px;
-                text-align: left;
-                padding-left: 20px;
-                padding-right: 20px;
-                padding-bottom: 5px;
-                padding-top: 10px;
-                display: block;
-                word-break: break-all;
-            }
-            
-            div.comment .DateRight {
-                color: grey;
-                float: right;
-                height: 0px;
-            }
-            
-            div.comment .DateLeft {
-                color: grey;
-                float: right;
-                height: 0px;
-            }
-            
-            div.comment #left {
-                float: left;
-                color: red;
-                background-color: green;
-                border-radius: 20px;
-                font-size: 20px;
-                text-align: left;
-                padding-left: 20px;
-                padding-right: 20px;
-                padding-bottom: 5px;
-                padding-top: 10px;
-                display: block;
-                word-break: break-all;
-            }
-            
-            #Details {}
-            
-            div.boxComments {
-                bottom: 10px;
-                width: 100%;
-            }
-            
-            div.showMelodieComments {
-                background-color: black;
-                border-style: solid;
-                border-color: blue;
-                overflow-y: scroll;
-                height: 250px;
-            }
-            
-            button.buttonInsert {
-                -webkit-appearance: button;
-                text-rendering: auto;
-                color: rgb(129, 123, 123);
-                text-shadow: none;
-                text-align: center;
-                padding-left: 20px;
-                cursor: pointer;
-                background-color: white;
-                font: 400 13.3333px Arial;
-                border-width: 0.8;
-                border-radius: 0.5em;
-                border-style: outset;
-                border-color: rgb(7, 66, 155);
-                width: min-content;
-                font-size: 1em;
-                height: min-content;
-                flex-direction: row;
-                background-image: url(/MUM/Images/add.png);
-                background-size: contain;
-                background-repeat: repeat-y;
-            }
-            
-            #refresh {
-                -webkit-appearance: button;
-                text-rendering: auto;
-                color: rgb(129, 123, 123);
-                text-shadow: none;
-                text-align: center;
-                cursor: pointer;
-                background-color: white;
-                font: 400 13.3333px Arial;
-                border-width: 0.8;
-                border-radius: 0.5em;
-                border-style: outset;
-                border-color: rgb(7, 66, 155);
-                width: min-content;
-                font-size: 1em;
-                height: min-content;
-                flex-direction: row;
-                background-image: unset;
-            }
-            
-            a.buttonExport {
-                -webkit-appearance: button;
-                -webkit-writing-mode: horizontal-tb !important;
-                text-rendering: auto;
-                color: rgb(129, 123, 123);
-                letter-spacing: normal;
-                word-spacing: normal;
-                text-transform: none;
-                text-indent: 2px;
-                text-shadow: none;
-                display: inline-block;
-                text-align: center;
-                align-items: flex-start;
-                cursor: default;
-                background-color: #1ee6f4;
-                box-sizing: border-box;
-                margin: 5px;
-                font: 400 13.3333px Arial;
-                padding: 1px 6px;
-                border-width: 3px;
-                border-radius: 0.5em;
-                border-style: outset;
-                border-color: rgb(7, 66, 155);
-                width: 60%;
-                text-decoration: none;
-            }
-            
-            button.buttonLogout {
-                top: 5.8em;
-                -webkit-appearance: button;
-                color: darkgreen;
-                text-indent: 400;
-                text-shadow: saddlebrown;
-                float: lett;
-                text-align: center;
-                cursor: pointer;
-                background-color: darkred;
-                box-sizing: border-box;
-                font: 400 13.3333px Arial;
-                padding: 0.2em;
-                border-width: 0.5em;
-                border-radius: 0.2em;
-                border-style: outset;
-                border-color: rgb(7, 66, 155);
-                width: fit-content;
-                height: 2.4em;
-                /*50%*/
-                font-size: 1em;
-                z-index: 1;
-            }
-            
-            button {
-                -webkit-appearance: button;
-                -webkit-writing-mode: horizontal-tb !important;
-                text-rendering: auto;
-                color: rgb(129, 123, 123);
-                letter-spacing: normal;
-                word-spacing: normal;
-                text-transform: none;
-                text-indent: 0px;
-                text-shadow: none;
-                display: inline-block;
-                text-align: center;
-                align-items: flex-start;
-                cursor: default;
-                background-color: #1ee6f4;
-                box-sizing: border-box;
-                margin: 0px;
-                font: 400 13.3333px Arial;
-                padding: 1px 6px;
-                border-width: 3px;
-                border-radius: 0.5em;
-                border-style: outset;
-                border-color: rgb(7, 66, 155);
-                width: 15%;
-            }
-            
-            button.Play {
-                -webkit-appearance: button;
-                -webkit-writing-mode: horizontal-tb !important;
-                cursor: pointer;
-                background-color: black;
-                border-radius: 20px;
-                margin: 5px;
-                float: right;
-                width: 45px;
-            }
-            
-            button.PlayMelodie {
-                -webkit-appearance: button;
-                -webkit-writing-mode: horizontal-tb !important;
-                cursor: pointer;
-                background-color: purple;
-                border-radius: 60px;
-                margin: 5px;
-                float: right;
-                width: 100px;
-                height: 100px;
-            }
-            
-            button.button-search {
-                width: 15%;
-            }
-            
-            button.buttonComentariu {
-                -webkit-appearance: button;
-                text-rendering: auto;
-                color: rgb(129, 123, 123);
-                text-shadow: none;
-                float: right;
-                text-align: center;
-                cursor: pointer;
-                background-color: #1ee6f4;
-                font: 400 13.3333px Arial;
-                border-width: 0.8;
-                border-radius: 0.5em;
-                border-style: outset;
-                border-color: rgb(7, 66, 155);
-                width: 25%;
-                font-size: 1em;
-                margin: 1px;
-                height: 2.5em;
-            }
-            
-            label.rec {
-                background-color: #c53c3c;
-                color: antiquewhite;
-                /* height: 200px; */
-                /* width: 300px; */
-                font-size: xx-large;
-                border-radius: 20px;
-                padding-right: 25px;
-                padding-left: 25px;
-                padding-top: 6px;
-                padding-bottom: 6px;
-            }
-            
-            .search-field {
-                position: relative;
-                width: 98%;
-                bottom: 0em;
-                background-color: rgb(45, 43, 43);
-                -webkit-appearance: searchfield;
-                color: rgb(31, 180, 31);
-                height: 50px;
-                border-radius: 20px;
-                border-color: black;
-            }
-            
-            input.search-field::placeholder {
-                color: rgb(31, 180, 31);
-            }
-            
-            div.containerC {
-                display: flex;
-            }
-            
-            .containerMusic {
-                height: 100%;
-                background-color: white;
-                width: 80%;
-                display: flex;
-                float: left;
-                justify-content: space-between;
-            }
-            
-            .pozitionare {
-                display: block;
-            }
-            
-            div.showOneAlbum {
-                margin: auto;
-                width: 50%;
-                border: 3px solid green;
-                padding: 10px;
-                background-color: white;
-                text-align: center;
-                font-size: larger;
-                font-style: italic;
-            }
-            
-            div.showOneGen {
-                margin: auto;
-                width: 50%;
-                border: 3px solid green;
-                padding: 10px;
-                background-color: white;
-                text-align: center;
-                font-size: larger;
-                font-style: italic;
-            }
-            
-            div.showOneArtist {
-                margin: auto;
-                width: 50%;
-                border: 3px solid green;
-                padding: 10px;
-                background-color: white;
-                text-align: center;
-                font-size: larger;
-                font-style: italic;
-            }
-            
-            div.showOneMelodie {
-                background-color: black;
-                width: 100%;
-            }
-            
-            input.adaugareComentariu {
-                width: 73%;
-                height: 2.5em;
-            }
-            
-            div.User {}
-            
-            .video-player-embed {
-                display: block;
-                position: absolute;
-                bottom: 2em;
-                right: 2em;
-                border: 1em solid green;
-                border-radius: 1em;
-                height: min-content;
-                width: min-content;
-                float: right;
-            }
-            
-            button.closeVideo {
-                position: relative;
-                background-color: #f4511e;
-                border: none;
-                color: white;
-                text-align: center;
-                font-size: 16px;
-                margin: 4px 2px;
-                opacity: 0.8;
-                transition: 0.3s;
-                display: inline-block;
-                text-decoration: none;
-                cursor: pointer;
-                border-radius: 20px;
-                width: 100%;
-            }
-            
-            button.closeVideo:hover {
-                opacity: 1
-            }
-            
-            .pozitionare .video-player-inner-wrap {
-                position: fixed;
-                z-index: 3000002;
-            }
-            
-            .video-player-inner-wrap {
-                bottom: 10px;
-                float: right;
-                z-index: 99 !important;
-                right: 10px;
-            }
-            
-            a.form-inline {
-                display: flex;
-                height: 65%;
-                width: 75%;
-                margin-top: 5em;
-                margin: auto;
-                border: 1em solid green;
-                border-radius: 0.3em;
-                padding: 0.5em;
-                border-image: url(/MUM/Images/fire.jpg) 30;
-            }
-            
-            a.form-inline div.second {
-                width: 100%;
-                border-color: red;
-                height: 100%;
-            }
-            
-            .Melodie .second {
-                background-image: url("/MUM/Images/granit.jpg");
-                background-color: red;
-                display: inline;
-                flex-direction: column;
-                color: white;
-            }
-            
-            div.mycontainer {
-                background: -webkit-gradient(linear, left top, left bottom, from(#ff8a00), to(#e52e71));
-                padding-right: 10px;
-            }
-            
-            .Melodie .first button svg {
-                width: 100%;
-                height: 100%;
-                color: #bf2e2e;
-                background-color: greenyellow;
-                border-radius: 20px;
-                border: 0.1em solid;
-            }
-            
-            .Melodie .first {
-                border-image: url(/MUM/Images/fire.jpg) 30;
-                border-radius: 2.5em;
-                border: 4em black;
-            }
-            /*
+                            button.buttonAdmin {
+                                -webkit-appearance: button;
+                                -webkit-writing-mode: horizontal-tb !important;
+                                text-rendering: optimizeLegibility;
+                                color: white;
+                                flex-grow: 1;
+                                text-align: center;
+                                cursor: pointer;
+                                background-color: red;
+                                margin-top: 1.2em;
+                                font: 400 13.3333px Arial;
+                                padding: 1px 6px;
+                                border-radius: 20px;
+                                border-color: #ce0909;
+                                width: 34%;
+                            }
+                            
+                            body {
+                                background-color: black;
+                            }
+                            
+                            .Admin {
+                                color: #1ee6f4;
+                            }
+                            
+                            div.baraButoane {
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                            
+                            div.comment {
+                                display: flow-root;
+                                margin-bottom: 20px;
+                                margin-top: 20px;
+                                margin-right: 15px;
+                                margin-left: 15px;
+                            }
+                            
+                            #Alb {
+                                background-color: black;
+                                width: 80%;
+                            }
+                            
+                            div.comment #right {
+                                float: right;
+                                color: red;
+                                background-color: white;
+                                border-radius: 20px;
+                                font-size: 20px;
+                                text-align: left;
+                                padding-left: 20px;
+                                padding-right: 20px;
+                                padding-bottom: 5px;
+                                padding-top: 10px;
+                                display: block;
+                                word-break: break-all;
+                            }
+                            
+                            div.comment .DateRight {
+                                color: grey;
+                                float: right;
+                                height: 0px;
+                            }
+                            
+                            div.comment .DateLeft {
+                                color: grey;
+                                float: right;
+                                height: 0px;
+                            }
+                            
+                            div.comment #left {
+                                float: left;
+                                color: red;
+                                background-color: green;
+                                border-radius: 20px;
+                                font-size: 20px;
+                                text-align: left;
+                                padding-left: 20px;
+                                padding-right: 20px;
+                                padding-bottom: 5px;
+                                padding-top: 10px;
+                                display: block;
+                                word-break: break-all;
+                            }
+                            
+                            #Details {}
+                            
+                            div.boxComments {
+                                bottom: 10px;
+                                width: 100%;
+                            }
+                            
+                            div.showMelodieComments {
+                                background-color: black;
+                                border-style: solid;
+                                border-color: blue;
+                                overflow-y: scroll;
+                                height: 250px;
+                            }
+                            
+                            button.buttonInsert {
+                                -webkit-appearance: button;
+                                text-rendering: auto;
+                                color: black;
+                                text-shadow: none;
+                                text-align: center;
+                                padding-left: 20px;
+                                cursor: pointer;
+                                background-color: white;
+                                font: 400 13.3333px Arial;
+                                border-width: 0.8;
+                                border-radius: 0.5em;
+                                border-style: outset;
+                                border-color: rgb(7, 66, 155);
+                                width: min-content;
+                                font-size: 1em;
+                                height: min-content;
+                                flex-direction: row;
+                                background-image: url(/MUM/Images/add.png);
+                                background-size: contain;
+                                background-repeat: repeat-y;
+                            }
+                            
+                            #refresh {
+                                -webkit-appearance: button;
+                                text-rendering: auto;
+                                color: black;
+                                text-shadow: none;
+                                text-align: center;
+                                cursor: pointer;
+                                background-color: white;
+                                font: 400 13.3333px Arial;
+                                border-width: 0.8;
+                                border-radius: 0.5em;
+                                border-style: outset;
+                                border-color: rgb(7, 66, 155);
+                                width: min-content;
+                                font-size: 1em;
+                                height: min-content;
+                                flex-direction: row;
+                                background-image: unset;
+                            }
+                            
+                            a.buttonExport {
+                                -webkit-appearance: button;
+                                -webkit-writing-mode: horizontal-tb !important;
+                                text-rendering: auto;
+                                color: rgb(129, 123, 123);
+                                letter-spacing: normal;
+                                word-spacing: normal;
+                                text-transform: none;
+                                text-indent: 2px;
+                                text-shadow: none;
+                                display: inline-block;
+                                text-align: center;
+                                align-items: flex-start;
+                                cursor: default;
+                                background-color: #1ee6f4;
+                                box-sizing: border-box;
+                                margin: 5px;
+                                font: 400 13.3333px Arial;
+                                padding: 1px 6px;
+                                border-width: 3px;
+                                border-radius: 0.5em;
+                                border-style: outset;
+                                border-color: rgb(7, 66, 155);
+                                width: 60%;
+                                text-decoration: none;
+                            }
+                            
+                            a.buttonLogout {
+                                top: 5.8em;
+                                -webkit-appearance: button;
+                                color: white;
+                                text-align: center;
+                                cursor: pointer;
+                                background-color: black;
+                                box-sizing: border-box;
+                                font: 400 13.3333px Arial;
+                                padding: 0.2em;
+                                border-width: 0.5em;
+                                border-radius: 0.2em;
+                                border-style: outset;
+                                border-color: #bf2e2e;
+                                width: fit-content;
+                                height: 2.4em;
+                                /*50%*/
+                                font-size: 1em;
+                                z-index: 1;
+                            }
+                            
+                            button {
+                                -webkit-appearance: button;
+                                -webkit-writing-mode: horizontal-tb !important;
+                                text-rendering: auto;
+                                color: black;
+                                letter-spacing: normal;
+                                word-spacing: normal;
+                                text-transform: none;
+                                text-indent: 0px;
+                                text-shadow: none;
+                                display: inline-block;
+                                text-align: center;
+                                align-items: flex-start;
+                                cursor: default;
+                                background-color: #1ee6f4;
+                                box-sizing: border-box;
+                                margin: 0px;
+                                font: 400 13.3333px Arial;
+                                padding: 1px 6px;
+                                border-width: 3px;
+                                border-radius: 0.5em;
+                                border-style: outset;
+                                border-color: rgb(7, 66, 155);
+                                width: 15%;
+                            }
+                            
+                            button.Play {
+                                -webkit-appearance: button;
+                                -webkit-writing-mode: horizontal-tb !important;
+                                cursor: pointer;
+                                background-color: black;
+                                border-radius: 20px;
+                                margin: 5px;
+                                float: right;
+                                width: 45px;
+                            }
+                            
+                            button.PlayMelodie {
+                                -webkit-appearance: button;
+                                -webkit-writing-mode: horizontal-tb !important;
+                                cursor: pointer;
+                                background-color: purple;
+                                border-radius: 60px;
+                                margin: 5px;
+                                float: right;
+                                width: 100px;
+                                height: 100px;
+                            }
+                            
+                            button.button-search {
+                                width: 15%;
+                            }
+                            
+                            button.buttonComentariu {
+                                -webkit-appearance: button;
+                                text-rendering: auto;
+                                color: rgb(129, 123, 123);
+                                text-shadow: none;
+                                float: right;
+                                text-align: center;
+                                cursor: pointer;
+                                background-color: #1ee6f4;
+                                font: 400 13.3333px Arial;
+                                border-width: 0.8;
+                                border-radius: 0.5em;
+                                border-style: outset;
+                                border-color: rgb(7, 66, 155);
+                                width: 25%;
+                                font-size: 1em;
+                                margin: 1px;
+                                height: 2.5em;
+                            }
+                            
+                            label.rec {
+                                background-color: #c53c3c;
+                                color: antiquewhite;
+                                /* height: 200px; */
+                                /* width: 300px; */
+                                font-size: xx-large;
+                                border-radius: 20px;
+                                padding-right: 25px;
+                                padding-left: 25px;
+                                padding-top: 6px;
+                                padding-bottom: 6px;
+                            }
+                            
+                            .search-field {
+                                position: relative;
+                                width: 98%;
+                                bottom: 0em;
+                                background-color: rgb(45, 43, 43);
+                                -webkit-appearance: searchfield;
+                                color: rgb(31, 180, 31);
+                                height: 50px;
+                                border-radius: 20px;
+                                border-color: black;
+                            }
+                            
+                            input.search-field::placeholder {
+                                color: rgb(31, 180, 31);
+                            }
+                            
+                            div.containerC {
+                                display: flex;
+                            }
+                            
+                            .containerMusic {
+                                height: 100%;
+                                background-color: white;
+                                width: 80%;
+                                display: flex;
+                                float: left;
+                                justify-content: space-between;
+                            }
+                            
+                            .pozitionare {
+                                display: block;
+                            }
+                            
+                            div.showOneAlbum {
+                                margin: auto;
+                                width: 50%;
+                                border: 3px solid green;
+                                padding: 10px;
+                                background-color: white;
+                                text-align: center;
+                                font-size: larger;
+                                font-style: italic;
+                            }
+                            
+                            div.showOneGen {
+                                margin: auto;
+                                width: 50%;
+                                border: 3px solid green;
+                                padding: 10px;
+                                background-color: white;
+                                text-align: center;
+                                font-size: larger;
+                                font-style: italic;
+                            }
+                            
+                            div.showOneArtist {
+                                margin: auto;
+                                width: 50%;
+                                border: 3px solid green;
+                                padding: 10px;
+                                background-color: white;
+                                text-align: center;
+                                font-size: larger;
+                                font-style: italic;
+                            }
+                            
+                            div.showOneMelodie {
+                                background-color: black;
+                                width: 100%;
+                            }
+                            
+                            input.adaugareComentariu {
+                                width: 73%;
+                                height: 2.5em;
+                            }
+                            
+                            div.User {}
+                            
+                            .video-player-embed {
+                                display: block;
+                                position: absolute;
+                                bottom: 2em;
+                                right: 2em;
+                                border: 1em solid green;
+                                border-radius: 1em;
+                                height: min-content;
+                                width: min-content;
+                                float: right;
+                            }
+                            
+                            button.closeVideo {
+                                position: relative;
+                                background-color: #f4511e;
+                                border: none;
+                                color: white;
+                                text-align: center;
+                                font-size: 16px;
+                                margin: 4px 2px;
+                                opacity: 0.8;
+                                transition: 0.3s;
+                                display: inline-block;
+                                text-decoration: none;
+                                cursor: pointer;
+                                border-radius: 20px;
+                                width: 100%;
+                            }
+                            
+                            button.closeVideo:hover {
+                                opacity: 1
+                            }
+                            
+                            .pozitionare .video-player-inner-wrap {
+                                position: fixed;
+                                z-index: 3000002;
+                            }
+                            
+                            .video-player-inner-wrap {
+                                bottom: 10px;
+                                float: right;
+                                z-index: 99 !important;
+                                right: 10px;
+                            }
+                            
+                            a.form-inline {
+                                display: flex;
+                                height: 65%;
+                                width: 75%;
+                                margin-top: 5em;
+                                margin: auto;
+                                border: 1em solid green;
+                                border-radius: 0.3em;
+                                padding: 0.5em;
+                                border-image: url(/MUM/Images/fire.jpg) 30;
+                            }
+                            
+                            a.form-inline div.second {
+                                width: 100%;
+                                border-color: red;
+                                height: 100%;
+                            }
+                            
+                            .Melodie .second {
+                                background-image: url("/MUM/Images/granit.jpg");
+                                background-color: red;
+                                display: inline;
+                                flex-direction: column;
+                                color: white;
+                            }
+                            
+                            div.mycontainer {
+                                background: -webkit-gradient(linear, left top, left bottom, from(#ff8a00), to(#e52e71));
+                                padding-right: 10px;
+                            }
+                            
+                            .Melodie .first button svg {
+                                width: 100%;
+                                height: 100%;
+                                color: #bf2e2e;
+                                background-color: greenyellow;
+                                border-radius: 20px;
+                                border: 0.1em solid;
+                            }
+                            
+                            .Melodie .first {
+                                border-image: url(/MUM/Images/fire.jpg) 30;
+                                border-radius: 2.5em;
+                                border: 4em black;
+                            }
+                            /*
     .Melodie.first:first-child {
         flex-flow: row wrap;
         margin-top: 2px;
         vertical-align: center;
     }*/
-            
-            .modal {
-                display: none;
-                /* Hidden by default */
-                position: fixed;
-                /* Stay in place */
-                z-index: 1;
-                /* Sit on top */
-                padding-top: 100px;
-                /* Location of the box */
-                left: 0;
-                top: 0;
-                width: 100%;
-                /* Full width */
-                height: 100%;
-                /* Full height */
-                overflow: auto;
-                /* Enable scroll if needed */
-                background-color: rgb(0, 0, 0);
-                /* Fallback color */
-                background-color: rgba(0, 0, 0, 0.4);
-                /* Black w/ opacity */
-            }
-            /* Modal Content */
-            
-            div.showDetailsMelodie {
-                background-color: #c16060;
-                display: flex;
-                justify-content: space-between;
-                padding-left: 30px;
-                padding-top: 20px;
-                padding-bottom: 20px;
-                border-radius: 100px;
-                color: white;
-                font-size: large;
-                font-family: 'Courier New', Courier, monospace;
-            }
-            
-            div.Views {
-                color: white;
-                font-size: large;
-                font-family: 'Courier New', Courier, monospace;
-            }
-            
-            .modal-content {
-                background-color: #fefefe;
-                margin: auto;
-                padding: 20px;
-                border: 1px solid #888;
-                width: 80%;
-            }
-            /* The Close Button */
-            
-            .close {
-                color: #aaaaaa;
-                float: right;
-                font-size: 28px;
-                font-weight: bold;
-            }
-            
-            .close:hover,
-            .close:focus {
-                color: #000;
-                text-decoration: none;
-                cursor: pointer;
-            }
-            
-            .outer {
-                background: -webkit-gradient(linear, left top, left bottom, from(#ff8a00), to(#e52e71));
-                margin-bottom: 15px;
-                margin-top: 20px;
-                margin-left: 20px;
-            }
-            
-            .wrap {
-                flex-flow: row wrap;
-                margin: 0 auto;
-                background: -webkit-gradient(linear, left top, left bottom, from(#ff8a00), to(#e52e71));
-                display: flex;
-                padding-top: 15px;
-                padding-left: 20px
-            }
-            
-            div.wrap#tabelSearch {
-                display: none;
-            }
-            
-            .wrap#tabelAlbume {
-                display: none;
-            }
-            
-            .wrap#tabelArtisti {
-                display: none;
-            }
-            
-            .wrap#tabelUseri {
-                display: none;
-            }
-            
-            .wrap#tabelGenuri {
-                display: none;
-            }
-            
-            .wrap#tabelFavorite {
-                display: none;
-            }
-            
-            .listMusic .second .ver {
-                background-color: red;
-                display: inline;
-                width: 100px;
-                height: 100px;
-            }
-            
-            .listMusic .first button svg {
-                width: 100%;
-                height: 100%;
-                color: #bf2e2e;
-                background-color: blue;
-                border-radius: 20px;
-            }
-            
-            .listMusic .first {
-                background-color: black;
-                height: 50px;
-                float: right;
-                border-radius: 20px;
-            }
-            
-            .listMusic {
-                width: 200px;
-                padding-bottom: 30px;
-                margin-bottom: 30px;
-                position: relative;
-                background-color: greenyellow;
-                border-radius: 20px;
-                margin: 5px;
-            }
-            
-            .Melodie {
-                padding-bottom: 2em;
-                margin-bottom: 2em;
-                margin-right: 1em;
-                position: relative;
-                background-color: greenyellow;
-                border-radius: 1em;
-                border: 1em solid;
-                border-image: url(/MUM/Images/fire.jpg) 30;
-                flex-grow: 0;
-                width: 20%;
-                background-image: url("/MUM/Images/universe.jpg");
-            }
-            
-            .item2 {
-                width: 23%;
-                padding-bottom: 30px;
-                margin-bottom: 30px;
-                position: relative;
-                border-bottom: 0px solid red;
-            }
-            
-            .Melodie:nth-child(4n+1):after {
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 500%;
-                bottom: 0;
-                border-bottom: 0px solid red;
-            }
-            
-            @media (max-width: 768px) {
-                .item:nth-child(2n+1):nth-last-child(2):after,
-                .item:nth-child(2n+1):nth-last-child(1):after {
-                    display: none;
-                }
-                .item {
-                    width: 43%;
-                }
-            }
-            
-            @media (min-width: 768px) {
-                .item:nth-child(4n+1):nth-last-child(4):after,
-                .item:nth-child(4n+1):nth-last-child(4):after,
-                .item:nth-child(4n+1):nth-last-child(2):after,
-                .item:nth-child(4n+1):nth-last-child(1):after {
-                    display: none;
-                }
-            }
-            
-            button.buttonFavoritAdd {
-                -webkit-appearance: button;
-                -webkit-writing-mode: horizontal-tb !important;
-                text-rendering: auto;
-                color: #e52e71;
-                letter-spacing: normal;
-                word-spacing: normal;
-                text-transform: none;
-                text-indent: 2px;
-                text-shadow: none;
-                height: 38px;
-                display: inline-block;
-                text-align: center;
-                align-items: flex-start;
-                cursor: default;
-                background-color: rgb(72, 68, 68);
-                box-sizing: border-box;
-                margin: 5px;
-                font: 400 13.3333px Arial;
-                padding: 1px 6px;
-                border-width: 3px;
-                border-radius: 20px;
-                border-style: outset;
-                border-color: #e52e71;
-                width: 60%;
-            }
-            
-            button.buttonFavoriteAdded {
-                -webkit-appearance: button;
-                -webkit-writing-mode: horizontal-tb !important;
-                text-rendering: auto;
-                color: rgb(129, 123, 123);
-                letter-spacing: normal;
-                word-spacing: normal;
-                text-transform: none;
-                text-indent: 2px;
-                text-shadow: none;
-                display: inline-block;
-                text-align: center;
-                align-items: flex-start;
-                cursor: default;
-                background-color: #1ee6f4;
-                box-sizing: border-box;
-                margin: 5px;
-                font: 400 13.3333px Arial;
-                padding: 1px 6px;
-                border-width: 3px;
-                border-radius: 0.5em;
-                border-style: outset;
-                border-color: rgb(7, 66, 155);
-                width: 60%;
-            }
-            
-            button.buttonFavoriteAdded:hover span {
-                display: none
-            }
-            
-            button.buttonFavoriteAdded:hover:before {
-                content: "Delete!";
-            }
-            
-            button.buttonFavoriteAdded:hover {
-                background-color: green;
-            }
-            
-            rss {
-                display: contents;
-                font-family: verdana, arial;
-                float: right;
-                width: 20vh;
-                font-size: 0.8em;
-                border: 0.2em solid silver;
-                background-color: black;
-            }
-            
-            div.buttonDownload {
-                float: right;
-                padding-right: 20px;
-            }
-            
-            div.buttonUtil {
-                float: left;
-                padding-left: 20px;
-            }
-            
-            div.rss {
-                float: right;
-                display: flow-root;
-                width: 300px;
-                grid-gap: 20px;
-                background-color: black;
-            }
-            
-            channel title {}
-            
-            button.download {
-                width: fit-content;
-                font-size: medium;
-                cursor: pointer;
-            }
-            
-            div.second table {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            
-            title {
-                box-sizing: border-box;
-                display: block;
-                font-size: 1.2em;
-                margin: 5px;
-                padding: 2px;
-                color: white;
-                background-color: rgb(145, 2, 80);
-                border: 0.2em solid white;
-                word-break: break-all;
-            }
-            
-            link {
-                display: block;
-                font-size: x-small;
-                padding-left: 10px;
-            }
-            
-            item {
-                display: block;
-                border: black solid 1em;
-                border-radius: 0.5em;
-                font-size: 0.6em;
-            }
-            
-            docs {
-                display: block;
-                background-color: #ffffe6;
-                margin: 20px;
-                text-align: center;
-                padding: 5px;
-                color: #7f7f7f;
-                border: 1px solid silver;
-            }
-            /* all hidden elements */
-            
-            language,
-            lastBuildDate,
-            ttl,
-            guid,
-            category,
-            description,
-            pubDate {
-                display: none;
-            }
+                            
+                            .modal {
+                                display: none;
+                                /* Hidden by default */
+                                position: fixed;
+                                /* Stay in place */
+                                z-index: 1;
+                                /* Sit on top */
+                                padding-top: 100px;
+                                /* Location of the box */
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                /* Full width */
+                                height: 100%;
+                                /* Full height */
+                                overflow: auto;
+                                /* Enable scroll if needed */
+                                background-color: rgb(0, 0, 0);
+                                /* Fallback color */
+                                background-color: rgba(0, 0, 0, 0.4);
+                                /* Black w/ opacity */
+                            }
+                            /* Modal Content */
+                            
+                            div.showDetailsMelodie {
+                                background-color: #c16060;
+                                display: flex;
+                                justify-content: space-between;
+                                padding-left: 30px;
+                                padding-top: 20px;
+                                padding-bottom: 20px;
+                                border-radius: 100px;
+                                color: white;
+                                font-size: large;
+                                font-family: 'Courier New', Courier, monospace;
+                            }
+                            
+                            div.Views {
+                                color: white;
+                                font-size: large;
+                                font-family: 'Courier New', Courier, monospace;
+                            }
+                            
+                            .modal-content {
+                                background-color: #fefefe;
+                                margin: auto;
+                                padding: 20px;
+                                border: 1px solid #888;
+                                width: 80%;
+                            }
+                            /* The Close Button */
+                            
+                            .close {
+                                color: #aaaaaa;
+                                float: right;
+                                font-size: 28px;
+                                font-weight: bold;
+                            }
+                            
+                            .close:hover,
+                            .close:focus {
+                                color: #000;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                            
+                            .outer {
+                                background: -webkit-gradient(linear, left top, left bottom, from(#ff8a00), to(#e52e71));
+                                margin-bottom: 15px;
+                                margin-top: 20px;
+                                margin-left: 20px;
+                            }
+                            
+                            .wrap {
+                                flex-flow: row wrap;
+                                margin: 0 auto;
+                                display: flex;
+                                padding-top: 15px;
+                                padding-left: 20px
+                            }
+                            
+                            div.wrap#tabelSearch {}
+                            
+                            .wrap#tabelAlbume {}
+                            
+                            .wrap#tabelArtisti {}
+                            
+                            .wrap#tabelUseri {}
+                            
+                            .wrap#tabelGenuri {}
+                            
+                            .wrap#tabelFavorite {}
+                            
+                            .listMusic .second .ver {
+                                background-color: red;
+                                display: inline;
+                                width: 100px;
+                                height: 100px;
+                            }
+                            
+                            .listMusic .first button svg {
+                                width: 100%;
+                                height: 100%;
+                                color: #bf2e2e;
+                                background-color: blue;
+                                border-radius: 20px;
+                            }
+                            
+                            .listMusic .first {
+                                background-color: black;
+                                height: 50px;
+                                float: right;
+                                border-radius: 20px;
+                            }
+                            
+                            .listMusic {
+                                width: 200px;
+                                padding-bottom: 30px;
+                                margin-bottom: 30px;
+                                position: relative;
+                                background-color: greenyellow;
+                                border-radius: 20px;
+                                margin: 5px;
+                            }
+                            
+                            .Melodie {
+                                padding-bottom: 2em;
+                                margin-bottom: 2em;
+                                margin-right: 1em;
+                                position: relative;
+                                background-color: greenyellow;
+                                border-radius: 1em;
+                                border: 1em solid;
+                                border-image: url(/MUM/Images/fire.jpg) 30;
+                                flex-grow: 0;
+                                width: 20%;
+                                background-image: url("/MUM/Images/universe.jpg");
+                            }
+                            
+                            .item2 {
+                                width: 23%;
+                                padding-bottom: 30px;
+                                margin-bottom: 30px;
+                                position: relative;
+                                border-bottom: 0px solid red;
+                            }
+                            
+                            .Melodie:nth-child(4n+1):after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                width: 500%;
+                                bottom: 0;
+                                border-bottom: 0px solid red;
+                            }
+                            
+                            @media (max-width: 768px) {
+                                .item:nth-child(2n+1):nth-last-child(2):after,
+                                .item:nth-child(2n+1):nth-last-child(1):after {
+                                    display: none;
+                                }
+                                .item {
+                                    width: 43%;
+                                }
+                            }
+                            
+                            @media (min-width: 768px) {
+                                .item:nth-child(4n+1):nth-last-child(4):after,
+                                .item:nth-child(4n+1):nth-last-child(4):after,
+                                .item:nth-child(4n+1):nth-last-child(2):after,
+                                .item:nth-child(4n+1):nth-last-child(1):after {
+                                    display: none;
+                                }
+                            }
+                            
+                            button.buttonFavoritAdd {
+                                -webkit-appearance: button;
+                                -webkit-writing-mode: horizontal-tb !important;
+                                text-rendering: auto;
+                                color: #e52e71;
+                                letter-spacing: normal;
+                                word-spacing: normal;
+                                text-transform: none;
+                                text-indent: 2px;
+                                text-shadow: none;
+                                height: 38px;
+                                display: inline-block;
+                                text-align: center;
+                                align-items: flex-start;
+                                cursor: default;
+                                background-color: black;
+                                box-sizing: border-box;
+                                margin: 5px;
+                                font: 400 13.3333px Arial;
+                                padding: 1px 6px;
+                                border-width: 3px;
+                                border-radius: 20px;
+                                border-style: outset;
+                                border-color: #e52e71;
+                                width: 60%;
+                            }
+                            
+                            button.buttonFavoriteAdded {
+                                -webkit-appearance: button;
+                                -webkit-writing-mode: horizontal-tb !important;
+                                text-rendering: auto;
+                                color: black;
+                                letter-spacing: normal;
+                                word-spacing: normal;
+                                text-transform: none;
+                                text-indent: 2px;
+                                text-shadow: none;
+                                display: inline-block;
+                                text-align: center;
+                                align-items: flex-start;
+                                cursor: default;
+                                background-color: #1ee6f4;
+                                box-sizing: border-box;
+                                margin: 5px;
+                                font: 400 13.3333px Arial;
+                                padding: 1px 6px;
+                                border-width: 3px;
+                                border-radius: 0.5em;
+                                border-style: outset;
+                                border-color: rgb(7, 66, 155);
+                                width: 60%;
+                            }
+                            
+                            button.buttonFavoriteAdded:hover span {
+                                display: none
+                            }
+                            
+                            button.buttonFavoriteAdded:hover:before {
+                                content: "Delete!";
+                            }
+                            
+                            button.buttonFavoriteAdded:hover {
+                                background-color: green;
+                            }
+                            
+                            rss {
+                                display: contents;
+                                font-family: verdana, arial;
+                                float: right;
+                                width: 20vh;
+                                font-size: 0.8em;
+                                border: 0.2em solid silver;
+                                background-color: black;
+                            }
+                            
+                            div.buttonDownload {
+                                float: right;
+                                padding-right: 20px;
+                            }
+                            
+                            div.buttonUtil {
+                                float: left;
+                                padding-left: 20px;
+                            }
+                            
+                            div.rss {
+                                float: right;
+                                display: flow-root;
+                                width: 300px;
+                                grid-gap: 20px;
+                                background-color: black;
+                            }
+                            
+                            channel title {}
+                            
+                            button.download {
+                                width: fit-content;
+                                font-size: medium;
+                                cursor: pointer;
+                            }
+                            
+                            div.second table {
+                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            }
+                            
+                            title {
+                                box-sizing: border-box;
+                                display: block;
+                                font-size: 1.2em;
+                                margin: 5px;
+                                padding: 2px;
+                                color: white;
+                                background-color: rgb(145, 2, 80);
+                                border: 0.2em solid white;
+                                word-break: break-all;
+                            }
+                            
+                            link {
+                                display: block;
+                                font-size: x-small;
+                                padding-left: 10px;
+                            }
+                            
+                            item {
+                                display: block;
+                                border: black solid 1em;
+                                border-radius: 0.5em;
+                                font-size: 0.6em;
+                            }
+                            
+                            docs {
+                                display: block;
+                                background-color: #ffffe6;
+                                margin: 20px;
+                                text-align: center;
+                                padding: 5px;
+                                color: #7f7f7f;
+                                border: 1px solid silver;
+                            }
+                            /* all hidden elements */
+                            
+                            language,
+                            lastBuildDate,
+                            ttl,
+                            guid,
+                            category,
+                            description,
+                            pubDate {
+                                display: none;
+                            }

@@ -27,6 +27,7 @@ $(document).ready(function() {
                 $("#tabelAlbume").hide();
                 $("#tabelFavorite").hide();
                 $("#tabelArtisti").hide();
+                $("#tabelUseri").hide();
                 $("#Alb").hide();
                 $("#userDetails").hide();
                 $("#tabelGenuri").html(html).show();
