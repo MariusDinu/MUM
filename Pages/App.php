@@ -71,7 +71,9 @@ include 'TemplateModal.php';
                 </div>  
 <div class="wrap" id="tabelFavorite" value="1"> 
                 </div>
-                          
+ <div id="Alb">
+  
+  </div>                          
 </div>  
 
 <div class="pozitionare">
@@ -104,9 +106,7 @@ include 'TemplateModal.php';
 </div>
 
 <div class='userDetails' id='userDetails'>    </div>
-  <div id="Alb">
   
-  </div> 
   
 </div>
   

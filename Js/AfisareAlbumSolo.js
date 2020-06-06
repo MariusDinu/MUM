@@ -181,7 +181,7 @@ function AfisareMelodie(current) {
     $("#userDetails").hide();
     $("#Alb").show();
     document.getElementById("Alb").innerHTML = "<div class='showOneMelodie' id='showOneMelodie'><div class='showDetailsMelodie' id='showDetailsMelodie'>" +
-        "</div><br><label class='rec' for='rec'>Recomandate</label><div class='outer'> <div class='wrap' id='recommendedMusic'> </div></div> <div class='boxComments' id='boxComments'><div class= 'showMelodieComments' id ='showMelodieComments'> " + " </div> " +
+        "</div><br><br><label class='rec' for='rec'>Recomandate</label><div class='outer'> <div class='wrap' id='recommendedMusic'> </div></div> <div class='boxComments' id='boxComments'><div class= 'showMelodieComments' id ='showMelodieComments'> " + " </div> " +
         "<input class='adaugareComentariu' id='adaugareComentariu' name='adaugareComentariu' placeholder='Scrie un comentariu nou...' type='text' > " +
         " <button class='buttonComentariu' id = 'buttonComentariu' onclick='adaugareComentariu()' > Adaugare Comentariu </button> </div>" +
         " </div > ";

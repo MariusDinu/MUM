@@ -40,6 +40,7 @@
     
     #Alb {
         background-color: black;
+        width: 80%;
     }
     
     div.comment #right {
@@ -88,8 +89,7 @@
     
     div.boxComments {
         bottom: 10px;
-        position: fixed;
-        width: 80%;
+        width: 100%;
     }
     
     div.showMelodieComments {
@@ -238,7 +238,7 @@
         -webkit-appearance: button;
         -webkit-writing-mode: horizontal-tb !important;
         cursor: pointer;
-        background-color: black;
+        background-color: purple;
         border-radius: 60px;
         margin: 5px;
         float: right;
@@ -317,20 +317,41 @@
     }
     
     div.showOneAlbum {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
         background-color: white;
+        text-align: center;
+        font-size: larger;
+        font-style: italic;
     }
     
     div.showOneGen {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
         background-color: white;
+        text-align: center;
+        font-size: larger;
+        font-style: italic;
     }
     
     div.showOneArtist {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
         background-color: white;
+        text-align: center;
+        font-size: larger;
+        font-style: italic;
     }
     
     div.showOneMelodie {
         background-color: black;
-        width: 80%;
+        width: 100%;
     }
     
     input.adaugareComentariu {
@@ -459,10 +480,22 @@
     /* Modal Content */
     
     div.showDetailsMelodie {
-        background-color: white;
+        background-color: #c16060;
         display: flex;
         justify-content: space-between;
         padding-left: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 100px;
+        color: white;
+        font-size: large;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    div.Views {
+        color: white;
+        font-size: large;
+        font-family: 'Courier New', Courier, monospace;
     }
     
     .modal-content {
@@ -500,6 +533,7 @@
         margin: 0 auto;
         background-color: black;
         display: flex;
+        padding-left: 20px
     }
     
     .listMusic .second .ver {
@@ -666,9 +700,7 @@
         grid-gap: 20px;
     }
     
-    channel title {
-        width: 300px;
-    }
+    channel title {}
     
     title {
         box-sizing: border-box;

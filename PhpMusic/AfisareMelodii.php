@@ -59,7 +59,7 @@ function afisareAdmin(){
         "<div class='"."Melodie"."' id='".$row['Id']."'>".
        
        
-        "<a class='"."form-inline"."' href='/MUM/Pages/music=?id=".$row['Id']."&object=".$row['Name']."'>".
+        "<a class='"."form-inline"."' id='".$row['Id']."' onclick='AfisareMelodie(this)'>".
         "<div class='second' id='Id' value='".$row['Id']."'>".
         "<table style='"."width:100%"."'>".
         "<tr> <th id='Nume:".$row['Name']."'>Nume Melodie: ".$row['Name']."</th></tr>".
