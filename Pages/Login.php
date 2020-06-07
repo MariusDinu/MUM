@@ -69,18 +69,18 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="login">
 
                     <form class="form-horizontal" style="text-align:center;">
-                        <div>
+                        <div class='reg'>
                             Login
                 </div>
                 <div id="show-registration"> </div>
                     </form>
                    
                     <form class="form-horizontal" method="post">
-                        <label for="Username"><b>Username</b></label>
+                        <label for="Username"><b>Username: </b></label>
                         <input type="text" placeholder="Enter Username" id="user" name="user" value="" required="" >
                        
                         <div id="displayUser"></div>
-                        <label for="psw"><b>Password</b></label>
+                        <label for="psw"><b>Password: </b></label>
                         <input type="password" placeholder="Enter Password" id="password"  name="password" required="" >
                         <div id="password-error"></div>
 
@@ -91,7 +91,7 @@
                          </div>
                 
                          <div>
-                            <a href="/MUM/Pages/welcome.php"> <p>Login with Spotify?</p> </a>
+                            <a class='spotify' href="/MUM/Pages/welcome.php"> <p>Login with Spotify?</p> </a>
                          </div>
                 </div>
                 </form>

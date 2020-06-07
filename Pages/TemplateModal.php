@@ -129,23 +129,23 @@
     <form  class="music-Settings" id="musicSettings" method="POST" enctype="multipart/form-data">
                    
                         <p>
-                            <label for="Name">Numele melodiei</label>
-                            <input id="numeleMelodieiInserare" name="numeleMelodiei" placeholder="Introdu noul nume" type="text" required="required">
+                            <label class='numeleMelodieiInserare'>Numele melodiei: </label>
+                            <input class='numeleMelodieiInserare' id="numeleMelodieiInserare" name="numeleMelodiei" placeholder="Introdu noul nume" type="text" required="required">
                         </p>
                         <p>
-                            <label for="Artist">Artist</label>
-                            <input id="artistInserare" name="artist" placeholder="Introdu noul artist" type="text">
+                            <label class='artistInserare'>Artist: </label>
+                            <input class='artistInserare' id="artistInserare" name="artist" placeholder="Introdu noul artist" type="text">
                         </p>
                         <p>
-                            <label for="Gen">Gen</label>
-                            <input id="genInserare" name="gen" placeholder="Introdu noul gen" type="text" required="required">
+                            <label class='genInserare'>Gen: </label>
+                            <input class='genInserare' id="genInserare" name="gen" placeholder="Introdu noul gen" type="text" required="required">
                         </p>
                         <p>
-                            <label for="Album">Album</label>
-                            <input id="albumInserare" name="album" placeholder="Introdu noul Album" type="text">
+                            <label class="albumInserare">Album: </label>
+                            <input class="albumInserare" id="albumInserare" name="album" placeholder="Introdu noul Album" type="text">
                         </p>
                         <p>
-                            <label for="idle">Data lansarii</label>
+                            <label class="dataInserare">Data lansarii: </label>
 <select id="ziInserare" name="zi" required="required">
   <option value=""></option>
   <option value="1">1</option>
@@ -234,9 +234,9 @@
 
                         </p>
                         <p>
-                            <label for="Link">Link</label>
-                            <input id="linkInserare" name="link"  placeholder="Introdu noul link"   type="text" >
-                            <label> Or </label>
+                            <label class="linkInserare">Link: </label>
+                            <input class="linkInserare" id="linkInserare" name="link"  placeholder="Introdu noul link"   type="text" >
+                           
                           
 
                             
@@ -245,7 +245,7 @@
                             <p id="errorLink"></p> 
                         </p>
                     
-                        <button class="btn btn-success"  id="Inserare" type="submit">Adaugare</button>
+                        <button class="SalvareUser"  id="Inserare" type="submit">Adaugare</button>
                    
                 </form>
                
@@ -260,28 +260,28 @@
     <form action="" onsubmit="" class="room-settings1" id="roomSettings1" method="post">
                     <fieldset>
                         <p>
-                            <label for="Name">Numele nou:</label>
+                            <label class="NumeNou">Numele nou:</label>
                             <input id="numelenou" name="numelenou" placeholder="Introdu noul nume" type="text" >
                         </p>
                         <p>
-                            <label for="Artist">Parola noua:</label>
+                            <label class="ParolaNoua">Parola noua:</label>
                             <input id="parolanoua" name="parolanoua" placeholder="Introdu noua parola" type="text" >
                         </p>
                         <p>
-                            <label for="spec">Email nou:</label>
+                            <label class="EmailNou">Email nou:</label>
                             <input id="emailnou" name="emailnou" placeholder="Introdu noul email" type="text" >
                             
                         </p>
                         <p>
-                        <label for="country" >Choose a Country:</label>
-                        <select id="country" name="country"> 
+                        <label class="CountryNou" >Choose a Country:</label>
+                        <select class="CountryNou" id="country" name="country"> 
                         <option value=""></option>
                 <option value="italia">Italia</option>
                 <option value="spania">Spania</option>
                 <option value="china">China</option>
                 <option value="belgia">Belgia</option>
               </select></p>
-              <button class="btn btn-success" id="SalvareUser"  type="submit">Salvare</button>
+              <button class="SalvareUser" id="SalvareUser"  type="submit">Salvare</button>
               </fieldset>
                 </form>
   </div>
@@ -295,16 +295,16 @@
     <form action="" onsubmit="" class="room-settingsAdmin" id="roomSettingsAdmin" method="post">
                     <fieldset>
                         <p>
-                            <label for="Name">Numele nou:</label>
-                            <input id="numelenouAdmin" name="numelenou" placeholder="Introdu noul nume" type="text" >
+                            <label class='numelenouAdmin'>Numele nou:</label>
+                            <input class='numelenouAdmin' id="numelenouAdmin" name="numelenou" placeholder="Introdu noul nume" type="text" >
                         </p>
                         <p>
-                            <label for="Artist">Parola noua:</label>
-                            <input id="parolanouaAdmin" name="parolanoua" placeholder="Introdu noua parola" type="text" >
+                            <label class='parolanouaAdmin'>Parola noua:</label>
+                            <input class='parolanouaAdmin' id="parolanouaAdmin" name="parolanoua" placeholder="Introdu noua parola" type="text" >
                         </p>
                         <p>
-                            <label for="spec">Email nou:</label>
-                            <input id="emailnouAdmin" name="emailnou" placeholder="Introdu noul email" type="text" >
+                            <label class='emailnouAdmin'>Email nou:</label>
+                            <input class='emailnouAdmin' id="emailnouAdmin" name="emailnou" placeholder="Introdu noul email" type="text" >
                              
                         </p>
                         <p>
@@ -316,7 +316,7 @@
                 <option value="china">China</option>
                 <option value="belgia">Belgia</option>
               </select></p>
-              <button class="btn btn-success" id="SalvareAdmin"  type="submit">Salvare</button>
+              <button class="SalvareUser" id="SalvareAdmin"  type="submit">Salvare</button>
               </fieldset>
                 </form>
   </div>
@@ -328,8 +328,8 @@
 <form>
 <fieldset>
                         <p>
-                            <label for="Lista">Alege Lista:</label>
-                            <select id='Lista' >
+                            <label class="ListaFavoriteSelectie">Alege Lista:</label>
+                            <select class='ListaFavoriteSelectie' id='Lista' >
 <?php 
 
 $bazaUsere= new BD();
@@ -349,7 +349,7 @@ echo "<option value='$b'> $b </option> ";
 
                             </select>
                         </p>
-                        <button class="btn btn-success" id="AdaugareFav"  type="submit">Adaugare</button>
+                        <button class="SalvareUser" id="AdaugareFav"  type="submit">Adaugare</button>
 </fieldset>
 
 </form>
@@ -363,10 +363,10 @@ echo "<option value='$b'> $b </option> ";
     <form action="" onsubmit="" class="room-settingsAdmin"  method="post">
                     <fieldset>
                         <p>
-                            <label for="ListaNoua">Lista noua:</label>
-                            <input id="ListaNouaInserare" name="ListaNouaInserare" placeholder="Introdu noul nume" type="text" >
+                            <label class="ListaNouaInserare">Lista noua:</label>
+                            <input class='ListaFavoriteSelectie'id="ListaNouaInserare" name="ListaNouaInserare" placeholder="Introdu noul nume" type="text" >
                         </p>
-                        <button class="btn btn-success" id="InserareListaNoua"  type="submit">Adaugare Lista</button>
+                        <button class="SalvareUser" id="InserareListaNoua"  type="submit">Adaugare Lista</button>
                         </fieldset>
 
 </form>
@@ -377,7 +377,7 @@ echo "<option value='$b'> $b </option> ";
   <!-- Modal content -->
   <div class="modal-content">
     <span class="closeTopM">&times;</span>
-    <fieldset>
+    <fieldset class='butoane'>
       <a class='buttonExport' id='buttonCsvTopM' href='/MUM/PhpMusic/TopM.php?button=csv'> CSV </a>
       <a class='buttonExport' id='buttonPdfTopM' href='/MUM/PhpMusic/TopM.php?button=pdf'> PDF </a>
 
@@ -388,7 +388,7 @@ echo "<option value='$b'> $b </option> ";
   <!-- Modal content -->
   <div class="modal-content">
     <span class="closeTopV">&times;</span>
-    <fieldset>
+    <fieldset class='butoane'>
       <a class='buttonExport' id='buttonCsvTopV' href='/MUM/PhpMusic/TopV.php?button=csv'> CSV </a>
       <a class='buttonExport' id='buttonPdfTopV' href='/MUM/PhpMusic/TopV.php?button=pdf'> PDF </a>
 
@@ -399,7 +399,7 @@ echo "<option value='$b'> $b </option> ";
   <!-- Modal content -->
   <div class="modal-content">
     <span class="closeTopC">&times;</span>
-    <fieldset>
+    <fieldset class='butoane'>
       <a class='buttonExport' id='buttonCsvTopC' href='/MUM/PhpMusic/TopC.php?button=csv'> CSV </a>
       <a class='buttonExport' id='buttonPdfTopC' href='/MUM/PhpMusic/TopC.php?button=pdf'> PDF </a>
 

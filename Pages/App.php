@@ -33,15 +33,15 @@ include 'TemplateNav.php';
 
 echo "  <div class='baraButoane'>
 <div class='buttonUtil'>        
-<a class='buttonLogout' id='Logout' onclick='logout()' >Logout </a>
-        <button id='refresh' class='buttonInsert' onclick='history.go(0)'>Refresh</button>
+
+        <button id='refresh' class='refreshButton' onclick='history.go(0)'>Refresh</button>
       
-        <button class='buttonInsert' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Melodie</button> 
-        <button class='buttonInsert' id='AddLista' onclick='insertLista()' >Lista</button> </div>
+        <button class='refreshButton' id='Insert' data-toggle='modal' data-target='#music-Settings' onclick='insertMelodie()' >Adaugare Melodie</button> 
+        <button class='refreshButton' id='AddLista' onclick='insertLista()' >Adaugare Lista</button> </div>
         <div class='buttonDownload' >
-        <button class='download' id='buttonTopM' onclick='TopM()'>Top10</button>
-        <button class='download' onclick='TopV()'>TopViews</button>
-        <button class='download' onclick='TopC()'>TopComments</button></div>
+        <button class='TopM' id='buttonTopM' onclick='TopM()'>Top10</button>
+        <button class='TopV' onclick='TopV()'>TopViews</button>
+        <button class='TopC' onclick='TopC()'>TopComments</button></div>
           <br><br> </div>
         ";
       ?>
@@ -194,7 +194,7 @@ function TopV(){
 var modal = document.getElementById('TopV');
  var btn = document.getElementById('myBtn');
  
- var span = document.getElementsByClassName('closeTopM')[0];
+ var span = document.getElementsByClassName('closeTopV')[0];
 var csv=document.getElementById('buttonCsvTopV');
 var pdf=document.getElementById('buttonPdfTopV');
  modal.style.display = 'block';

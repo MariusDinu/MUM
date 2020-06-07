@@ -23,7 +23,7 @@ function afisareUser(){
     foreach( $cerUser->query($sqlUser) as $row){
      
     
-      echo   "<div class='"."Melodie"."'>".
+      echo   "<div class='"."Album"."'>".
       "<div class='"."first"."'>".
       "<button onclick='playMusic(this)' id='".$row['Album']."' title='"."Play"."' class='Play b8 b9 ba ao bb bc bd be bf bg bh bi bj'><svg viewBox='"."0 0 26 26"."' xmlns='"."http://www.w3.org/2000/svg"."' style='"."width: 100%; height: 100%; "."'><title>Play</title><path d='"."M7.712 22.04a.732.732 0 0 1-.806.007.767.767 0 0 1-.406-.703V4.656c0-.31.135-.544.406-.703.271-.16.54-.157.806.006l14.458 8.332c.266.163.4.4.4.709 0 .31-.134.546-.4.71L7.712 22.04z"."' fill='"."currentColor"."' fill-rule='"."evenodd"."'></path></svg></button></div>".
       "<a class='"."form-inline"."' id='".$row['Album']."' onclick='"."AfisareAlbum(this)'>".

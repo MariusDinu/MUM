@@ -10,9 +10,15 @@
     text-decoration-color: lightslategray;
 }
 
-body, html {
+body,
+html {
     font-family: Ringside Regular A, Ringside Regular B, Rubik, Lato, Lucida Grande, Lucida Sans Unicode, Tahoma, Sans-Serif;
     width: 99%;
+    background-color: black;
+}
+
+.tab-content {
+    color: white;
 }
 
 .color {
@@ -23,17 +29,40 @@ body, html {
     margin-top: 5em;
 }
 
+.container form.form-horizontal2 {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 25px 0 rgba(229, 46, 113, .2);
+}
+
+input {
+    height: 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
 .container form {
     width: 100%;
-    margin-top: 7rem;
     padding: 10%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 25px 0 rgba(229, 46, 113, .2);
+}
+
+a.spotify {
+    color: blueviolet;
 }
 
 .login-register-form-section {
     border-radius: 15px;
     max-width: 580px;
     margin: 0 auto;
+    font-style: normal;
+    font-family: serif;
+    font-size: x-large;
 }
 
 .login-register-form-section i {
@@ -50,7 +79,8 @@ body, html {
     color: #959794;
 }
 
-.login-register-form-section .nav-tabs>li>a, .login-register-form-section .nav-tabs>li.active>a {
+.login-register-form-section .nav-tabs>li>a,
+.login-register-form-section .nav-tabs>li.active>a {
     width: 288px;
     text-align: center;
     border-radius: 0;
@@ -84,6 +114,7 @@ body, html {
     padding: 0 20px;
 }
 
+
 /* Media Queries */
 
 @media (max-width:320px) {
@@ -96,7 +127,8 @@ body, html {
     .login-register-form-section i {
         width: 50px;
     }
-    .login-register-form-section .nav-tabs>li>a, .login-register-form-section .nav-tabs>li.active>a {
+    .login-register-form-section .nav-tabs>li>a,
+    .login-register-form-section .nav-tabs>li.active>a {
         width: 320px;
         border-radius: 0;
     }
@@ -134,7 +166,8 @@ body, html {
     .login-register-form-section i {
         width: 50px;
     }
-    .login-register-form-section .nav-tabs>li>a, .login-register-form-section .nav-tabs>li.active>a {
+    .login-register-form-section .nav-tabs>li>a,
+    .login-register-form-section .nav-tabs>li.active>a {
         width: max-content;
         text-align: center;
         border-radius: 5px;
@@ -175,6 +208,7 @@ body, html {
     body {
         margin-top: 0;
         padding: 0;
+        overflow: hidden;
     }
 }
 
@@ -206,4 +240,13 @@ body, html {
 .reg {
     text-align: center;
     border-color: red;
+    /* height: 50px; */
+    background-color: purple;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 20px;
+    font-size: x-large;
+    font-family: serif;
+    font-style: initial;
+    margin-left: 35%;
 }

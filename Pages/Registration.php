@@ -5,15 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport">
-    <link href="/Mum/Css/Layout.css" rel="stylesheet">
-  
-    <link href="/Mum/Css/site.css" rel="stylesheet">
-    <link href="/Mum/Css/purecookie.css" rel="stylesheet">
-    <link href="/Mum/Css/register.css" rel="stylesheet">
+    <link href="/MUM/Css/Layout.css" rel="stylesheet">
+    
+    <link href="/MUM/Css/site.css" rel="stylesheet">
+    <link href="/MUM/Css/purecookie.css" rel="stylesheet">
+    <link href="/MUM/Css/register.css" rel="stylesheet">
 </head>
-
-<body>
-    <header class="site-header">
+<header class="site-header">
        
       
             <div class="logo2" ></div>
@@ -62,29 +60,31 @@
 
         
     </header>
+<body>
+   <main> 
     <div class="container">
         <div class="login-register-form-section">
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="login">
 
-                <form class="form-horizontal">
+                <form class="form-horizontal2">
               
-                    <div class="reg" style="text-align: center;">
+                    <div class="reg" >
                        Registration
                     </div>
             
                 </form>
                     <form class="form-horizontal" method="post" >
-                        <label for="email"><b>Email</b></label>
+                        <label for="email"><b>Email: </b></label>
                         <input type="text" placeholder="Enter Email" id="email"  name="email" required="required"> 
                         <div id="display"></div>
-                        <label for="Username"><b>Username</b></label>
+                        <label for="Username"><b>Username: </b></label>
                         <input type="text" placeholder="Enter Username" id="username" name="username" value="" required="required" >
                         <div id="displayUser"></div>
-                        <label for="psw"><b>Password</b></label>
+                        <label for="psw"><b>Password: </b></label>
                         <input type="password" placeholder="Enter Password" id="password"  name="password" required="required" >
                         <div id="password-error"></div>
-                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <label for="psw-repeat"><b>Repeat Password: </b></label>
                         <input type="password" placeholder="Repeat Password" id="confirmPassword"  name="confirmPassword" required="required">
                         <div id="message"></div>
                         <hr>
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-
+</main>
 </body>
 
 

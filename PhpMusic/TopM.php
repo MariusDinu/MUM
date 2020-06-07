@@ -17,7 +17,7 @@ $cerUser = $bazaUser::obtine_conexiune();
 $cerereUser=$cerUser->prepare($sql);
 $cerereUser->execute();
 while($row=$cerereUser->fetch(PDO::FETCH_ASSOC)){
-    if($row['NumeMelodie']!='')
+    if($row['Name']!='')
 {if($output!='')fputcsv($output,$row);}
 }
 fclose($output);

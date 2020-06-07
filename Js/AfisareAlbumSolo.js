@@ -121,6 +121,57 @@ function AfisareArtist(current) {
 
 }
 
+function deleteComentariu(current) {
+    var comment = current.value;
+    var user = $("#user").attr('value');
+    var music = $('#IdOneView').attr('value');
+    console.log(comment);
+    $.ajax({
+        type: "POST",
+        //Data will be sent to "ajax.php".
+        url: "/MUM/PhpMusic/DeleteComentariu.php",
+        //Data, that will be sent to "ajax.php".
+        data: {
+            id: comment,
+            user: user
+
+        },
+        success: function(html) {
+            console.log(html);
+            $('#showMelodieComments').html(html).show();
+
+            $.ajax({
+                type: "POST",
+                //Data will be sent to "ajax.php".
+                url: "/MUM/PhpMusic/AfisareComentarii.php",
+                //Data, that will be sent to "ajax.php".
+                data: {
+                    id: music,
+                    user: user
+
+                },
+                success: function(html) {
+                    console.log('Succes');
+                    $('#showMelodieComments').html(html).show();
+                    document.getElementById('adaugareComentariu').value = '';
+
+
+                }
+
+
+
+            });
+
+        }
+
+
+
+
+
+    });
+
+}
+
 function adaugareComentariu() {
     var text = document.getElementById('adaugareComentariu').value;
     var user = $("#user").attr('value');
