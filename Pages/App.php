@@ -49,7 +49,8 @@ echo "  <div class='baraButoane'>
   
 <?php
 include '../Feed/FeedViews.php';
-include '../Feed/Feed.php';
+echo "<br>";
+include '../Feed/Feed.php';echo "<br>";
 include '../Feed/FeedComments.php';
 
 ?></div>

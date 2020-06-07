@@ -20,7 +20,7 @@ echo "<language> en-us</language>";
 foreach( $cerAdmin->query($sqlAdmin) as $row){
 
 echo "<item xmlns:dc='".$row['Id']."'>";
-echo "<title>".$row['Name']."</title>";
+echo "<title> ".$row['Artist']." - ".$row['Name']."</title>";
 echo "</item>";
 }
 

@@ -2,7 +2,7 @@ function AfisareAlbum(current) {
     var name = current.id;
 
     document.getElementById("Alb").innerHTML = "<div class='showOneAlbum' id='showOneAlbum'> Nume Album: " +
-        name + "</div> <div class='nameArtist' id='nameArtist'> Katy Perry </div> <div class='detailsArtist' id='detailsArtist'> aty Perry (born Katheryn Elizabeth Hudson, October 25, 1984) is a singer/songwriter from Santa Barbara, California, United States. Perry's success was so sudden in 2008 it seemed as if she was an overnight success when the opposite was true. Daughter of Pentecostal pastors, Katy was raised by born-agai</div>" +
+        name + "</div> " +
         "<div class='outer'><div  class='wrap' id='listMusic'> </div></div> ";
     $.ajax({
         //AJAX type is "Post".
@@ -43,7 +43,7 @@ function AfisareGen(current) {
     var name = current.id;
 
     document.getElementById("Alb").innerHTML = "<div class='showOneGen' id='showOneGen'> Nume Gen:" +
-        name + "</div><div class='nameArtist' id='nameArtist'> Katy Perry </div> <div class='detailsArtist' id='detailsArtist'> aty Perry (born Katheryn Elizabeth Hudson, October 25, 1984) is a singer/songwriter from Santa Barbara, California, United States. Perry's success was so sudden in 2008 it seemed as if she was an overnight success when the opposite was true. Daughter of Pentecostal pastors, Katy was raised by born-agai</div>" +
+        name + "</div>" +
         "<div class='outer'><div  class='wrap' id='listGenMusic'> </div></div> ";
     $.ajax({
         //AJAX type is "Post".
@@ -85,7 +85,7 @@ function AfisareArtist(current) {
 
 
     document.getElementById("Alb").innerHTML = "<div class='showOneArtist' id='showOneArtist'> Nume Artist: " +
-        name + "</div><div class='nameArtist' id='nameArtist'> Katy Perry </div> <div class='detailsArtist' id='detailsArtist'> aty Perry (born Katheryn Elizabeth Hudson, October 25, 1984) is a singer/songwriter from Santa Barbara, California, United States. Perry's success was so sudden in 2008 it seemed as if she was an overnight success when the opposite was true. Daughter of Pentecostal pastors, Katy was raised by born-agai</div>" +
+        name + "</div> " +
         "<div class='outer'><div  class='wrap' id='listArtistMusic'> </div></div> ";
     $.ajax({
         //AJAX type is "Post".

@@ -1,6 +1,4 @@
                         button.buttonAdmin {
-                            -webkit-appearance: button;
-                            -webkit-writing-mode: horizontal-tb !important;
                             text-rendering: optimizeLegibility;
                             color: white;
                             flex-grow: 1;
@@ -155,7 +153,7 @@
                         }
                         
                         body {
-                            background-color: black;
+                            background-image: url(/MUM/Images/cosmos.jpg);
                         }
                         
                         .Admin {
@@ -175,15 +173,27 @@
                             margin-left: 15px;
                         }
                         
+                        .SearchLabel {
+                            display: none;
+                        }
+                        
+                        .Admin {
+                            display: none;
+                        }
+                        
+                        .search {
+                            padding-left: 15px;
+                            padding-right: 5px;
+                        }
+                        
                         #Alb {
-                            background-color: black;
                             width: 80%;
                         }
                         
                         div.comment #right {
                             float: right;
-                            color: red;
-                            background-color: white;
+                            color: #efeeee;
+                            background-color: #9f0fa9;
                             border-radius: 20px;
                             font-size: 20px;
                             text-align: left;
@@ -196,21 +206,21 @@
                         }
                         
                         div.comment .DateRight {
-                            color: grey;
+                            color: white;
                             float: right;
                             height: 0px;
                         }
                         
                         div.comment .DateLeft {
-                            color: grey;
+                            color: white;
                             float: right;
                             height: 0px;
                         }
                         
                         div.comment #left {
                             float: left;
-                            color: red;
-                            background-color: green;
+                            color: #f3f0f0;
+                            background-color: #6f6f6f;
                             border-radius: 20px;
                             font-size: 20px;
                             text-align: left;
@@ -232,13 +242,13 @@
                         div.showMelodieComments {
                             background-color: black;
                             border-style: solid;
-                            border-color: blue;
+                            border-color: rgba(224, 5, 5, 0.973);
                             overflow-y: scroll;
                             height: 250px;
+                            margin: 10px;
                         }
                         
                         button.buttonInsert {
-                            -webkit-appearance: button;
                             text-rendering: auto;
                             color: black;
                             text-shadow: none;
@@ -247,7 +257,6 @@
                             cursor: pointer;
                             background-color: white;
                             font: 400 13.3333px Arial;
-                            border-width: 0.8;
                             border-radius: 0.5em;
                             border-style: outset;
                             border-color: rgb(7, 66, 155);
@@ -286,7 +295,6 @@
                         
                         a.buttonLogout {
                             top: 5.8em;
-                            -webkit-appearance: button;
                             color: white;
                             text-align: center;
                             cursor: pointer;
@@ -306,8 +314,6 @@
                         }
                         
                         button {
-                            -webkit-appearance: button;
-                            -webkit-writing-mode: horizontal-tb !important;
                             text-rendering: auto;
                             color: black;
                             letter-spacing: normal;
@@ -332,8 +338,6 @@
                         }
                         
                         button.Play {
-                            -webkit-appearance: button;
-                            -webkit-writing-mode: horizontal-tb !important;
                             cursor: pointer;
                             background-color: black;
                             border-radius: 20px;
@@ -343,8 +347,6 @@
                         }
                         
                         button.PlayMelodie {
-                            -webkit-appearance: button;
-                            -webkit-writing-mode: horizontal-tb !important;
                             cursor: pointer;
                             background-color: purple;
                             border-radius: 60px;
@@ -358,24 +360,33 @@
                             width: 15%;
                         }
                         
-                        button.buttonComentariu {
-                            -webkit-appearance: button;
-                            text-rendering: auto;
-                            color: rgb(129, 123, 123);
-                            text-shadow: none;
-                            float: right;
-                            text-align: center;
+                        .buttonComentariu {
+                            box-shadow: 3px 4px 0px 0px #1564ad;
+                            background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+                            background-color: #79bbff;
+                            border-radius: 5px;
+                            border: 1px solid #337bc4;
+                            display: inline-block;
                             cursor: pointer;
-                            background-color: #1ee6f4;
-                            font: 400 13.3333px Arial;
-                            border-width: 0.8;
-                            border-radius: 0.5em;
-                            border-style: outset;
-                            border-color: rgb(7, 66, 155);
-                            width: 25%;
-                            font-size: 1em;
-                            margin: 1px;
-                            height: 2.5em;
+                            color: #ffffff;
+                            font-family: Arial;
+                            font-size: 17px;
+                            font-weight: bold;
+                            padding: 12px 44px;
+                            text-decoration: none;
+                            width: fit-content;
+                            float: right;
+                            text-shadow: 0px 1px 0px #528ecc;
+                        }
+                        
+                        .buttonComentariu:hover {
+                            background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+                            background-color: #378de5;
+                        }
+                        
+                        .buttonComentariu:active {
+                            position: relative;
+                            top: 1px;
                         }
                         
                         label.rec {
@@ -396,11 +407,11 @@
                             width: 98%;
                             bottom: 0em;
                             background-color: rgb(45, 43, 43);
-                            -webkit-appearance: searchfield;
                             color: rgb(31, 180, 31);
                             height: 50px;
                             border-radius: 20px;
                             border-color: black;
+                            padding-left: 15px;
                         }
                         
                         input.search-field::placeholder {
@@ -458,13 +469,14 @@
                         }
                         
                         div.showOneMelodie {
-                            background-color: black;
                             width: 100%;
                         }
                         
                         input.adaugareComentariu {
-                            width: 73%;
-                            height: 2.5em;
+                            width: 75%;
+                            height: 3.5em;
+                            padding-left: 20px;
+                            border-radius: 20px;
                         }
                         
                         div.User {}
@@ -541,7 +553,6 @@
                         }
                         
                         div.mycontainer {
-                            background: black;
                             padding-right: 10px;
                         }
                         
@@ -617,7 +628,7 @@
                             color: #fff;
                             border: 1px solid #AEAEAE;
                             border-radius: 30px;
-                            background: #605F61;
+                            background: red;
                             font-size: 31px;
                             font-weight: bold;
                             display: inline-block;
@@ -743,7 +754,6 @@
                         }
                         
                         .outer {
-                            background: black;
                             margin-bottom: 15px;
                             margin-top: 20px;
                             margin-left: 20px;
@@ -978,8 +988,6 @@
                         }
                         
                         button.buttonFavoritAdd {
-                            -webkit-appearance: button;
-                            -webkit-writing-mode: horizontal-tb !important;
                             text-rendering: auto;
                             color: #e52e71;
                             letter-spacing: normal;
@@ -1005,10 +1013,10 @@
                         }
                         
                         button.buttonFavoriteAdded {
-                            -webkit-appearance: button;
-                            -webkit-writing-mode: horizontal-tb !important;
                             text-rendering: auto;
-                            color: black;
+                            color: #da0cff;
+                            font-size: medium;
+                            font-style: normal;
                             letter-spacing: normal;
                             word-spacing: normal;
                             text-transform: none;
@@ -1018,16 +1026,17 @@
                             text-align: center;
                             align-items: flex-start;
                             cursor: default;
-                            background-color: #1ee6f4;
+                            background-color: #012b12;
                             box-sizing: border-box;
                             margin: 5px;
                             font: 400 13.3333px Arial;
                             padding: 1px 6px;
                             border-width: 3px;
-                            border-radius: 0.5em;
                             border-style: outset;
-                            border-color: rgb(7, 66, 155);
+                            border-color: #a20dbd;
                             width: 60%;
+                            padding: 8px;
+                            border-radius: 25px;
                         }
                         
                         button.buttonFavoriteAdded:hover span {
@@ -1038,8 +1047,25 @@
                             content: "Delete!";
                         }
                         
+                        html::-webkit-scrollbar {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        
+                        html::-webkit-scrollbar-thumb {
+                            background: linear-gradient(180deg, #ff8a00, #e52e71);
+                            border-radius: 30px;
+                            box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+                        }
+                        
+                        html::-webkit-scrollbar-track {
+                            background: linear-gradient(90deg, #201c29, #201c29 1px, #100e17 0, #100e17);
+                        }
+                        
                         button.buttonFavoriteAdded:hover {
-                            background-color: green;
+                            color: #0c8aff;
+                            border-color: #0c8aff;
+                            background: linear-gradient(180deg, #ff8a00, #e52e71);
                         }
                         
                         rss {
@@ -1069,7 +1095,33 @@
                             background-color: black;
                         }
                         
-                        channel title {}
+                        channel title {
+                            text-align: center;
+                            box-sizing: border-box;
+                            display: block;
+                            font-size: 1.2em;
+                            margin: 5px;
+                            padding: 5px;
+                            color: white;
+                            background-color: rgb(145, 2, 80);
+                            border: 0.2em solid white;
+                            word-break: break-all;
+                            border-radius: 10px;
+                        }
+                        
+                        .grid-container {
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            padding: 10px;
+                        }
+                        
+                        .grid-item {
+                            padding: 20px;
+                            font-size: 30px;
+                            text-align: center;
+                        }
+                        
+                        .rss rss {}
                         
                         button.download {
                             width: fit-content;
@@ -1078,19 +1130,23 @@
                         }
                         
                         div.second table {
-                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            font-family: serif;
+                            font-style: normal;
+                            font-size: medium;
                         }
                         
-                        title {
+                        item title {
                             box-sizing: border-box;
                             display: block;
                             font-size: 1.2em;
-                            margin: 5px;
-                            padding: 2px;
+                            margin: 3px;
+                            padding: 5px;
                             color: white;
-                            background-color: rgb(145, 2, 80);
+                            background-color: rgb(201, 3, 112);
                             border: 0.2em solid white;
                             word-break: break-all;
+                            border-radius: 10px;
+                            text-align: unset;
                         }
                         
                         link {

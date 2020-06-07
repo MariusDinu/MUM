@@ -68,8 +68,8 @@ else return 3;
                 </div>
 </div>
         <div class='search' role='search' id='search-area'>
-          <label for='Search'> Cautare</label>      
-        <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='Search' id='Search' class='search-field' value=''>
+          <label class='SearchLabel' for='Search'> Cautare</label>      
+        <input type='search' required='required' placeholder='Scrie ce vrei sa cauti...' name='Search' id='Search' class='search-field' value=''>
        
        
                    
@@ -135,8 +135,8 @@ else return 3;
                     
        
                     <div class='search' role='search' id='search-area'>
-                    <label for='Search'> Cautare</label>  
-                    <input type='search' required='required' placeholder='Scrie ce vrei sa cauti' name='Search' id='Search' class='search-field' value=''>
+                    <label class='SearchLabel' for='Search'> Cautare</label>  
+                    <input type='search' required='required' placeholder='Scrie ce vrei sa cauti...' name='Search' id='Search' class='search-field' value=''>
                    
                    
                     
@@ -213,13 +213,22 @@ function insertLista(){
         if (html == 1) {
 
             alert('Succes!');
-            
+            $.ajax({
+                type: 'POST',
+                //Data will be sent to 
+                url: '/MUM/PhpMusic/AfisareListaNoua.php',
+                //Data, that will be sent
+                data: {
+                    user: user
+                },success: function(html) {
+                    document.getElementById('ListaFavoriteSelectie').innerHTML=html;
+                }});
     
     
         } else if (html == 2) {
             alert('Fail!');
         }
-        var a=document.createElement('script');
+             var a=document.createElement('script');
              a.src='/Mum/Js/AfisareFavoriteAll.js';
              document.body.appendChild(a);
     }

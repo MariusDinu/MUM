@@ -329,12 +329,12 @@
 <fieldset>
                         <p>
                             <label class="ListaFavoriteSelectie">Alege Lista:</label>
-                            <select class='ListaFavoriteSelectie' id='Lista' >
+                            <select class='ListaFavoriteSelectie' id='ListaFavoriteSelectie' >
 <?php 
 
 $bazaUsere= new BD();
 $a=$_GET['user'];
-$sqlSearch="Select * from favorite where UserName='$a'";
+$sqlSearch="Select * from favorite where UserName='$a' group by ListaFavorite ";
 $cerUsere = $bazaUsere::obtine_conexiune();
 $cerereUsere=$cerUsere->prepare($sqlSearch);
 $cerereUsere->execute(); 
@@ -378,9 +378,10 @@ echo "<option value='$b'> $b </option> ";
   <div class="modal-content">
     <span class="closeTopM">&times;</span>
     <fieldset class='butoane'>
-      <a class='buttonExport' id='buttonCsvTopM' href='/MUM/PhpMusic/TopM.php?button=csv'> CSV </a>
-      <a class='buttonExport' id='buttonPdfTopM' href='/MUM/PhpMusic/TopM.php?button=pdf'> PDF </a>
-
+      <div class='grid-container'>
+     <div class='grid-item'> <a class='buttonExport' id='buttonCsvTopM' href='/MUM/PhpMusic/TopM.php?button=csv'> CSV </a></div>
+     <div class='grid-item'> <a class='buttonExport' id='buttonPdfTopM' href='/MUM/PhpMusic/TopM.php?button=pdf'> PDF </a></div>
+</div>
    </fieldset>
 </div>
 </div>
@@ -389,9 +390,10 @@ echo "<option value='$b'> $b </option> ";
   <div class="modal-content">
     <span class="closeTopV">&times;</span>
     <fieldset class='butoane'>
-      <a class='buttonExport' id='buttonCsvTopV' href='/MUM/PhpMusic/TopV.php?button=csv'> CSV </a>
-      <a class='buttonExport' id='buttonPdfTopV' href='/MUM/PhpMusic/TopV.php?button=pdf'> PDF </a>
-
+    <div class='grid-container'>
+     <div class='grid-item'><a class='buttonExport' id='buttonCsvTopV' href='/MUM/PhpMusic/TopV.php?button=csv'> CSV </a> </div>
+     <div class='grid-item'>  <a class='buttonExport' id='buttonPdfTopV' href='/MUM/PhpMusic/TopV.php?button=pdf'> PDF </a> </div>
+</div>
    </fieldset>
 </div>
 </div>
@@ -400,9 +402,10 @@ echo "<option value='$b'> $b </option> ";
   <div class="modal-content">
     <span class="closeTopC">&times;</span>
     <fieldset class='butoane'>
-      <a class='buttonExport' id='buttonCsvTopC' href='/MUM/PhpMusic/TopC.php?button=csv'> CSV </a>
-      <a class='buttonExport' id='buttonPdfTopC' href='/MUM/PhpMusic/TopC.php?button=pdf'> PDF </a>
-
+    <div class='grid-container'>
+     <div class='grid-item'><a class='buttonExport' id='buttonCsvTopC' href='/MUM/PhpMusic/TopC.php?button=csv'> CSV </a> </div>
+      <div class='grid-item'> <a class='buttonExport' id='buttonPdfTopC' href='/MUM/PhpMusic/TopC.php?button=pdf'> PDF </a> </div>
+</div>
    </fieldset>
 </div>
 </div>

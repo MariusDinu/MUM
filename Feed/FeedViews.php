@@ -11,7 +11,7 @@ $abc=$cerereAdmin->fetchAll();
 echo "<?xml version='1.0' encoding='UTF-8'?> <?xml-stylesheet type='text/css' href='/MUM/Css/Feed.css' ?>".PHP_EOL;
 echo "<rss version='2.0'>" . PHP_EOL;
 echo "<channel>";
-echo "<title>Cele mai noi melodii </title>";
+echo "<title>Cele mai vizualizate melodii </title>";
 echo "<description>asdasdasdasd</description>";
 echo "<language> en-us</language>";
 
@@ -24,7 +24,7 @@ $id=$row['IdMelodie'];
 $view=$row['number'];
 $sqlMusic="Select * from music where Id='$id'";
 foreach( $cerAdmin->query($sqlMusic) as $row){
-echo "<title>Nume: ".$row['Name']." Views: ".$view."</title>";}
+echo "<title> ".$row['Artist']." - ".$row['Name']."       Views: ".$view."</title>";}
 echo "</item>";
 }
 
