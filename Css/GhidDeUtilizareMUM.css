@@ -1,5 +1,46 @@
+/*
+  XXX
+  figure styles
+  links
+*/
+
+.banner {
+    border-radius: 100px;
+    margin-top: 15px;
+}
+
+body {
+    max-width: 21cm;
+    margin: auto;
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+}
+
+li {
+    display: list-item;
+}
+
+ol {
+    list-style-type: none;
+}
+
+
+/* headers & headings */
+
+header>h1 {
+    margin: 0;
+    font-size: 3em;
+    padding-top: 4em;
+}
+
 .foto {
     text-align: center;
+}
+
+body {
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
 }
 
 main ol li {
@@ -10,4 +51,50 @@ main ol li {
 section {
     max-width: 25cm;
     margin: auto;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0.0375em;
+}
+
+h1,
+h2 {
+    color: #4b0061;
+}
+
+h2 {
+    margin-top: 3em;
+}
+
+h3 {
+    margin-top: 2.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0.0375em;
+}
+
+h1,
+h2 {
+    color: #4b0061;
+}
+
+h2 {
+    margin-top: 3em;
+}
+
+h3 {
+    margin-top: 2.5em;
 }
