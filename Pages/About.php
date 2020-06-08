@@ -76,13 +76,145 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 <h3>Diagrame UML</h3>
 
 <figure typeof="sa:Image">
-<img src="">
-<figcaption>Fig.1 - Structura (modelarea) datelor şi provenienţa lor</figcaption>
+<img src="/MUM/Images/bd.jpg">
+<figcaption><h4>Fig.1 - Structura (modelarea) datelor şi provenienţa lor</figcaption>
+</figure>
+
+
+<section>
+<h2>Etapele intermediare ale dezvoltării proiectului</h2>
+
+
+
+
+
+<section role="doc-abstract" aria-label="Abstract">
+
+<h2>html</h2>
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/nav-bar-svg.png">
+<figcaption><h4>Fig.2 - NavBar</h4></figcaption>
+</figure>
+
+  <h3>head</h3>
+<figure typeof="sa:Image">
+<img src="/MUM/Images/code1.png">
+</br>
+<img src="/MUM/Images/code2.png">
+<br>
+<img src="/MUM/Images/code3.png">
+<figcaption><h4>Fig.3 - Template Bara de Navigatie </h4></figcaption>
+</figure>
+
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/js1.png">
+<figcaption><h4>Fig.4 - Search - Animatie JS </h4></figcaption>
+</figure>
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/search1.png">
+<figcaption><h4>Fig.5 - Search JS </h4></figcaption>
+</figure>
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/register1.png">
+<figcaption><h4>Fig.6 - Register </h4></figcaption>
+</figure>
+</section>
+
+
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/inregistrare.png">
+<figcaption><h4>Fig.7 - Register JS </h4></figcaption>
+</figure>
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/AdminDetails.png">
+<br>
+<img src="/MUM/Images/verificare.png">
+<figcaption><h4>Fig.8 - Password formal veriication  </h4></figcaption>
+</figure>
+
+<section role="doc-abstract" aria-label="Abstract">
+
+  <h2>body</h2>
+  
+  <h3>PHP</h3>
+
+
+  <figure typeof="sa:Image">
+<img src="/MUM/Images/Top101.png">
+<figcaption><h4>Fig.9 - Top 10 </h4></figcaption>
+</figure>
+
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/pdf-export1.png">
+<figcaption><h4>Fig.10 - PDF export </h4></figcaption>
+</figure>
+
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/aisaremelodii-php.png">
+</br>
+<img src="/MUM/Images/melodii.png">
+<figcaption><h4>Fig.11 - Template Melodii  </h4></figcaption>
+</figure>
+
+</section>
+
+
+<section role="doc-abstract" aria-label="Abstract">
+
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/butoane Admin.png">
+<figcaption><h4>Fig.12 - butoane  User, Admin</h4></figcaption>
+</figure>
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/comentarii2.png">
+<figcaption><h4>Fig.13 - Comentarii </h4></figcaption>
+</figure>
+
+</section>
+
+<section>
+
+<h3>JS</h3>
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/ajax.png">
+<figcaption><h4>Fig.14 -Afisare</h4></figcaption>
+</figure>
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/js2.png">
+<figcaption><h4>Fig.15 -Melodii</h4></figcaption>
+</figure>
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/addLista1.png">
+<figcaption><h4>Fig.16 - Favorite</h4></figcaption>
+</figure>
+
+
+<figure typeof="sa:Image">
+<img src="/MUM/Images/delete1.png">
+<figcaption><h4>Fig.17 - Delete </h4></figcaption>
 </figure>
 
 
 
-<h3>Etapele intermediare ale dezvoltării proiectului</h3>
+
+
+</section>
+
+
+
 
 </section>
 
@@ -92,6 +224,9 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 
 
 
+
+
+</article>
 
 </body>
 

@@ -8,3 +8,26 @@ h1 {
     text-emphasis: bold;
     color: blue;
 }
+
+h3 {
+    font-size: larger;
+}
+
+p {
+    font-size: larger;
+}
+
+h4 {
+    text-align: center;
+    text-emphasis: bold;
+    color: gray;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 80%;
+}
