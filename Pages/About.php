@@ -4,7 +4,7 @@
 
 <head>
 <meta charset="UTF-8">
-
+ <meta name="description">
 <meta name="viewport" content="width=device-width">
 <title> Scholarity HTML </title>
     <link href="/MUM/Css/About.css" rel="stylesheet">

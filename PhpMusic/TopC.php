@@ -1,6 +1,6 @@
 <?php 
 require_once '../vendor/autoload.php';
-include '/xampp/htdocs/MUM/PhpRegister/connect.php';
+include '../PhpRegister/connect.php';
 if($_GET['button']=='csv')
 {
 

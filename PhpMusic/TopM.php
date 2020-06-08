@@ -1,6 +1,6 @@
 <?php
 require_once '../vendor/autoload.php';
-include '/xampp/htdocs/MUM/PhpRegister/connect.php';
+include '../PhpRegister/connect.php';
 if($_GET['button']=='csv')
 {
 
@@ -26,7 +26,7 @@ else
 if($_GET['button']=='pdf')
 {
    
-    $mpdf = new \Mpdf\Mpdf();
+    $mpdf = new  \Mpdf\Mpdf();
   
     
     $sql="SELECT * FROM music ORDER BY Date limit 10";

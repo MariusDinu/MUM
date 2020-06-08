@@ -1,6 +1,7 @@
 {
     "require": {
         "jwilsson/spotify-web-api-php": "^3.4",
-        "mpdf/mpdf": "^8.0"
+        "mpdf/mpdf": "^8.0",
+        "start_url": "/Pages/HomePage.php"
     }
 }

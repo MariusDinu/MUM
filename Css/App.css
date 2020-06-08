@@ -12,7 +12,7 @@
                             border-color: #ce0909;
                             width: 34%;
                         }
-                        
+
                         .logout {
                             box-shadow: inset 0px 1px 0px 0px #f29c93;
                             background: linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
@@ -29,17 +29,17 @@
                             text-decoration: none;
                             text-shadow: 0px 1px 0px #b23e35;
                         }
-                        
+
                         .logout:hover {
                             background: linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
                             background-color: #ce0100;
                         }
-                        
+
                         .logout:active {
                             position: relative;
                             top: 1px;
                         }
-                        
+
                         .refreshButton {
                             box-shadow: inset 0px 1px 0px 0px #f7c5c0;
                             background: linear-gradient(to bottom, #18266b 5%, #975de4 100%);
@@ -57,17 +57,17 @@
                             text-decoration: none;
                             text-shadow: 0px 1px 0px #a95049;
                         }
-                        
+
                         .refreshButton:hover {
                             background: linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
                             background-color: #e4685d;
                         }
-                        
+
                         .refreshButton:active {
                             position: relative;
                             top: 1px;
                         }
-                        
+
                         .TopC {
                             box-shadow: inset 0px 1px 0px 0px #f9eca0;
                             background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
@@ -85,17 +85,17 @@
                             text-decoration: none;
                             text-shadow: 0px 1px 0px #ded17c;
                         }
-                        
+
                         .TopC:hover {
                             background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
                             background-color: #f2ab1e;
                         }
-                        
+
                         .TopC:active {
                             position: relative;
                             top: 1px;
                         }
-                        
+
                         .TopV {
                             box-shadow: inset 0px 1px 0px 0px #f5978e;
                             background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
@@ -113,17 +113,17 @@
                             text-shadow: 0px 1px 0px #810e05;
                             width: fit-content;
                         }
-                        
+
                         .TopV:hover {
                             background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
                             background-color: #c62d1f;
                         }
-                        
+
                         .TopV:active {
                             position: relative;
                             top: 1px;
                         }
-                        
+
                         .TopM {
                             box-shadow: inset 0px 1px 0px 0px #e184f3;
                             background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
@@ -141,30 +141,30 @@
                             text-shadow: 0px 1px 0px #9b14b3;
                             width: fit-content;
                         }
-                        
+
                         .TopM:hover {
                             background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
                             background-color: #a20dbd;
                         }
-                        
+
                         .TopM:active {
                             position: relative;
                             top: 1px;
                         }
-                        
+
                         body {
                             background-image: url(/MUM/Images/cosmos.jpg);
                         }
-                        
+
                         .Admin {
                             color: #1ee6f4;
                         }
-                        
+
                         div.baraButoane {
                             padding-top: 10px;
                             padding-bottom: 10px;
                         }
-                        
+
                         div.comment {
                             display: flow-root;
                             margin-bottom: 20px;
@@ -172,24 +172,24 @@
                             margin-right: 15px;
                             margin-left: 15px;
                         }
-                        
+
                         .SearchLabel {
                             display: none;
                         }
-                        
+
                         .Admin {
                             display: none;
                         }
-                        
+
                         .search {
                             padding-left: 15px;
                             padding-right: 5px;
                         }
-                        
+
                         #Alb {
                             width: 80%;
                         }
-                        
+
                         div.comment #right {
                             float: right;
                             color: #efeeee;
@@ -204,19 +204,19 @@
                             display: block;
                             word-break: break-all;
                         }
-                        
+
                         div.comment .DateRight {
                             color: white;
                             float: right;
                             height: 0px;
                         }
-                        
+
                         div.comment .DateLeft {
                             color: white;
                             float: right;
                             height: 0px;
                         }
-                        
+
                         div.comment #left {
                             float: left;
                             color: #f3f0f0;
@@ -231,14 +231,12 @@
                             display: block;
                             word-break: break-all;
                         }
-                        
-                        #Details {}
-                        
+
                         div.boxComments {
                             bottom: 10px;
                             width: 100%;
                         }
-                        
+
                         div.showMelodieComments {
                             background-color: black;
                             border-style: solid;
@@ -247,7 +245,7 @@
                             height: 250px;
                             margin: 10px;
                         }
-                        
+
                         button.buttonInsert {
                             text-rendering: auto;
                             color: black;
@@ -268,9 +266,9 @@
                             background-size: contain;
                             background-repeat: repeat-y;
                         }
-                        
+
                         fieldset.butoane {}
-                        
+
                         a.buttonExport {
                             position: relative;
                             padding: 10px 20px;
@@ -285,14 +283,14 @@
                             width: fit-content;
                             background-color: #03e9f4;
                         }
-                        
+
                         a.buttonExport:hover {
                             background: #03e9f4;
                             color: #fff;
                             border-radius: 5px;
                             box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
                         }
-                        
+
                         a.buttonLogout {
                             top: 5.8em;
                             color: white;
@@ -312,7 +310,7 @@
                             font-size: 1em;
                             z-index: 1;
                         }
-                        
+
                         button {
                             text-rendering: auto;
                             color: black;
@@ -336,7 +334,7 @@
                             border-color: rgb(7, 66, 155);
                             width: 15%;
                         }
-                        
+
                         button.Play {
                             cursor: pointer;
                             background-color: transparent;
@@ -346,7 +344,7 @@
                             width: 45px;
                             padding-right: 8px;
                         }
-                        
+
                         button.PlayMelodie {
                             cursor: pointer;
                             background-color: purple;
@@ -356,11 +354,11 @@
                             width: 100px;
                             height: 100px;
                         }
-                        
+
                         button.button-search {
                             width: 15%;
                         }
-                        
+
                         .buttonComentariu {
                             box-shadow: 3px 4px 0px 0px #1564ad;
                             background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
@@ -379,17 +377,17 @@
                             float: right;
                             text-shadow: 0px 1px 0px #528ecc;
                         }
-                        
+
                         .buttonComentariu:hover {
                             background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
                             background-color: #378de5;
                         }
-                        
+
                         .buttonComentariu:active {
                             position: relative;
                             top: 1px;
                         }
-                        
+
                         label.rec {
                             background-color: #c53c3c;
                             color: antiquewhite;
@@ -402,7 +400,7 @@
                             padding-top: 6px;
                             padding-bottom: 6px;
                         }
-                        
+
                         .search-field {
                             position: relative;
                             width: 98%;
@@ -414,15 +412,15 @@
                             border-color: black;
                             padding-left: 15px;
                         }
-                        
+
                         input.search-field::placeholder {
                             color: rgb(31, 180, 31);
                         }
-                        
+
                         div.containerC {
                             display: flex;
                         }
-                        
+
                         .containerMusic {
                             height: 100%;
                             background-color: white;
@@ -431,11 +429,11 @@
                             float: left;
                             justify-content: space-between;
                         }
-                        
+
                         .pozitionare {
                             display: block;
                         }
-                        
+
                         div.showOneAlbum {
                             margin: auto;
                             width: 50%;
@@ -446,7 +444,7 @@
                             font-size: larger;
                             font-style: italic;
                         }
-                        
+
                         div.showOneGen {
                             margin: auto;
                             width: 50%;
@@ -457,7 +455,7 @@
                             font-size: larger;
                             font-style: italic;
                         }
-                        
+
                         div.showOneArtist {
                             margin: auto;
                             width: 50%;
@@ -468,20 +466,18 @@
                             font-size: larger;
                             font-style: italic;
                         }
-                        
+
                         div.showOneMelodie {
                             width: 100%;
                         }
-                        
+
                         input.adaugareComentariu {
                             width: 75%;
                             height: 3.5em;
                             padding-left: 20px;
                             border-radius: 20px;
                         }
-                        
-                        div.User {}
-                        
+
                         .video-player-embed {
                             display: block;
                             position: absolute;
@@ -493,7 +489,7 @@
                             width: min-content;
                             float: right;
                         }
-                        
+
                         button.closeVideo {
                             position: relative;
                             background-color: #f4511e;
@@ -510,23 +506,23 @@
                             border-radius: 20px;
                             width: 100%;
                         }
-                        
+
                         button.closeVideo:hover {
                             opacity: 1
                         }
-                        
+
                         .pozitionare .video-player-inner-wrap {
                             position: fixed;
                             z-index: 3000002;
                         }
-                        
+
                         .video-player-inner-wrap {
                             bottom: 10px;
                             float: right;
                             z-index: 99 !important;
                             right: 10px;
                         }
-                        
+
                         a.form-inline {
                             display: flex;
                             height: 65%;
@@ -538,13 +534,13 @@
                             padding: 0.5em;
                             border-image: url(/MUM/Images/fire.jpg) 30;
                         }
-                        
+
                         a.form-inline div.second {
                             width: 100%;
                             border-color: red;
                             height: 100%;
                         }
-                        
+
                         .Melodie .second {
                             background-image: url("/MUM/Images/granit.jpg");
                             background-color: red;
@@ -552,11 +548,11 @@
                             flex-direction: column;
                             color: white;
                         }
-                        
+
                         div.mycontainer {
                             padding-right: 10px;
                         }
-                        
+
                         .Melodie .first button svg {
                             width: 100%;
                             height: 100%;
@@ -565,19 +561,20 @@
                             border-radius: 20px;
                             border: 0.1em solid;
                         }
-                        
+
                         .Melodie .first {
                             border-image: url(/MUM/Images/fire.jpg) 30;
                             border-radius: 2.5em;
                             border: 4em black;
                         }
+
                         /*
     .Melodie.first:first-child {
         flex-flow: row wrap;
         margin-top: 2px;
         vertical-align: center;
     }*/
-                        
+
                         .modal {
                             display: none;
                             /* Hidden by default */
@@ -600,8 +597,9 @@
                             background-color: rgba(0, 0, 0, 0.4);
                             /* Black w/ opacity */
                         }
+
                         /* Modal Content */
-                        
+
                         div.showDetailsMelodie {
                             background-color: #c16060;
                             display: flex;
@@ -614,13 +612,13 @@
                             font-size: large;
                             font-family: 'Courier New', Courier, monospace;
                         }
-                        
+
                         div.Views {
                             color: white;
                             font-size: large;
                             font-family: 'Courier New', Courier, monospace;
                         }
-                        
+
                         button.deleteComment {
                             float: right;
                             margin-top: -30px;
@@ -636,14 +634,8 @@
                             line-height: 0px;
                             padding: 11px 3px;
                         }
-                        
-                        span.closeUser,
-                        span.closeInsert,
-                        span.closeAdmin,
-                        span.closeInsertLista,
-                        span.closeTopM,
-                        span.closeTopC,
-                        span.closeTopV {
+
+                        span.closeUser, span.closeInsert, span.closeAdmin, span.closeInsertLista, span.closeTopM, span.closeTopC, span.closeTopV {
                             float: right;
                             margin-top: -30px;
                             margin-right: -30px;
@@ -658,7 +650,7 @@
                             line-height: 0px;
                             padding: 11px 3px;
                         }
-                        
+
                         button.SalvareUser {
                             position: relative;
                             display: inline-block;
@@ -673,29 +665,15 @@
                             letter-spacing: 4px;
                             width: fit-content;
                         }
-                        
+
                         button.SalvareUser:hover {
                             background: #03e9f4;
                             color: #fff;
                             border-radius: 5px;
                             box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
                         }
-                        
-                        label.EmailNou,
-                        label.NumeNou,
-                        label.ParolaNoua,
-                        label.CountryNou,
-                        label.ListaNouaInserare,
-                        label.ListaFavoriteSelectie,
-                        label.numelenouAdmin,
-                        label.parolanouaAdmin,
-                        label.emailnouAdmin,
-                        label.linkInserare,
-                        label.dataInserare,
-                        label.albumInserare,
-                        label.genInserare,
-                        label.artistInserare,
-                        label.numeleMelodieiInserare {
+
+                        label.EmailNou, label.NumeNou, label.ParolaNoua, label.CountryNou, label.ListaNouaInserare, label.ListaFavoriteSelectie, label.numelenouAdmin, label.parolanouaAdmin, label.emailnouAdmin, label.linkInserare, label.dataInserare, label.albumInserare, label.genInserare, label.artistInserare, label.numeleMelodieiInserare {
                             top: 0;
                             left: 0;
                             padding: 10px 0;
@@ -704,22 +682,8 @@
                             pointer-events: none;
                             transition: .5s;
                         }
-                        
-                        input#numelenou,
-                        input#parolanoua,
-                        input#emailnou,
-                        input#country,
-                        input#ListaNouaInserare,
-                        input#ListaFavoriteSelectie,
-                        input#numelenouAdmin,
-                        input#parolanouaAdmin,
-                        input#emailnouAdmin,
-                        input#linkInserare,
-                        input#dataInserare,
-                        input#albumInserare,
-                        input#genInserare,
-                        input#artistInserare,
-                        input#numeleMelodieiInserare {
+
+                        input#numelenou, input#parolanoua, input#emailnou, input#country, input#ListaNouaInserare, input#ListaFavoriteSelectie, input#numelenouAdmin, input#parolanouaAdmin, input#emailnouAdmin, input#linkInserare, input#dataInserare, input#albumInserare, input#genInserare, input#artistInserare, input#numeleMelodieiInserare {
                             width: 50%;
                             padding: 10px 0;
                             font-size: 16px;
@@ -730,7 +694,7 @@
                             outline: none;
                             background: transparent;
                         }
-                        
+
                         .modal-content {
                             background: linear-gradient(#141e30, #243b55);
                             margin: auto;
@@ -738,28 +702,28 @@
                             border: 1px solid #888;
                             width: 30%;
                         }
+
                         /* The Close Button */
-                        
+
                         .close {
                             color: #aaaaaa;
                             float: right;
                             font-size: 28px;
                             font-weight: bold;
                         }
-                        
-                        .close:hover,
-                        .close:focus {
+
+                        .close:hover, .close:focus {
                             color: #000;
                             text-decoration: none;
                             cursor: pointer;
                         }
-                        
+
                         .outer {
                             margin-bottom: 15px;
                             margin-top: 20px;
                             margin-left: 20px;
                         }
-                        
+
                         .wrap {
                             flex-flow: row wrap;
                             margin: 0 auto;
@@ -767,7 +731,8 @@
                             padding-top: 15px;
                             padding-left: 20px
                         }
-                        
+
+                        /*
                         div.wrap#tabelSearch {}
                         
                         .wrap#tabelAlbume {}
@@ -778,15 +743,15 @@
                         
                         .wrap#tabelGenuri {}
                         
-                        .wrap#tabelFavorite {}
-                        
+                        .wrap#tabelFavorite {}*/
+
                         .listMusic .second .ver {
                             background-color: red;
                             display: inline;
                             width: 100px;
                             height: 100px;
                         }
-                        
+
                         .listMusic .first button svg {
                             width: 100%;
                             height: 100%;
@@ -794,14 +759,14 @@
                             background-color: blue;
                             border-radius: 20px;
                         }
-                        
+
                         .listMusic .first {
                             background-color: black;
                             height: 50px;
                             float: right;
                             border-radius: 20px;
                         }
-                        
+
                         .listMusic {
                             width: 200px;
                             padding-bottom: 30px;
@@ -811,7 +776,7 @@
                             border-radius: 20px;
                             margin: 5px;
                         }
-                        
+
                         .Gen .first button svg {
                             width: 100%;
                             height: 100%;
@@ -820,7 +785,7 @@
                             border-radius: 20px;
                             border: 0.1em solid;
                         }
-                        
+
                         .Gen {
                             padding-bottom: 2em;
                             margin-bottom: 2em;
@@ -834,7 +799,7 @@
                             width: 20%;
                             background-image: url("/MUM/Images/universe.jpg");
                         }
-                        
+
                         .Gen a.form-inline {
                             display: flex;
                             height: 65%;
@@ -846,14 +811,14 @@
                             padding: 0.5em;
                             border-image: url(/MUM/Images/fire.jpg) 30;
                         }
-                        
+
                         .Gen a.form-inline div.second {
                             width: 100%;
                             border-color: red;
                             height: 100%;
                             color: white;
                         }
-                        
+
                         .Artist .first button svg {
                             width: 100%;
                             height: 100%;
@@ -862,7 +827,7 @@
                             border-radius: 20px;
                             border: 0.1em solid;
                         }
-                        
+
                         .Artist {
                             padding-bottom: 2em;
                             margin-bottom: 2em;
@@ -876,7 +841,7 @@
                             width: 20%;
                             background-image: url("/MUM/Images/universe.jpg");
                         }
-                        
+
                         .Artist a.form-inline {
                             display: flex;
                             height: 65%;
@@ -888,14 +853,14 @@
                             padding: 0.5em;
                             border-image: url(/MUM/Images/fire.jpg) 30;
                         }
-                        
+
                         .Artist a.form-inline div.second {
                             width: 100%;
                             border-color: red;
                             height: 100%;
                             color: white;
                         }
-                        
+
                         .Album .first button svg {
                             width: 100%;
                             height: 100%;
@@ -904,7 +869,7 @@
                             border-radius: 20px;
                             border: 0.1em solid;
                         }
-                        
+
                         .Album {
                             padding-bottom: 2em;
                             margin-bottom: 2em;
@@ -918,7 +883,7 @@
                             width: 20%;
                             background-image: url("/MUM/Images/universe.jpg");
                         }
-                        
+
                         .Album a.form-inline {
                             display: flex;
                             height: 65%;
@@ -930,14 +895,14 @@
                             padding: 0.5em;
                             border-image: url(/MUM/Images/fire.jpg) 30;
                         }
-                        
+
                         .Album a.form-inline div.second {
                             width: 100%;
                             border-color: red;
                             height: 100%;
                             color: white;
                         }
-                        
+
                         .Melodie {
                             padding-bottom: 2em;
                             margin-bottom: 2em;
@@ -951,7 +916,7 @@
                             width: 20%;
                             background-image: url("/MUM/Images/universe.jpg");
                         }
-                        
+
                         .item2 {
                             width: 23%;
                             padding-bottom: 30px;
@@ -959,7 +924,7 @@
                             position: relative;
                             border-bottom: 0px solid red;
                         }
-                        
+
                         .Melodie:nth-child(4n+1):after {
                             content: "";
                             position: absolute;
@@ -968,26 +933,22 @@
                             bottom: 0;
                             border-bottom: 0px solid red;
                         }
-                        
+
                         @media (max-width: 768px) {
-                            .item:nth-child(2n+1):nth-last-child(2):after,
-                            .item:nth-child(2n+1):nth-last-child(1):after {
+                            .item:nth-child(2n+1):nth-last-child(2):after, .item:nth-child(2n+1):nth-last-child(1):after {
                                 display: none;
                             }
                             .item {
                                 width: 43%;
                             }
                         }
-                        
+
                         @media (min-width: 768px) {
-                            .item:nth-child(4n+1):nth-last-child(4):after,
-                            .item:nth-child(4n+1):nth-last-child(4):after,
-                            .item:nth-child(4n+1):nth-last-child(2):after,
-                            .item:nth-child(4n+1):nth-last-child(1):after {
+                            .item:nth-child(4n+1):nth-last-child(4):after, .item:nth-child(4n+1):nth-last-child(4):after, .item:nth-child(4n+1):nth-last-child(2):after, .item:nth-child(4n+1):nth-last-child(1):after {
                                 display: none;
                             }
                         }
-                        
+
                         button.buttonFavoritAdd {
                             text-rendering: auto;
                             color: #e52e71;
@@ -1012,7 +973,7 @@
                             border-color: #e52e71;
                             width: 60%;
                         }
-                        
+
                         button.buttonFavoriteAdded {
                             text-rendering: auto;
                             color: #da0cff;
@@ -1039,36 +1000,36 @@
                             padding: 8px;
                             border-radius: 25px;
                         }
-                        
+
                         button.buttonFavoriteAdded:hover span {
                             display: none
                         }
-                        
+
                         button.buttonFavoriteAdded:hover:before {
                             content: "Delete!";
                         }
-                        
+
                         html::-webkit-scrollbar {
                             width: 30px;
                             height: 30px;
                         }
-                        
+
                         html::-webkit-scrollbar-thumb {
                             background: linear-gradient(180deg, #ff8a00, #e52e71);
                             border-radius: 30px;
                             box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
                         }
-                        
+
                         html::-webkit-scrollbar-track {
                             background: linear-gradient(90deg, #201c29, #201c29 1px, #100e17 0, #100e17);
                         }
-                        
+
                         button.buttonFavoriteAdded:hover {
                             color: #0c8aff;
                             border-color: #0c8aff;
                             background: linear-gradient(180deg, #ff8a00, #e52e71);
                         }
-                        
+
                         rss {
                             display: contents;
                             font-family: verdana, arial;
@@ -1078,16 +1039,16 @@
                             border: 0.2em solid silver;
                             background-color: black;
                         }
-                        
+
                         div.buttonDownload {
                             float: right;
                         }
-                        
+
                         div.buttonUtil {
                             float: left;
                             padding-left: 20px;
                         }
-                        
+
                         div.rss {
                             float: right;
                             display: flow-root;
@@ -1095,7 +1056,7 @@
                             grid-gap: 20px;
                             background-color: black;
                         }
-                        
+
                         channel title {
                             text-align: center;
                             box-sizing: border-box;
@@ -1109,34 +1070,34 @@
                             word-break: break-all;
                             border-radius: 10px;
                         }
-                        
+
                         .grid-container {
                             display: grid;
                             grid-template-columns: auto auto;
                             padding: 10px;
                         }
-                        
+
                         .grid-item {
                             padding: 20px;
                             font-size: 30px;
                             text-align: center;
                         }
-                        
+
                         .rss rss {}
-                        
+
                         button.download {
                             width: fit-content;
                             font-size: medium;
                             cursor: pointer;
                         }
-                        
+
                         div.second table {
                             font-family: serif;
                             font-style: normal;
                             font-size: medium;
                         }
-                        
-                        item title {
+
+                        title {
                             box-sizing: border-box;
                             display: block;
                             font-size: 1.2em;
@@ -1149,20 +1110,20 @@
                             border-radius: 10px;
                             text-align: unset;
                         }
-                        
+
                         link {
                             display: block;
                             font-size: x-small;
                             padding-left: 10px;
                         }
-                        
+
                         item {
                             display: block;
                             border: black solid 1em;
                             border-radius: 0.5em;
                             font-size: 0.6em;
                         }
-                        
+
                         docs {
                             display: block;
                             background-color: #ffffe6;
@@ -1172,8 +1133,10 @@
                             color: #7f7f7f;
                             border: 1px solid silver;
                         }
+
                         /* all hidden elements */
-                        
+
+                        /*
                         language,
                         lastBuildDate,
                         ttl,
@@ -1183,3 +1146,4 @@
                         pubDate {
                             display: none;
                         }
+                        */
