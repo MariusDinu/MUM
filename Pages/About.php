@@ -196,7 +196,6 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 <aside>
     Daca utilizatorul are drepturi de admin, sunt adaugate butoane pentru modificarea metadatelor melodiei si pentru stergere.
     Daca nu are drepturi, este adaugat butonul de favorite. 
-    Butonul de play deschide un link de youtube salvat in baza de date cu melodia respectiva intr un modal ce  
     </aside>
 <pre>
 </figure>
