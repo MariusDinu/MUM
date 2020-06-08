@@ -1,7 +1,6 @@
 .jumbo {
     width: 100%;
     height: 100vh;
-    /*background-color: black;*/
 }
 
 html {
@@ -9,11 +8,10 @@ html {
     background-image: url(/MUM/Images/cosmos.jpg);
 }
 
-body {
-    background-color: black;
-}
+body {}
 
 .text {
+    text-align: center;
     font-style: normal;
     font-style: oblique;
     font-family: cursive;
