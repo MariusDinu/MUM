@@ -133,7 +133,7 @@ include 'TemplateModal.php';
   </main>
  
   
-<footer><p>Author: Hege Refsnes</p></footer>
+<footer><p>Author: Marius Dinu and Zaharia Bogdan and Badratan Bogdan</p></footer>
 </body>
 
 
@@ -248,17 +248,5 @@ window.onclick = function(event) {
 
 </script>
 
-
-<script>
-
-
-// When the user clicks anywhere outside of the modal, close it
-
-
-
-
-
-
-</script>
 
 </html>
