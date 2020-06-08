@@ -94,7 +94,7 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 
 <figure typeof="sa:Image">
 <img src="/MUM/Images/nav-bar-svg.png">
-<figcaption><h4>Fig.2 - NavBar</h4></figcaption>
+<figcaption><h4>Fig.2 - NavBar </h4></figcaption>
 </figure>
 
   <h3>head</h3>
@@ -105,12 +105,31 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 <br>
 <img src="/MUM/Images/code3.png">
 <figcaption><h4>Fig.3 - Template Bara de Navigatie </h4></figcaption>
+
+<pre>
+<aside>
+    Bara de navigatie este implementata diferit pentru utilizatorii cu drepturi de admin si fara,
+     spre exemplu daca nu exista drepturi, trebuie adaugat butonul de favorite. 
+
+</aside>
+<pre>
+<aside>
+
+</aside>
 </figure>
 
 
 <figure typeof="sa:Image">
 <img src="/MUM/Images/js1.png">
-<figcaption><h4>Fig.4 - Search - Animatie JS </h4></figcaption>
+<figcaption><h4>Fig.4 - Search</h4></figcaption>
+
+<pre>
+<aside>
+    
+    Cand este cautat un sir vid melodiile se reactualizeaza dupa ultimul apel ajax.
+
+</aside>
+<pre>
 </figure>
 
 <figure typeof="sa:Image">
@@ -135,7 +154,12 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 <img src="/MUM/Images/AdminDetails.png">
 <br>
 <img src="/MUM/Images/verificare.png">
-<figcaption><h4>Fig.8 - Password formal veriication  </h4></figcaption>
+<figcaption><h4>Fig.8 - Password formal verification  </h4></figcaption>
+<pre>
+<aside>
+    Sunt trimise datele folosind metoda post intr un container data.
+    </aside>
+<pre>
 </figure>
 
 <section role="doc-abstract" aria-label="Abstract">
@@ -154,6 +178,11 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 <figure typeof="sa:Image">
 <img src="/MUM/Images/pdf-export1.png">
 <figcaption><h4>Fig.10 - PDF export </h4></figcaption>
+<pre>
+<aside>
+    Se interogheaza baza de date pentru ultimele 10 melodii adaugate recent si se ofera optiunea de a exporta in pdf.
+</aside>
+<pre>
 </figure>
 
 
@@ -162,6 +191,14 @@ Bonus: recurgerea la un serviciu online precum Last.fm, Spotify etc.
 </br>
 <img src="/MUM/Images/melodii.png">
 <figcaption><h4>Fig.11 - Template Melodii  </h4></figcaption>
+
+<pre>
+<aside>
+    Daca utilizatorul are drepturi de admin, sunt adaugate butoane pentru modificarea metadatelor melodiei si pentru stergere.
+    Daca nu are drepturi, este adaugat butonul de favorite. 
+    Butonul de play deschide un link de youtube salvat in baza de date cu melodia respectiva intr un modal ce  
+    </aside>
+<pre>
 </figure>
 
 </section>

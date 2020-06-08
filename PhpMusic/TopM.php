@@ -26,7 +26,7 @@ else
 if($_GET['button']=='pdf')
 {
    
-    $mpdf = new \Mpdf\Mpdf();
+    $mpdf = new Mpdf();
   
     
     $sql="SELECT * FROM music ORDER BY Date limit 10";
@@ -51,3 +51,15 @@ if($_GET['button']=='pdf')
 }
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
