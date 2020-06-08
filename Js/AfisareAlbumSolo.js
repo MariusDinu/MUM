@@ -339,6 +339,7 @@ function AfisareListaFavorite(current) {
 
     var lista = current.id;
     var user = $('#user').attr('value');
+
     $.ajax({
 
         type: 'POST',
@@ -354,8 +355,8 @@ function AfisareListaFavorite(current) {
         success: function(html) {
 
 
-            $('#tabelFavorite').html(html).show();
-            $('#tabelAfisare').hide();
+            $('#tabelFavorite ').html(html).show();
+            $('#tabelAfisare ').hide();
 
         }
     });
